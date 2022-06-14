@@ -1,0 +1,1282 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>天地劫官网</title>
+		<link rel="icon" href="image/favicon.ico"/>
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<script src="js/bootstrap.bundle.min.js"></script>
+		<style>
+			body{font-family: arial;}
+			.bg-blueblack{background-color: #77cbfd;}
+			.bg-sblue{background-color: #3e4458;}
+			.shadow-img{box-shadow:-10px 10px 0px #a19975;}
+			.btn-secondaryellow{background-color: #a19975;}
+			.text-secondaryellow{color:#a19975 ;}
+			a{text-decoration: none;}
+			a{color: #000000;}
+			a:hover{color: #f4f4f4;}
+			.bg-gray{background-color: #eeeeee;}
+			.text-gray{color: #3e4458;}
+			.bg-yellow{background-color: #bf9f53;}
+			
+			.slider-content h5{text-shadow: 0 0 2px black;}
+			.slider-content p{text-shadow: 0 0 2px black;}
+			
+			.card-box-node a:hover{
+				color: black
+			}
+			
+			.bg-image{
+				background-repeat:no-repeat;
+				background-attachment:fixed;
+				background-size: cover;
+				background-position: center center;
+			}
+			
+			#news a:hover{text-decoration: underline;}
+			
+			#news .more:hover{text-decoration: none;}
+			
+			#pass a:hover,#use a:hover{color: white;background-color: #000;}
+			
+			.addTo{background-color: white;}
+			.addTo:hover{background-color: yellow;color: white;}
+			
+
+			.bg-video{
+				background-color: rgba(0,0,0,0.3);
+				cursor: pointer;
+				transition: 0.3s;
+			}
+			.bg-video:hover{
+				background-color: rgba(0,0,0,0);
+			}
+			.bg-video img{
+				opacity: 0.5;
+			}
+			
+			.bg-sha{background-color: rgba(0,0,0,0.3);transition: .3s;}
+			.bg-sha:hover{background-color: rgba(0,0,0,0);}
+			
+			.needUl li a{
+				color:#2f343c ;
+				
+			}
+			.needUl li a:hover{
+				color:black ;
+			}
+			
+			.topNav{background-color: rgba(255,255,255,0.7);transition: .3s;}
+			.topNav:hover{background-color: rgba(255,255,255,1);}
+			.topNav:hover a{color: black;}
+			.topNav a{color: #ccc;}
+			
+			
+			.cardbox a:hover{
+				color: black;
+			}
+			
+			.tab-box a:hover{
+				color: black;text-decoration: underline;
+			}
+			
+			#news .morenode:hover{
+				text-decoration: none;
+			}
+			
+			#page a:hover{
+				background-color: black;
+				color: white;
+			}
+			
+			#user a:hover{
+				background-color: black;
+				color: white;
+			}
+			
+			.addLink{background-color: white;}
+			.addLink:hover{background-color: yellow;color: black;}
+			
+			.bg-hover{
+				cursor: pointer;
+				transition:.3s;
+				background-color: rgba(0,0,0,0.3);
+			}
+			.bg-hover:hover{
+				background-color: rgba(0,0,0,0);
+			}
+			
+			.needlink{
+				color: rgb(50,50,50)
+			}
+			.needlink:hover{
+				color: black;
+			}
+		</style>
+	</head>
+	<body class='bg-light'>
+		<!-- nav start-->
+			<div class='container-fluid shadow px-0 topNav fixed-top'>
+				<div class="container">
+					<nav class="navbar navbar-expand-md navbar-light">
+						<div class='container-fluid px-4'>
+							<a href="#" class='navbar-brand ms-4'>
+								<img src="image/p1_logo.png" />
+							</a>
+							<button class='navbar-toggler' data-bs-toggle='collapse' data-bs-target='#slidernode'>
+								<span class='navbar-toggler-icon'></span>
+							</button>
+							<div class='collapse navbar-collapse' id='slidernode'>
+								<ul class='navbar-nav ms-auto me-4'>
+									<li class='nav-item text-center'>
+										<a href="#" class='nav-link fw-bold'>
+											首页
+										</a>
+									</li>
+									<li class='nav-item text-center'>
+										<a href="#" class='nav-link fw-bold'>
+											逸闻录
+										</a>
+									</li>
+									<li class='nav-item  text-center'>
+										<a href="#" class='nav-link fw-bold'>
+											群侠传
+										</a>
+									</li>
+									<li class='nav-item text-center'>
+										<a href="#" class='nav-link fw-bold'>
+											资料站
+										</a>
+									</li>
+									<li class='nav-item text-center'>
+										<a href="#" class='nav-link fw-bold'>
+											江湖令
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</nav>
+				</div>
+			</div>
+		<!-- nav end-->
+		<!-- banner start-->
+		<div class='d-flex justify-content-center overflow-hidden position-relative'>
+			<div class='position-absolute translate-middle-y' style='left:5%;top: 40%;z-index: 99;'>
+				<img src="image/p1_slogan_3.png" />
+				<img src="image/p1_videobtn.png" videosrc='media/tdj_21040701.mp4' data-bs-toggle='modal' id='videoPlayNode' data-bs-target='#modalVideo' style='left: 27px;bottom: -15px;cursor: pointer;z-index: 10;' class='position-absolute'/>
+			</div>
+			<video src="media/tdj_2020122201.mp4" autoplay muted loop></video>
+		</div>
+		<!-- banner end-->
+		
+		<!-- news start-->
+		<div class='container-fluid px-0' style="position: relative;top: -50px;">
+			<ul class='d-flex list-unstyled align-items-end mb-0'>
+				<li class='w-25 bg-gray d-flex justify-content-center justify-content-sm-end pe-sm-5 align-items-center' style="height: 60px;">
+					<span class='text-gray fs-4 mt-2'>最新公告</span>
+				</li>
+				<li class='w-75 bg-sblue text-light d-flex align-items-center ps-4 ps-sm-5' style="height: 50px;">
+					<span class='fs-6'>天地劫最新资料站</span>
+				</li>
+			</ul>
+			<!-- more start-->
+			<div class='container position-relative'>
+				<a href="#" class='badge bg-yellow end-0 position-absolute rounded-pill' style='top:-35px'>更多>></a>
+			</div>
+			<div class="container position-relative">
+				
+			</div>
+			<!-- more end-->
+			
+			<!-- carousel start-->
+			<div class='carousel slide mb-3 mb-md-5' data-bs-ride='carousel' id='leonode'>
+				<ol class='carousel-indicators'>
+					<li data-bs-target='#leonode' class='active' data-bs-slide-to='0'></li>
+					<li data-bs-target='#leonode' data-bs-slide-to='1'></li>
+					<li data-bs-target='#leonode' data-bs-slide-to='2'></li>
+				</ol>
+				<div class='carousel-inner slider-content'>
+					<div class='carousel-item active'>
+						<div class='carousel-caption'>
+							<h5 class='mb-1 mb-sm-3'>天地劫主题站正式上线</h5>
+							<p class='mb-sm-3'>时轮万向 观天地流转</p>
+						</div>
+						<img src="image/p2_lb1.jpg" class='img-fluid d-block' />
+					</div>
+					<div class='carousel-item'>
+						<div class='carousel-caption'>
+							<h5 class='mb-1 mb-sm-3'>玩家共同设计第一期</h5>
+							<p class='mb-sm-3'>小怪设计主题结束</p>
+						</div>
+						<img src="image/p2_lb2.jpg" class='img-fluid d-block'  />
+					</div>
+					<div class='carousel-item'>
+						<div class='carousel-caption'>
+							<h5 class='mb-1 mb-sm-3'>3.11 全平台公测</h5>
+							<p class='mb-sm-3'>超绝画风 奇幻武侠大作</p>
+						</div>
+						<img src="image/p2_lb3.jpg" class='img-fluid d-block' />
+					</div>
+				</div>
+				<a href="#leonode" class='carousel-control-prev' data-bs-slide='prev'>
+					<span class='carousel-control-prev-icon'></span>
+				</a>
+				<a href="#leonode" class='carousel-control-next' data-bs-slide='next'>
+					<span class='carousel-control-next-icon'></span>
+				</a>
+			</div>
+			<!-- carousel end -->
+			
+			<!-- news end -->
+			
+			<!-- cardbox start-->
+			<div class='container cardbox'>
+				<div class='row'>
+					<div class='col-12 col-lg-3'>
+						<div class='card d-none d-lg-block'>
+							<img src="image/lixingweihu.png" class='card-img-top' />
+							<div class='card-body'>
+								<h6 class='card-title text-truncate'>[公告]《天地劫：幽城再临》4月15日更新停机维护公告</h6>
+								<p class='card-text'>为了给您带来更好的游戏体验，《天地劫：幽城再临》将于4月15日06:00进行更新停机维护。</p>
+								<a href="#" class='card-link'>详细信息>></a>
+							</div>
+						</div>
+						<div class='row border shadow bg-white d-flex d-lg-none'>
+							<div class='col-5 d-flex justify-content-center align-items-center px-0'>
+								<img src="image/lixingweihu.png" class='img-fluid'  />
+							</div>
+							<div class='col-7 position-relative'>
+								<h6 class='text-secondary mt-3 text-truncate'>[公告]《天地劫：幽城再临》4月15日更新停机维护公告</h6>
+								<p>为了给您带来更好的游戏体验，《天地劫：幽城再临》将于4月15日06:00进行更新停机维护。</p>
+								<a href="#" class="position-absolute end-0 bottom-0 me-3 mb-2">详细信息>></a>
+							</div>
+						</div>
+					</div>
+					<div class='col-12 col-lg-3 mt-3 mt-lg-0'>
+						<div class='card d-none d-lg-block'>
+							<img src="image/4.12banbenqianzhan.jpg" class='card-img-top' />
+							<div class='card-body'>
+								<h6 class='card-title text-truncate'>[公告]《天地劫：幽城再临》4月15日更新停机维护公告</h6>
+								<p class='card-text'>为了给您带来更好的游戏体验，《天地劫：幽城再临》将于4月15日06:00进行更新停机维护。</p>
+								<a href="#" class='card-link'>详细信息>></a>
+							</div>
+						</div>
+						<div class='row border shadow bg-white d-flex d-lg-none'>
+							<div class='col-5 d-flex justify-content-center align-items-center px-0'>
+								<img src="image/4.12banbenqianzhan.jpg" class='img-fluid'  />
+							</div>
+							<div class='col-7 position-relative'>
+								<h6 class='text-secondary mt-3 text-truncate'>[公告]《天地劫：幽城再临》4月15日更新停机维护公告</h6>
+								<p>为了给您带来更好的游戏体验，《天地劫：幽城再临》将于4月15日06:00进行更新停机维护。</p>
+								<a href="#" class="position-absolute end-0 bottom-0 me-3 mb-2">详细信息>></a>
+							</div>
+						</div>
+					</div>
+					<div class='col-12 col-lg-3 mt-3 mt-lg-0'>
+						<div class='card d-none d-lg-block'>
+							<img src="image/wentishuoming.png" class='card-img-top' />
+							<div class='card-body'>
+								<h6 class='card-title text-truncate'>[公告]幻海迷城刷新异常说明及解决方案</h6>
+								<p class='card-text'>幻海迷城刷新异常说明及解决方案。</p>
+								<a href="#" class='card-link'>详细信息>></a>
+							</div>
+						</div>
+						<div class='row border shadow bg-white d-flex d-lg-none'>
+							<div class='col-5 d-flex justify-content-center align-items-center px-0'>
+								<img src="image/wentishuoming.png" class='img-fluid'  />
+							</div>
+							<div class='col-7 position-relative'>
+								<h6 class='text-secondary mt-3 text-truncate'>[公告]幻海迷城刷新异常说明及解决方案</h6>
+								<p>幻海迷城刷新异常说明及解决方案。</p>
+								<a href="#" class="position-absolute end-0 bottom-0 me-3 mb-2">详细信息>></a>
+							</div>
+						</div>
+					</div>
+					<div class='col-12 col-lg-3 mt-3 mt-lg-0'>
+						<div class='card d-none d-lg-block'>
+							<img src="image/lixingweihu.png" class='card-img-top' />
+							<div class='card-body'>
+								<h6 class='card-title text-truncate'>[公告]《天地劫：幽城再临》“逆旅归客”版本更新公告</h6>
+								<p class='card-text'>《天地劫：幽城再临》4月8日“逆旅归客”资料片版本正式更新！</p>
+								<a href="#" class='card-link'>详细信息>></a>
+							</div>
+						</div>
+						<div class='row border shadow bg-white d-flex d-lg-none'>
+							<div class='col-5 d-flex justify-content-center align-items-center px-0'>
+								<img  src="image/lixingweihu.png" class='img-fluid'  />
+							</div>
+							<div class='col-7 position-relative'>
+								<h6 class='text-secondary mt-3 text-truncate'>[公告]《天地劫：幽城再临》“逆旅归客”版本更新公告</h6>
+								<p>《天地劫：幽城再临》4月8日“逆旅归客”资料片版本正式更新！</p>
+								<a href="#" class="position-absolute end-0 bottom-0 me-3 mb-2">详细信息>></a>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+			
+			<!-- cardbox end -->
+			<!-- content  start-->
+			<div class='container mt-5'>
+				<div class='row'>
+					<div class='col-12 col-lg-5'>
+						<!-- card start-->
+						<div class='card'>
+							<img src="image/bg-news-4a2dbe93.jpg" class='card-img-top'/>
+							<div class='card-img-overlay text-center'>
+								<a href="#" class='w-100 d-block text-danger h5 mt-3 mt-lg-2 mb-2 mt-xl-3 mb-lg-1 mb-xl-2'>公测开局萌新必看小知识</a>
+								<a href="#" class='w-100 d-block h5 text-dark'>天地劫幽城再临公测定档3月11日</a>
+							</div>
+						</div>
+						<!-- card end-->
+						<!-- tab start -->
+						<ul class='nav nav-tabs mt-3'>
+							<li class='nav-item'>
+								<a href="#news" data-bs-toggle='tab' class='nav-link active text-dark'>
+									新闻资讯
+								</a>
+							</li>
+							<li class='nav-item'>
+								<a href="#play" data-bs-toggle='tab'  class='nav-link text-dark'>
+									最强攻略
+								</a>
+							</li>
+						</ul>
+						<div class='tab-content tab-box'>
+							<div class='tab-pane fade show active py-4 px-1' id='news'>
+								<ul class='list-unstyled'>
+									<li class='d-flex justify-content-between'>
+										<div class='d-flex align-items-center' style='max-width: 92%;'>
+											<span class='me-2 p-1 text-light py-0 text-nowrap' style='background-color: #7b8dc1;font-size: 10px;'>新闻</span>
+											<a class='text-truncate' href="#">天地劫幽城再临35暗创怎么玩 副本通关攻略2131231</a>
+										</div>
+										<div class='text-secondary d-flex align-items-center' style="font-size: 11px;">
+											04/19
+										</div>
+									</li>
+									<li class='d-flex justify-content-between mt-2'>
+										<div class='d-flex align-items-center' style='max-width: 92%;'>
+											<span class='me-2 p-1 text-light py-0 text-nowrap' style='background-color: #7b8dc1;font-size: 10px;'>新闻</span>
+											<a class='text-truncate' href="#">天地劫幽城再临35暗创怎么玩 副本通关攻略2131231</a>
+										</div>
+										<div class='text-secondary d-flex align-items-center' style="font-size: 11px;">
+											04/19
+										</div>
+									</li>
+									<li class='d-flex justify-content-between mt-2'>
+										<div class='d-flex align-items-center' style='max-width: 92%;'>
+											<span class='me-2 p-1 text-light py-0 text-nowrap' style='background-color: #7b8dc1;font-size: 10px;'>新闻</span>
+											<a class='text-truncate' href="#">天地劫幽城再临35暗创怎么玩 副本通关攻略2131231</a>
+										</div>
+										<div class='text-secondary d-flex align-items-center' style="font-size: 11px;">
+											04/19
+										</div>
+									</li>
+									<li class='d-flex justify-content-between mt-2'>
+										<div class='d-flex align-items-center' style='max-width: 92%;'>
+											<span class='me-2 p-1 text-light py-0 text-nowrap' style='background-color: #7b8dc1;font-size: 10px;'>新闻</span>
+											<a class='text-truncate' href="#">天地劫幽城再临35暗创怎么玩 副本通关攻略2131231</a>
+										</div>
+										<div class='text-secondary d-flex align-items-center' style="font-size: 11px;">
+											04/19
+										</div>
+									</li>
+									<li class='d-flex justify-content-between mt-2'>
+										<div class='d-flex align-items-center' style='max-width: 92%;'>
+											<span class='me-2 p-1 text-light py-0 text-nowrap' style='background-color: #7b8dc1;font-size: 10px;'>新闻</span>
+											<a class='text-truncate' href="#">天地劫幽城再临35暗创怎么玩 副本通关攻略2131231</a>
+										</div>
+										<div class='text-secondary d-flex align-items-center' style="font-size: 11px;">
+											04/19
+										</div>
+									</li>
+									<li class='d-flex justify-content-between mt-2'>
+										<div class='d-flex align-items-center' style='max-width: 92%;'>
+											<span class='me-2 p-1 text-light py-0 text-nowrap' style='background-color: #7b8dc1;font-size: 10px;'>新闻</span>
+											<a class='text-truncate' href="#">天地劫幽城再临35暗创怎么玩 副本通关攻略2131231</a>
+										</div>
+										<div class='text-secondary d-flex align-items-center' style="font-size: 11px;">
+											04/19
+										</div>
+									</li>
+								</ul>
+								<ul class='list-unstyled mt-4'>
+									<li class='d-flex justify-content-between'>
+										<div class='d-flex align-items-center' style='max-width: 92%;'>
+											<span class='me-2 p-1 text-light py-0 text-nowrap' style='background-color: #7b8dc1;font-size: 10px;'>新闻</span>
+											<a class='text-truncate' href="#">天地劫幽城再临35暗创怎么玩 副本通关攻略2131231</a>
+										</div>
+										<div class='text-secondary d-flex align-items-center' style="font-size: 11px;">
+											04/19
+										</div>
+									</li>
+									<li class='d-flex justify-content-between mt-2'>
+										<div class='d-flex align-items-center' style='max-width: 92%;'>
+											<span class='me-2 p-1 text-light py-0 text-nowrap' style='background-color: #7b8dc1;font-size: 10px;'>新闻</span>
+											<a class='text-truncate' href="#">天地劫幽城再临35暗创怎么玩 副本通关攻略2131231</a>
+										</div>
+										<div class='text-secondary d-flex align-items-center' style="font-size: 11px;">
+											04/19
+										</div>
+									</li>
+									<li class='d-flex justify-content-between mt-2'>
+										<div class='d-flex align-items-center' style='max-width: 92%;'>
+											<span class='me-2 p-1 text-light py-0 text-nowrap' style='background-color: #7b8dc1;font-size: 10px;'>新闻</span>
+											<a class='text-truncate' href="#">天地劫幽城再临35暗创怎么玩 副本通关攻略2131231</a>
+										</div>
+										<div class='text-secondary d-flex align-items-center' style="font-size: 11px;">
+											04/19
+										</div>
+									</li>
+									<li class='d-flex justify-content-between mt-2'>
+										<div class='d-flex align-items-center' style='max-width: 92%;'>
+											<span class='me-2 p-1 text-light py-0 text-nowrap' style='background-color: #7b8dc1;font-size: 10px;'>新闻</span>
+											<a class='text-truncate' href="#">天地劫幽城再临35暗创怎么玩 副本通关攻略2131231</a>
+										</div>
+										<div class='text-secondary d-flex align-items-center' style="font-size: 11px;">
+											04/19
+										</div>
+									</li>
+									<li class='d-flex justify-content-between mt-2'>
+										<div class='d-flex align-items-center' style='max-width: 92%;'>
+											<span class='me-2 p-1 text-light py-0 text-nowrap' style='background-color: #7b8dc1;font-size: 10px;'>新闻</span>
+											<a class='text-truncate' href="#">天地劫幽城再临35暗创怎么玩 副本通关攻略2131231</a>
+										</div>
+										<div class='text-secondary d-flex align-items-center' style="font-size: 11px;">
+											04/19
+										</div>
+									</li>
+									<li class='d-flex justify-content-between mt-2'>
+										<div class='d-flex align-items-center' style='max-width: 92%;'>
+											<span class='me-2 p-1 text-light py-0 text-nowrap' style='background-color: #7b8dc1;font-size: 10px;'>新闻</span>
+											<a class='text-truncate' href="#">天地劫幽城再临35暗创怎么玩 副本通关攻略2131231</a>
+										</div>
+										<div class='text-secondary d-flex align-items-center' style="font-size: 11px;">
+											04/19
+										</div>
+									</li>
+								</ul>
+								<ul class='list-unstyled mt-4'>
+									<li class='d-flex justify-content-between'>
+										<div class='d-flex align-items-center' style='max-width: 92%;'>
+											<span class='me-2 p-1 text-light py-0 text-nowrap' style='background-color: #7b8dc1;font-size: 10px;'>新闻</span>
+											<a class='text-truncate' href="#">天地劫幽城再临35暗创怎么玩 副本通关攻略2131231</a>
+										</div>
+										<div class='text-secondary d-flex align-items-center' style="font-size: 11px;">
+											04/19
+										</div>
+									</li>
+									<li class='d-flex justify-content-between mt-2'>
+										<div class='d-flex align-items-center' style='max-width: 92%;'>
+											<span class='me-2 p-1 text-light py-0 text-nowrap' style='background-color: #7b8dc1;font-size: 10px;'>新闻</span>
+											<a class='text-truncate' href="#">天地劫幽城再临35暗创怎么玩 副本通关攻略2131231</a>
+										</div>
+										<div class='text-secondary d-flex align-items-center' style="font-size: 11px;">
+											04/19
+										</div>
+									</li>
+									<li class='d-flex justify-content-between mt-2'>
+										<div class='d-flex align-items-center' style='max-width: 92%;'>
+											<span class='me-2 p-1 text-light py-0 text-nowrap' style='background-color: #7b8dc1;font-size: 10px;'>新闻</span>
+											<a class='text-truncate' href="#">天地劫幽城再临35暗创怎么玩 副本通关攻略2131231</a>
+										</div>
+										<div class='text-secondary d-flex align-items-center' style="font-size: 11px;">
+											04/19
+										</div>
+									</li>
+									<li class='d-flex justify-content-between mt-2'>
+										<div class='d-flex align-items-center' style='max-width: 92%;'>
+											<span class='me-2 p-1 text-light py-0 text-nowrap' style='background-color: #7b8dc1;font-size: 10px;'>新闻</span>
+											<a class='text-truncate' href="#">天地劫幽城再临35暗创怎么玩 副本通关攻略2131231</a>
+										</div>
+										<div class='text-secondary d-flex align-items-center' style="font-size: 11px;">
+											04/19
+										</div>
+									</li>
+									<li class='d-flex justify-content-between mt-2'>
+										<div class='d-flex align-items-center' style='max-width: 92%;'>
+											<span class='me-2 p-1 text-light py-0 text-nowrap' style='background-color: #7b8dc1;font-size: 10px;'>新闻</span>
+											<a class='text-truncate' href="#">天地劫幽城再临35暗创怎么玩 副本通关攻略2131231</a>
+										</div>
+										<div class='text-secondary d-flex align-items-center' style="font-size: 11px;">
+											04/19
+										</div>
+									</li>
+									<li class='d-flex justify-content-between mt-2'>
+										<div class='d-flex align-items-center' style='max-width: 92%;'>
+											<span class='me-2 p-1 text-light py-0 text-nowrap' style='background-color: #7b8dc1;font-size: 10px;'>新闻</span>
+											<a class='text-truncate' href="#">天地劫幽城再临35暗创怎么玩 副本通关攻略2131231</a>
+										</div>
+										<div class='text-secondary d-flex align-items-center' style="font-size: 11px;">
+											04/19
+										</div>
+									</li>
+								</ul>
+								<a href="#" class='w-100 py-1 text-secondary text-center d-block morenode' style='background-color: #EEEEEE;font-size: 10px;'>更多</a>
+							</div>
+							<div class='tab-pane fade show  py-4 px-1' id='play'>
+								<ul class='list-unstyled'>
+									<li class='d-flex justify-content-between'>
+										<div class='d-flex align-items-center' style='max-width: 92%;'>
+											<span class='me-2 p-1 text-light py-0 text-nowrap' style='background-color: #7b8dc1;font-size: 10px;'>新闻</span>
+											<a class='text-truncate' href="#">天地劫幽城再临35暗创怎么玩 2131232131</a>
+										</div>
+										<div class='text-secondary d-flex align-items-center' style="font-size: 11px;">
+											04/19
+										</div>
+									</li>
+									<li class='d-flex justify-content-between mt-2'>
+										<div class='d-flex align-items-center' style='max-width: 92%;'>
+											<span class='me-2 p-1 text-light py-0 text-nowrap' style='background-color: #7b8dc1;font-size: 10px;'>新闻</span>
+											<a class='text-truncate' href="#">天地劫幽城再临35暗创怎么玩 副本通关攻略2131231</a>
+										</div>
+										<div class='text-secondary d-flex align-items-center' style="font-size: 11px;">
+											04/19
+										</div>
+									</li>
+									<li class='d-flex justify-content-between mt-2'>
+										<div class='d-flex align-items-center' style='max-width: 92%;'>
+											<span class='me-2 p-1 text-light py-0 text-nowrap' style='background-color: #7b8dc1;font-size: 10px;'>新闻</span>
+											<a class='text-truncate' href="#">天地劫幽城再临35暗创怎么玩 副本通关攻略2131231</a>
+										</div>
+										<div class='text-secondary d-flex align-items-center' style="font-size: 11px;">
+											04/19
+										</div>
+									</li>
+									<li class='d-flex justify-content-between mt-2'>
+										<div class='d-flex align-items-center' style='max-width: 92%;'>
+											<span class='me-2 p-1 text-light py-0 text-nowrap' style='background-color: #7b8dc1;font-size: 10px;'>新闻</span>
+											<a class='text-truncate' href="#">天地劫幽城再临35暗创怎么玩 副本通关攻略2131231</a>
+										</div>
+										<div class='text-secondary d-flex align-items-center' style="font-size: 11px;">
+											04/19
+										</div>
+									</li>
+									<li class='d-flex justify-content-between mt-2'>
+										<div class='d-flex align-items-center' style='max-width: 92%;'>
+											<span class='me-2 p-1 text-light py-0 text-nowrap' style='background-color: #7b8dc1;font-size: 10px;'>新闻</span>
+											<a class='text-truncate' href="#">天地劫幽城再临35暗创怎么玩 副本通关攻略2131231</a>
+										</div>
+										<div class='text-secondary d-flex align-items-center' style="font-size: 11px;">
+											04/19
+										</div>
+									</li>
+									<li class='d-flex justify-content-between mt-2'>
+										<div class='d-flex align-items-center' style='max-width: 92%;'>
+											<span class='me-2 p-1 text-light py-0 text-nowrap' style='background-color: #7b8dc1;font-size: 10px;'>新闻</span>
+											<a class='text-truncate' href="#">天地劫幽城再临35暗创怎么玩 副本通关攻略2131231</a>
+										</div>
+										<div class='text-secondary d-flex align-items-center' style="font-size: 11px;">
+											04/19
+										</div>
+									</li>
+								</ul>
+								<ul class='list-unstyled mt-4'>
+									<li class='d-flex justify-content-between'>
+										<div class='d-flex align-items-center' style='max-width: 92%;'>
+											<span class='me-2 p-1 text-light py-0 text-nowrap' style='background-color: #7b8dc1;font-size: 10px;'>新闻</span>
+											<a class='text-truncate' href="#">天地劫幽城再临35暗创怎么玩 副本通关攻略2131231</a>
+										</div>
+										<div class='text-secondary d-flex align-items-center' style="font-size: 11px;">
+											04/19
+										</div>
+									</li>
+									<li class='d-flex justify-content-between mt-2'>
+										<div class='d-flex align-items-center' style='max-width: 92%;'>
+											<span class='me-2 p-1 text-light py-0 text-nowrap' style='background-color: #7b8dc1;font-size: 10px;'>新闻</span>
+											<a class='text-truncate' href="#">天地劫幽城再临35暗创怎么玩 副本通关攻略2131231</a>
+										</div>
+										<div class='text-secondary d-flex align-items-center' style="font-size: 11px;">
+											04/19
+										</div>
+									</li>
+									<li class='d-flex justify-content-between mt-2'>
+										<div class='d-flex align-items-center' style='max-width: 92%;'>
+											<span class='me-2 p-1 text-light py-0 text-nowrap' style='background-color: #7b8dc1;font-size: 10px;'>新闻</span>
+											<a class='text-truncate' href="#">天地劫幽城再临35暗创怎么玩 副本通关攻略2131231</a>
+										</div>
+										<div class='text-secondary d-flex align-items-center' style="font-size: 11px;">
+											04/19
+										</div>
+									</li>
+									<li class='d-flex justify-content-between mt-2'>
+										<div class='d-flex align-items-center' style='max-width: 92%;'>
+											<span class='me-2 p-1 text-light py-0 text-nowrap' style='background-color: #7b8dc1;font-size: 10px;'>新闻</span>
+											<a class='text-truncate' href="#">天地劫幽城再临35暗创怎么玩 副本通关攻略2131231</a>
+										</div>
+										<div class='text-secondary d-flex align-items-center' style="font-size: 11px;">
+											04/19
+										</div>
+									</li>
+									<li class='d-flex justify-content-between mt-2'>
+										<div class='d-flex align-items-center' style='max-width: 92%;'>
+											<span class='me-2 p-1 text-light py-0 text-nowrap' style='background-color: #7b8dc1;font-size: 10px;'>新闻</span>
+											<a class='text-truncate' href="#">天地劫幽城再临35暗创怎么玩 副本通关攻略2131231</a>
+										</div>
+										<div class='text-secondary d-flex align-items-center' style="font-size: 11px;">
+											04/19
+										</div>
+									</li>
+									<li class='d-flex justify-content-between mt-2'>
+										<div class='d-flex align-items-center' style='max-width: 92%;'>
+											<span class='me-2 p-1 text-light py-0 text-nowrap' style='background-color: #7b8dc1;font-size: 10px;'>新闻</span>
+											<a class='text-truncate' href="#">天地劫幽城再临35暗创怎么玩 副本通关攻略2131231</a>
+										</div>
+										<div class='text-secondary d-flex align-items-center' style="font-size: 11px;">
+											04/19
+										</div>
+									</li>
+								</ul>
+								<ul class='list-unstyled mt-4'>
+									<li class='d-flex justify-content-between'>
+										<div class='d-flex align-items-center' style='max-width: 92%;'>
+											<span class='me-2 p-1 text-light py-0 text-nowrap' style='background-color: #7b8dc1;font-size: 10px;'>新闻</span>
+											<a class='text-truncate' href="#">天地劫幽城再临35暗创怎么玩 副本通关攻略2131231</a>
+										</div>
+										<div class='text-secondary d-flex align-items-center' style="font-size: 11px;">
+											04/19
+										</div>
+									</li>
+									<li class='d-flex justify-content-between mt-2'>
+										<div class='d-flex align-items-center' style='max-width: 92%;'>
+											<span class='me-2 p-1 text-light py-0 text-nowrap' style='background-color: #7b8dc1;font-size: 10px;'>新闻</span>
+											<a class='text-truncate' href="#">天地劫幽城再临35暗创怎么玩 副本通关攻略2131231</a>
+										</div>
+										<div class='text-secondary d-flex align-items-center' style="font-size: 11px;">
+											04/19
+										</div>
+									</li>
+									<li class='d-flex justify-content-between mt-2'>
+										<div class='d-flex align-items-center' style='max-width: 92%;'>
+											<span class='me-2 p-1 text-light py-0 text-nowrap' style='background-color: #7b8dc1;font-size: 10px;'>新闻</span>
+											<a class='text-truncate' href="#">天地劫幽城再临35暗创怎么玩 副本通关攻略2131231</a>
+										</div>
+										<div class='text-secondary d-flex align-items-center' style="font-size: 11px;">
+											04/19
+										</div>
+									</li>
+									<li class='d-flex justify-content-between mt-2'>
+										<div class='d-flex align-items-center' style='max-width: 92%;'>
+											<span class='me-2 p-1 text-light py-0 text-nowrap' style='background-color: #7b8dc1;font-size: 10px;'>新闻</span>
+											<a class='text-truncate' href="#">天地劫幽城再临35暗创怎么玩 副本通关攻略2131231</a>
+										</div>
+										<div class='text-secondary d-flex align-items-center' style="font-size: 11px;">
+											04/19
+										</div>
+									</li>
+									<li class='d-flex justify-content-between mt-2'>
+										<div class='d-flex align-items-center' style='max-width: 92%;'>
+											<span class='me-2 p-1 text-light py-0 text-nowrap' style='background-color: #7b8dc1;font-size: 10px;'>新闻</span>
+											<a class='text-truncate' href="#">天地劫幽城再临35暗创怎么玩 副本通关攻略2131231</a>
+										</div>
+										<div class='text-secondary d-flex align-items-center' style="font-size: 11px;">
+											04/19
+										</div>
+									</li>
+									<li class='d-flex justify-content-between mt-2'>
+										<div class='d-flex align-items-center' style='max-width: 92%;'>
+											<span class='me-2 p-1 text-light py-0 text-nowrap' style='background-color: #7b8dc1;font-size: 10px;'>新闻</span>
+											<a class='text-truncate' href="#">天地劫幽城再临35暗创怎么玩 副本通关攻略2131231</a>
+										</div>
+										<div class='text-secondary d-flex align-items-center' style="font-size: 11px;">
+											04/19
+										</div>
+									</li>
+								</ul>
+								<a href="#" class='w-100 py-1 text-secondary text-center d-block morenode' style='background-color: #EEEEEE;font-size: 10px;'>更多</a>
+							</div>
+						</div>
+						<!-- tab end -->
+					</div>
+					<div class='col-12 col-lg-7 ps-3 ps-lg-5'>
+						<!-- imagecontent start -->
+						<div class='carousel border slide mb-3 rounded overflow-hidden carousel-fade' data-bs-ride='carousel' id='leosilder'>
+							<ol class='carousel-indicators'>
+								<li data-bs-target='#leosilder' class='active' data-bs-slide-to='0'></li>
+								<li data-bs-target='#leosilder' data-bs-slide-to='1'></li>
+								<li data-bs-target='#leosilder' data-bs-slide-to='2'></li>
+							</ol>
+							<div class='carousel-inner slider-content'>
+								<div class='carousel-item active' data-bs-interval="500">
+									<div class='carousel-caption'>
+										<h5>天地劫幽城再临角色如何选择 主角队阵容推荐1.0线</h5>
+									</div>
+									<img  src="image/bg-1.png" class='w-100 d-block' />
+								</div>
+								<div class='carousel-item'>
+									<div class='carousel-caption'>
+										<h5>如何在《天地劫》手游中上知天文下知地理</h5>
+									</div>
+									<img  src="image/bg-2.png" class='w-100 d-block'  />
+								</div>
+								<div class='carousel-item'>
+									<div class='carousel-caption'>
+										<h5>天地劫三部曲与手游故事的世界观-星晷刻盘</h5>
+									</div>
+									<img src="image/bg-3.png" class='w-100 d-block' />
+								</div>
+							</div>
+							<a href="#leosilder" class='carousel-control-prev' data-bs-slide='prev'>
+								<span class='carousel-control-prev-icon'></span>
+							</a>
+							<a href="#leosilder" class='carousel-control-next' data-bs-slide='next'>
+								<span class='carousel-control-next-icon'></span>
+							</a>
+						</div>
+						<!-- imagecontent end-->
+						
+						<!-- pic start -->
+						<div class='row'>
+							<div class='col-6'>
+								<div class='card rounded overflow-hidden border'>
+									<img src="image/fuJPfcboCukzyrx.png!a-3-320x.png" class='card-img-top' />
+									<div class='card-img-overlay text-light d-flex align-items-end p-1 p-sm-3' style="background-color: rgba(0,0,0,0.3);">
+										天地劫幽城再临攻略 新手少走弯路技巧总汇
+									</div>
+								</div>
+							</div>
+							<div class='col-6'>
+								<div class='card rounded overflow-hidden border'>
+									<img src="image/YYEajKbojhjcabp.jpg!a-3-320x.png" class='card-img-top' />
+									<div class='card-img-overlay text-light d-flex align-items-end p-1 p-sm-3' style="background-color: rgba(0,0,0,0.3);">
+										天地劫幽城再临攻略 新手少走弯路技巧总汇
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<!-- pic end -->
+						<!-- read start-->
+						<div class='col-12 mt-3 pb-3 px-2 overflow-hidden'>
+							<ul class='nav nav-tabs'>
+								<li class='nav-item'>
+									<a href="#page" data-bs-toggle='tab' class='nav-link active text-dark'>
+										热门文章
+									</a>
+								</li>
+								<li class='nav-item'>
+									<a href="#user" data-bs-toggle='tab' class='nav-link text-dark'>
+										角色档案
+									</a>
+								</li>
+							</ul>
+							<div class="tab-content">
+								<div class='tab-pane fade show active py-4 px-1' id='page'>
+									<a href="#" class='shadow px-4 border py-2 float-start m-1'>
+										体力相关
+									</a>
+									<a href="#" class='shadow px-4 border py-2 float-start m-1'>
+										体力相关
+									</a>
+									<a href="#" class='shadow px-4 border py-2 float-start m-1'>
+										体力相关
+									</a>
+									<a href="#" class='shadow px-4 border py-2 float-start m-1'>
+										体力相关
+									</a>
+									<a href="#" class='shadow px-4 border py-2 float-start m-1'>
+										体力相关
+									</a>
+									<a href="#" class='shadow px-4 border py-2 float-start m-1'>
+										体力相关
+									</a>
+									<a href="#" class='shadow px-4 border py-2 float-start m-1'>
+										体力相关
+									</a>
+									<a href="#" class='shadow px-4 border py-2 float-start m-1'>
+										体力相关
+									</a>
+									<a href="#" class='shadow px-4 border py-2 float-start m-1'>
+										体力相关
+									</a>
+									<a href="#" class='shadow px-4 border py-2 float-start m-1'>
+										体力相关
+									</a>
+									<a href="#" class='shadow px-4 border py-2 float-start m-1'>
+										体力相关
+									</a>
+									<a href="#" class='shadow px-4 border py-2 float-start m-1'>
+										体力相关
+									</a>
+								</div>
+								<div class='tab-pane fade show py-4 px-1' id='user'>
+									<a href="#" class='shadow px-4 border py-2 float-start m-1'>
+										剑邪
+									</a>
+									<a href="#" class='shadow px-4 border py-2 float-start m-1'>
+										鲜于超
+									</a>
+									<a href="#" class='shadow px-4 border py-2 float-start m-1'>
+										杨云佐
+									</a>
+									<a href="#" class='shadow px-4 border py-2 float-start m-1'>
+										剑邪
+									</a>
+									<a href="#" class='shadow px-4 border py-2 float-start m-1'>
+										鲜于超
+									</a>
+									<a href="#" class='shadow px-4 border py-2 float-start m-1'>
+										杨云佐
+									</a>
+									<a href="#" class='shadow px-4 border py-2 float-start m-1'>
+										剑邪
+									</a>
+									<a href="#" class='shadow px-4 border py-2 float-start m-1'>
+										鲜于超
+									</a>
+									<a href="#" class='shadow px-4 border py-2 float-start m-1'>
+										杨云佐
+									</a>
+									<a href="#" class='shadow px-4 border py-2 float-start m-1'>
+										剑邪
+									</a>
+									<a href="#" class='shadow px-4 border py-2 float-start m-1'>
+										鲜于超
+									</a>
+									<a href="#" class='shadow px-4 border py-2 float-start m-1'>
+										杨云佐
+									</a>
+									<a href="#" class='shadow px-4 border py-2 float-start m-1'>
+										剑邪
+									</a>
+									<a href="#" class='shadow px-4 border py-2 float-start m-1'>
+										鲜于超
+									</a>
+									<a href="#" class='shadow px-4 border py-2 float-start m-1'>
+										杨云佐
+									</a>
+								</div>
+							</div>
+						</div>
+						
+						<!-- read end-->
+						<!-- time start-->
+						<div class='col-12'>
+							<div class='rounded mt-3 overflow-hidden border position-relative' style='height: 150px;background-image:url(./image/TfODCubojkqstaC.jpg!a-3-480x.jpg);background-size:cover ;background-position:center ;'>
+								<div class='position-absolute w-100 h-100 start-0 top-0' style="background-color:rgba(0,0,0,0.7) ;">
+									<div class='row h-100'>
+										<div class='col-4 h-100 d-flex justify-content-center align-items-center p-4'>
+											<img src="./image/TfODCubojkqstaC.jpg!a-3-480x.jpg" class="img-fluid" />
+										</div>
+										<div class='col-8 p-3 ps-0'>
+											<p class='text-light'>预订《天地劫》，第一时间获得测试时间、<br>游戏礼包等基础服务通知.</p>
+											<a href="#" class='rounded-pill addLink p-4 py-2'>
+												<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
+												  <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+												</svg>
+												<small>预定</small>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- time end -->
+					</div>
+				</div>
+			</div>
+			<!-- content  end-->
+			
+ 
+		</div>
+		<!-- 观幻志 主题站 start -->
+		<div class='bg-image text-center py-5' style='height:500px;background-image: url(image/p4_bg.jpg);'>
+			<h1 class='text-light display-4 fw-bold mt-5'>观幻志 主题站</h1>
+			<p class='text-light mt-4'>“普贤汝当知： 一切诸众生，无始幻无明， 皆从诸如来，圆觉心建立。 犹如虚空华，依空而有相， 空华若复灭，虚空本不动。</p>
+			<p class='text-light mt-1'>幻从诸觉生，幻灭觉圆满， 觉心不动故。若彼诸菩萨， 及末世众生，常应远离幻， 诸幻悉皆离。</p>
+		</div>
+		<!-- 观幻志 主题站 end -->
+		
+		<!-- 最新视频 start -->
+		<div class='container py-5'>
+			<div class='d-flex justify-content-between'>
+				<h5 class='d-flex align-items-center'>
+					<svg class='me-2' xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right-square-fill" viewBox="0 0 16 16">
+					  <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm5.5 10a.5.5 0 0 0 .832.374l4.5-4a.5.5 0 0 0 0-.748l-4.5-4A.5.5 0 0 0 5.5 4v8z"/>
+					</svg>
+					最新视频
+				</h5>
+				<a href="#" class='text-secondary'>更多 +</a>
+			</div>
+			<hr />
+			<div class='row mt-4'>
+				<div class='col-12 col-md-6 col-lg-3 mb-3'>
+					<div class='card overflow-hidden'>
+						<div class='position-relative'>
+							<img src="image/p5_list_201.jpg" class='img-fluid w-100' />
+							<div class='w-100 h-100 position-absolute start-0 top-0 d-flex justify-content-center align-items-center bg-hover' data-bs-toggle='modal' data-bs-target='#modalVideo' videosrc='media/tdj_092301.mp4'>
+								<img src="image/p5_play_btn_con.png" />
+							</div>
+						</div>
+						<div class='card-body'>
+							<h6 class='card-title'>高燃预警</h6>
+							<p class='card-subtitle text-truncate'>国风武侠天地劫PV首曝！</p>
+						</div>
+					</div>
+				</div>
+				<div class='col-12 col-md-6 col-lg-3 mb-3'>
+					<div class='card overflow-hidden'>
+						<div class='position-relative'>
+							<img src="image/p5_list_202.jpg" class='img-fluid w-100' />
+							<div class='w-100 h-100 position-absolute start-0 top-0 d-flex justify-content-center align-items-center bg-hover' data-bs-toggle='modal' data-bs-target='#modalVideo' videosrc='media/FST.mp4'>
+								<img src="image/p5_play_btn_con.png" />
+							</div>
+						</div>
+						<div class='card-body'>
+							<h6 class='card-title'>大神攻略</h6>
+							<p class='card-subtitle text-truncate'>二测角色节奏榜新鲜出炉，新手必读</p>
+						</div>
+					</div>
+				</div>
+				<div class='col-12 col-md-6 col-lg-3 mb-3'>
+					<div class='card overflow-hidden'>
+						<div class='position-relative'>
+							<img src="image/p5_list_203.jpg" class='img-fluid w-100' />
+							<div class='w-100 h-100 position-absolute start-0 top-0 d-flex justify-content-center align-items-center bg-hover' data-bs-toggle='modal' data-bs-target='#modalVideo' videosrc='media/tdj_2010031002.mp4'>
+								<img src="image/p5_play_btn_con.png" />
+							</div>
+						</div>
+						<div class='card-body'>
+							<h6 class='card-title'>大神攻略</h6>
+							<p class='card-subtitle text-truncate'>如何快速攻下樊城</p>
+						</div>
+					</div>
+				</div>
+				<div class='col-12 col-md-6 col-lg-3 mb-3'>
+					<div class='card overflow-hidden'>
+						<div class='position-relative'>
+							<img src="image/p5_list_204.jpg" class='img-fluid w-100' />
+							<div class='w-100 h-100 position-absolute start-0 top-0 d-flex justify-content-center align-items-center bg-hover' data-bs-toggle='modal' data-bs-target='#modalVideo' videosrc='media/BingliSkill.mp4'>
+								<img src="image/p5_play_btn_con.png" />
+							</div>
+						</div>
+						<div class='card-body'>
+							<h6 class='card-title'>绝学惊现</h6>
+							<p class='card-subtitle text-truncate'>冰璃角色实测体验</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 最新视频 end -->
+		<!-- 角色档案 start-->
+		<div class='container-fluid bg-white py-5'>
+			<div class='container'>
+				<div class='d-flex justify-content-between'>
+					<h5 class='d-flex align-items-center'>
+						<svg class='me-2' xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-diamond-half" viewBox="0 0 16 16">
+						  <path d="M9.05.435c-.58-.58-1.52-.58-2.1 0L.436 6.95c-.58.58-.58 1.519 0 2.098l6.516 6.516c.58.58 1.519.58 2.098 0l6.516-6.516c.58-.58.58-1.519 0-2.098L9.05.435zM8 .989c.127 0 .253.049.35.145l6.516 6.516a.495.495 0 0 1 0 .7L8.35 14.866a.493.493 0 0 1-.35.145V.989z"/>
+						</svg>
+						角色档案
+					</h5>
+					<a href="#" class='text-secondary'>更多 +</a>
+				</div>
+				<hr />
+				<div class='row mt-4'>
+					<div class='col-12 col-md-6 col-lg-3 mb-3'>
+						<div class='card overflow-hidden'>
+							<img src="image/OAxHWxboDdlyoqC.jpg!a-3-240x.png" class='card-img-top' />
+							<div class='card-img-overlay bg-hover text-white d-flex align-items-end py-3 py-md-2'>
+								剑邪角色介绍
+							</div>
+						</div>
+					</div>
+					<div class='col-12 col-md-6 col-lg-3 mb-3'>
+						<div class='card overflow-hidden'>
+							<img src="image/OogPJCboDdkCDAl.jpg!a-3-240x.png" class='card-img-top' />
+							<div class='card-img-overlay bg-hover text-white d-flex align-items-end py-3 py-md-2'>
+								杨云佐角色介绍
+							</div>
+						</div>
+					</div>
+					<div class='col-12 col-md-6 col-lg-3 mb-3'>
+						<div class='card overflow-hidden'>
+							<img src="image/njKXvIboDdlvtth.jpg!a-3-240x.png" class='card-img-top' />
+							<div class='card-img-overlay bg-hover text-white d-flex align-items-end py-3 py-md-2'>
+								鲜于超角色介绍
+							</div>
+						</div>
+					</div>
+					<div class='col-12 col-md-6 col-lg-3 mb-3'>
+						<div class='card overflow-hidden'>
+							<img src="./image/LskhfBboiBiprDD.jpg!a-3-240x.png" class='card-img-top' />
+							<div class='card-img-overlay bg-hover text-white d-flex align-items-end py-3 py-md-2'>
+								李凤莹角色介绍
+							</div>
+						</div>
+					</div>
+					<div class='col-12 col-md-6 col-lg-3 mb-3'>
+						<div class='card overflow-hidden'>
+							<img src="image/LskhfBboiBiprDD.jpga!a-3-240x.png" class='card-img-top' />
+							<div class='card-img-overlay bg-hover text-white d-flex align-items-end py-3 py-md-2'>
+								郸阴角色介绍
+							</div>
+						</div>
+					</div>
+					<div class='col-12 col-md-6 col-lg-3 mb-3'>
+						<div class='card overflow-hidden'>
+							<img src="image/FQkShuboDdlhhcu.jpg!a-3-240x.png" class='card-img-top' />
+							<div class='card-img-overlay bg-hover text-white d-flex align-items-end py-3 py-md-2'>
+								封寒月角色介绍
+							</div>
+						</div>
+					</div>
+					<div class='col-12 col-md-6 col-lg-3 mb-3'>
+						<div class='card overflow-hidden'>
+							<img src="image/ILimPsboDdlsgfg.jpg!a-3-240x.png" class='card-img-top' />
+							<div class='card-img-overlay bg-hover text-white d-flex align-items-end py-3 py-md-2'>
+								紫枫角色介绍
+							</div>
+						</div>
+					</div>
+					<div class='col-12 col-md-6 col-lg-3 mb-3'>
+						<div class='card overflow-hidden'>
+							<img src="image/ihLdsiboDbivFka.jpg!a-3-240x.png" class='card-img-top' />
+							<div class='card-img-overlay bg-hover text-white d-flex align-items-end py-3 py-md-2'>
+								紫蕴角色介绍
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+		<!-- 角色档案 end -->
+		<!-- 讯息模块 start -->
+		<div class='container py-5'>
+			<div class='row'>
+				<div class='col-12 col-lg-4'>
+					<div class='d-flex justify-content-between border-start border-warning border-5'>
+						<span class='d-flex align-items-center ms-3'>
+							攻略合集
+						</span>
+						<a href="#" class='text-secondary'>更多 +</a>
+					</div>
+					<hr />
+					<ul class='list-unstyled'>
+						<li class='d-flex justify-content-between'>
+							<a href="#" class='text-truncate needlink'>天地劫幽城再临 关于公测初始号和UP池选择地劫幽城</a>
+							<span class='text-secondary'>03/09</span>
+						</li>
+						<li class='d-flex mt-2 justify-content-between'>
+							<a href="#" class='text-truncate needlink'>天地劫幽城再临 关于公测初始号和UP池选择地劫幽城</a>
+							<span class='text-secondary'>03/09</span>
+						</li>
+						<li class='d-flex mt-2 justify-content-between'>
+							<a href="#" class='text-truncate needlink'>天地劫幽城再临 关于公测初始号和UP池选择地劫幽城</a>
+							<span class='text-secondary'>03/09</span>
+						</li>
+						<li class='d-flex mt-2 justify-content-between'>
+							<a href="#" class='text-truncate needlink'>天地劫幽城再临 关于公测初始号和UP池选择地劫幽城</a>
+							<span class='text-secondary'>03/09</span>
+						</li>
+						<li class='d-flex mt-2 justify-content-between'>
+							<a href="#" class='text-truncate needlink'>天地劫幽城再临 关于公测初始号和UP池选择地劫幽城</a>
+							<span class='text-secondary'>03/09</span>
+						</li>
+						<li class='d-flex mt-2 justify-content-between'>
+							<a href="#" class='text-truncate needlink'>天地劫幽城再临 关于公测初始号和UP池选择地劫幽城</a>
+							<span class='text-secondary'>03/09</span>
+						</li>
+						<li class='d-flex mt-2 justify-content-between'>
+							<a href="#" class='text-truncate needlink'>天地劫幽城再临 关于公测初始号和UP池选择地劫幽城</a>
+							<span class='text-secondary'>03/09</span>
+						</li>
+						<li class='d-flex mt-2 justify-content-between'>
+							<a href="#" class='text-truncate needlink'>天地劫幽城再临 关于公测初始号和UP池选择地劫幽城</a>
+							<span class='text-secondary'>03/09</span>
+						</li>
+					</ul>
+				</div>
+				<div class='col-12 col-lg-4 mt-2 mt-lg-0'>
+					<div class='d-flex justify-content-between border-start border-warning border-5'>
+						<span class='d-flex align-items-center ms-3'>
+							精品内容
+						</span>
+						<a href="#" class='text-secondary'>更多 +</a>
+					</div>
+					<hr />
+					<ul class='list-unstyled'>
+						<li class='d-flex justify-content-between'>
+							<a href="#" class='text-truncate needlink'>天地劫幽城213再临 关于公测初始号和UP池选择地劫幽城</a>
+							<span class='text-secondary'>03/09</span>
+						</li>
+						<li class='d-flex mt-2 justify-content-between'>
+							<a href="#" class='text-truncate needlink'>天地劫幽城再临 关于公测初始号和UP池选择地劫幽城</a>
+							<span class='text-secondary'>03/09</span>
+						</li>
+						<li class='d-flex mt-2 justify-content-between'>
+							<a href="#" class='text-truncate needlink'>天地劫幽城再临 关于公测初始号和UP池选择地劫幽城</a>
+							<span class='text-secondary'>03/09</span>
+						</li>
+						<li class='d-flex mt-2 justify-content-between'>
+							<a href="#" class='text-truncate needlink'>天地劫幽城再临 关于公测初始号和UP池选择地劫幽城</a>
+							<span class='text-secondary'>03/09</span>
+						</li>
+						<li class='d-flex mt-2 justify-content-between'>
+							<a href="#" class='text-truncate needlink'>天地劫幽城再临 关于公测初始号和UP池选择地劫幽城</a>
+							<span class='text-secondary'>03/09</span>
+						</li>
+						<li class='d-flex mt-2 justify-content-between'>
+							<a href="#" class='text-truncate needlink'>天地劫幽城再临 关于公测初始号和UP池选择地劫幽城</a>
+							<span class='text-secondary'>03/09</span>
+						</li>
+						<li class='d-flex mt-2 justify-content-between'>
+							<a href="#" class='text-truncate needlink'>天地劫幽城再临 关于公测初始号和UP池选择地劫幽城</a>
+							<span class='text-secondary'>03/09</span>
+						</li>
+						<li class='d-flex mt-2 justify-content-between'>
+							<a href="#" class='text-truncate needlink'>天地劫幽城再临 关于公测初始号和UP池选择地劫幽城</a>
+							<span class='text-secondary'>03/09</span>
+						</li>
+					</ul>
+				</div>
+				<div class='col-12 col-lg-4 mt-2 mt-lg-0'>
+					<div class='d-flex justify-content-between border-start border-warning border-5'>
+						<span class='d-flex align-items-center ms-3'>
+							最新咨询
+						</span>
+						<a href="#" class='text-secondary'>更多 +</a>
+					</div>
+					<hr />
+					<ul class='list-unstyled'>
+						<li class='d-flex justify-content-between'>
+							<a href="#" class='text-truncate needlink'>天地劫幽123城再临 关于公测初始号和UP池选择地劫幽城</a>
+							<span class='text-secondary'>03/09</span>
+						</li>
+						<li class='d-flex mt-2 justify-content-between'>
+							<a href="#" class='text-truncate needlink'>天地劫幽城再临 关于公测初始号和UP池选择地劫幽城</a>
+							<span class='text-secondary'>03/09</span>
+						</li>
+						<li class='d-flex mt-2 justify-content-between'>
+							<a href="#" class='text-truncate needlink'>天地劫幽城再临 关于公测初始号和UP池选择地劫幽城</a>
+							<span class='text-secondary'>03/09</span>
+						</li>
+						<li class='d-flex mt-2 justify-content-between'>
+							<a href="#" class='text-truncate needlink'>天地劫幽城再临 关于公测初始号和UP池选择地劫幽城</a>
+							<span class='text-secondary'>03/09</span>
+						</li>
+						<li class='d-flex mt-2 justify-content-between'>
+							<a href="#" class='text-truncate needlink'>天地劫幽城再临 关于公测初始号和UP池选择地劫幽城</a>
+							<span class='text-secondary'>03/09</span>
+						</li>
+						<li class='d-flex mt-2 justify-content-between'>
+							<a href="#" class='text-truncate needlink'>天地劫幽城再临 关于公测初始号和UP池选择地劫幽城</a>
+							<span class='text-secondary'>03/09</span>
+						</li>
+						<li class='d-flex mt-2 justify-content-between'>
+							<a href="#" class='text-truncate needlink'>天地劫幽城再临 关于公测初始号和UP池选择地劫幽城</a>
+							<span class='text-secondary'>03/09</span>
+						</li>
+						<li class='d-flex mt-2 justify-content-between'>
+							<a href="#" class='text-truncate needlink'>天地劫幽城再临 关于公测初始号和UP池选择地劫幽城</a>
+							<span class='text-secondary'>03/09</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- 讯息模块 end -->
+		<!-- 联系模块 start-->
+		<div class='container-fluid bg-image py-5' style="background-image: url(image/content-01.png);">
+			<div class='container'>
+				<div class='row'>
+					<div class='col-12 col-md-5 order-2 order-md-0 text-center position-relative pt-5 pt-md-0'>
+						<img src="image/ewm.png" />
+						<h5 class='mt-2 text-light'>官方微信公众号</h5>
+						<div class='h-100 position-absolute end-0 top-0 bg-light d-none d-md-block' style='width: 1px;'></div>
+						<div class='w-100 position-absolute end-0 top-0 bg-light d-block d-md-none' style='height: 1px;'></div>
+					</div>
+					<div class='col-12 col-md-7 d-flex justify-content-between pb-5 pb-md-0'>
+						<ul class='list-unstyled text-light mt-5 ms-5'>
+							<li>官方玩家Q群7：78247X384（已满）</li>
+							<li class='mt-2'>官方玩家Q群8：1428X6279（已满）</li>
+							<li class='mt-2'>官方玩家Q群9：4725X2601</li>
+						</ul>
+						<img src="image/page6_peo.png" />
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 联系模块 end -->
+		<!-- footer页尾-->
+		<div class='container-fluid' style="background-color: #e1dcc9;">
+			<div class='container py-5 px-5 pb-4'>
+				<div class='text-center'>
+					<a href="#">
+						<img src="image/bot_logo.png" />
+					</a>
+				</div>
+				<hr />
+				<ul class='list-unstyled text-center'>
+					<li>
+						<a href="#"><small>用户权限</small></a> | <a href="#"><small>隐私协议</small></a> | <a href="#"><small>关于紫龙</small></a> | <a href="#"><small>客服中心</small></a> | <a href="#"><small>家长监护</small></a> | <small>适龄提示：本网站提供的游戏适合18岁以上的玩家</small>
+					</li>
+					<li>
+						<small>备案号：京ICP备15063824号 版本：1.0.3</small>
+					</li>
+					<li>
+						<small>设计者/制作者：李游Leo@myjavascript.cn</small>
+					</li>
+					<li>
+						<small>北京紫御科技有限公司版权所有 COPYRIGHT 2015 ZLONGAME.COM LIMITED. ALL RIGHTS RESERVED.</small>
+					</li>
+					<li>
+						<small>京公网安备 11010502034977号 京ICP证160189号 文网文：京网文〔2018〕11178-1019号</small>
+					</li>
+				</ul>
+			</div>
+		</div>
+		
+		<!-- footer页尾-->
+		
+		
+		
+		
+		
+		
+		<!-- modalVideo-->
+		<div class='modal fade' id='modalVideo' data-bs-backdrop='static'>
+			<div class='modal-dialog modal-lg modal-dialog-scrollable modal-dialog-centered modal-fullscreen-md-down'>
+				<div class='modal-content'>
+					<div class='modal-header'>
+						<h5 class='modal-title d-flex align-items-center'>
+							<svg class='me-2' xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right-square-fill" viewBox="0 0 16 16">
+							  <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm5.5 10a.5.5 0 0 0 .832.374l4.5-4a.5.5 0 0 0 0-.748l-4.5-4A.5.5 0 0 0 5.5 4v8z"/>
+							</svg>
+							<span id='modalTitle'>天地劫 超绝手游</span>
+						</h5>
+						<button class='btn-close' id='closeNode' data-bs-dismiss='modal'></button>
+					</div>
+					<div class='modal-body p-0 d-flex justify-content-center align-items-center' style='line-height: 0;'>
+						<video id='videoNode' src="media/tdj_21040701.mp4" class='w-100' controls></video>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- modalEnd-->
+		<script>
+			videoPlayNode.onclick = function(){
+				videoNode.src = this.getAttribute('videosrc');
+				modalTitle.innerHTML = '天地劫 超绝手游';
+				videoNode.play();
+			};
+			closeNode.onclick = function(){
+				videoNode.pause();
+			};
+			
+			var allVideoNode = document.querySelectorAll('.bg-hover');
+			for(var i = 0;i< allVideoNode.length;i++){
+				allVideoNode[i].onclick = function(){
+					videoNode.src = this.getAttribute('videosrc');
+					videoNode.play();
+					modalTitle.innerHTML = this.parentNode.nextElementSibling.children[1].innerText
+				}
+			};
+		</script>
+	</body>
+</html>

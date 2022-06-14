@@ -1,0 +1,10 @@
+<view class="liveStyle-container">
+    <view class="title">当天生活指数</view>
+    <view class="liveStyle">
+        <view class="liveStyle-item" wx:for="{{liveStyle}}" wx:key="index">
+            <view class="name">{{item.name}} : {{item.category}}</view>
+            <view class="text">{{item.text}}</view>
+        </view>
+    </view>
+
+</view>

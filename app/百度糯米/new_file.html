@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			html{height: 100%;}
+			*{margin: 0;padding: 0;text-decoration: none;list-style: none;}
+			.ttop{width: 100%;height: 40px; background: #f2f2f2;}
+			.top{height: 100%;width: 1217px;font-size: 10px;margin: 0 auto;}
+			.ul1{margin-left: 112px;line-height: 40px;float: left;} 
+			.top ul li{display: inline;margin-left: 22px;float: left;}
+			.ul2{line-height: 40px;float: left;margin-left: 290px;}
+			.done{background: url(img/s_1.gif)no-repeat 57px center;padding-right: 9px;}
+/*search*/
+			.search-all{width: 1217px;height: 111px;margin: 0 auto;}
+			.search-logo{margin-top: 25px;float: left;}
+			.dinw{margin-left: 35px;margin-top: 44px; float: left;height: 17px;width: 67px;font-size: 16px;text-indent: 17px;background: url(img/left_node.gif)no-repeat;}
+			.dinw a{color: #242424;background: url(img/right_node.gif)no-repeat 35px 7px;padding-right: 18px;}
+			.search-box{width: 576px;height: 41px;float: left;margin-left: 75px;margin-top: 25px;}
+			.box-left{height: 35px;width: 459px;float: left;overflow: hidden;border: #cfa65b 3px solid;text-indent: 20px;}
+			.box-left .text{outline: none;border: none;width: 425px;line-height: 36px;}
+			.box-right{width: 111px;height: 41px;margin-left: 465px; background: #cfa65b;line-height: 41px;text-align: center;}
+			.box-right a{color: #fdfcfa;}
+			.search-box ul{margin-top: 9px;margin-left: 3px;}
+			.search-box li{float: left;margin-right: 18px;font-size: 13px;}
+			.search-box li a{color: #aeaeae;}
+			.search-left{margin-left: 14px;margin-top: 25px;height: 37px;width: 145px;border: #f4ead7 solid 2px;background: #fff8eb;float: left;}
+			.search-left li{padding-left: 13px;float: left;width: 22px;height: 22px;margin-top: 7.5px;}
+			.search-left .s-l-li1{background: url(img/t_1.gif)no-repeat 13px 0;}
+			.search-left .s-l-li2{background: url(img/t_2.gif)no-repeat 13px 0;}
+			.search-left .s-l-li3{background: url(img/t_3.gif)no-repeat 13px 0;}
+			.search-left .s-l-{width: 1px;color: #efe5d1;}
+/*pe stare*/
+			.pe-all{width: 1217px;height: 430px;margin: 0 auto;}
+			.pe-all .pe-left{height: 100%;width: 235px;float: left;}
+			.pe-all .pe-left-top{width: 100%;height: 45px;background: #cda45a;}
+			.pe-all .pe-left-top a{color: white;height: auto;width: auto;margin-left: 17px;line-height: 45px;}
+			.pe-all .pe-left-top div{background: url(img/pe-left-top-1.png)no-repeat;width: 19px;height: 14px;margin-right: 18px;margin-top: 16px;float: right;}
+			.pe-all .pe-left .pe-left-bottom{width: 100%;height: 385px;background: #313131;}
+			.pe-all .pe-left .pe-left-bottom li{margin-left: 16px;line-height: 48px;font-size: 17px;}
+			.pe-all .pe-left .pe-left-bottom li a{color: #e5e5e5;}
+			.pe-all .pe-left .pe-left-bottom li span{font-size: 12px;float: right;margin-right: 17px;line-height: 48px;color: #7e7e7e;}
+			.pe-all .pe-top{height: 42px;width: 980px;border-bottom: 3px solid #cda45a;float: left;}
+			.pe-all .pe-top ul{margin-left: 30px;line-height: 42px;}
+			.pe-all .pe-top ul li{float: left;margin-right: 61px;}
+			.pe-all .pe-top ul li a{color: #414141;font-size: 16px;}
+			.pe-all .pe-top ul .pe-top-li1{padding-right: 14px;background: url(img/pe-top-li1-1.png)no-repeat 32px 18px;}
+			.pe-all .pe-top ul .pe-top-li2{padding-right: 15px;background: url(img/pe-top-li2-1.png)no-repeat 32px 10px;}
+			.pe-all .pe-pe2{float: left;width: 721px;height: 374px; margin-top: 11px;margin-left: 12px;}
+			.pe-all .pe-pe3{float: left;width: 238px;height: 165px;margin-top: 11px;margin-left: 11px;}
+			.pe-all .pe-pe4{float: left;width: 237px;height: 197px;margin-top: 12px;margin-left: 11px;}
+/*movie*/
+			.movie{margin: 48px auto; width: 1218px;height: 431px;border-bottom: 1px solid #ededed;}
+			.movie-top{height: 23px;width: 100%;}
+			.movie-top-span1{font-size: 23px;color: #2b2b2b;float: left;}
+			.movie-top-span2{font-size: 14px;color: #2b2b2b;float: right;margin-right: 32px; line-height: 42px;}
+			.movie-top-a{font-size: 14px;color: #2b2b2b;float: right;padding-right: 13px;background: url(img/movie-top-a-1.png)no-repeat 56px 13px;line-height: 42px;}
+			.movie-pe{margin: 22px auto;width: 100%;height: 387px;}
+			.movie-pe li{width: 182px;height: 100%;float: left;margin-left: 24px;}
+			.movie-pe .movie-pe1{margin-left: 0px;}
+			.movie-pe .movie-pe-text{font-size: 18px;margin: 26px auto;line-height: 18px;text-align: center;}
+			.movie-pe .movie-pe-div{margin: 16px auto;height: 34px;width: 120px;border: 2px solid #d1b380;text-align: center;border-radius: 2px;}
+			.movie-pe .movie-pe-a{line-height: 34px;color: #d1b380;}
+/*luiyou*/
+			.luiyou{margin: 47px auto;height: 412px;width: 1218px;border-bottom: 2px #efefef solid;}
+			.luiyou .luiyou-top{margin-top: 47px;width: 100%;height: 23px;}
+			.luiyou .luiyou-top .luiyou-top-li1{font-size: 23px;margin-left: 1px;color: #3d3d3d;float: left;}
+			.luiyou .luiyou-top .luiyou-top-li2{font-size: 13px;float: right;padding-right: 11px;background: url(./img/luiyou-top-li2.png)no-repeat 57px 2px;margin-top: 10px;}
+			.luiyou .luiyou-top .luiyou-top-li2 a{color: black;}
+			.luiyou-pe{margin-top: 21px;}
+			.luiyou-pe li{float: left;margin-left: 23px;}
+			.luiyou-pe .luiyou-pe1{margin-left: 0;}
+			.luiyou-pe7{margin-top: 20px;}
+			.shancen{width: 1218px;height: 386px;margin: 0 auto;}
+			.shancen-top{margin-top: 75px;width: 100%;height: 23px;}
+			.shancen-top-li1{font-size: 23px;margin-left: 1px;color: #3d3d3d;}
+			.shancen-linebig{width: 92px;height: 18px; border-bottom: 2px solid black;float: left;}
+			.shancen-line{float: left;border-bottom: 1px solid #e9e9e9;height: 20px;width: 1126px;}
+			.shancen-wz{margin-top: 35px;width: 243.5px;float: left;}
+			.shancen-wz li{height: 36px;width: 243.5px; font-size: 14px;}
+			.shancen-wz li a{color: #737373;}
+/*bottom*/
+			.bottom{width: 100%;height: 290px;background: #f2f2f2;margin-bottom: 0;position: relative;}
+			.bottom-body{height: 100%;width: 1218px;margin: 0 auto;}
+			.bottom-body1{font-size: 16px;color: black;font-weight: bold;margin-bottom: 6px;}
+			.bottom-body ul{margin-top: 49px;}
+			.bottom-body a{color: #9c9c9c;}
+			.bottom-pe{height: 39px;width: 133px;border: 2px solid #d1b380;border-radius: 2px;text-align: center;}
+			.shancen-wz .bottom-pe-a{line-height: 39px;color: #caa66e;font-size: 13px;}
+			.bottom-foot-div{position: absolute;bottom: 25px;left: 50%;margin-left: -114px;}
+			.bottom-foot{background: url(img/bottom-pe-1.png)no-repeat 0 1px;padding-left: 23px;}
+		</style>
+	</head>
+	<body>
+		<div class="ttop">
+			<div class="top">
+				<ul class="ul1">
+					<li>Hi,欢迎来到百度糯米</li>
+					<li><a href="index.html" style="color: #c6af83;">请登陆</a> </li>
+					<li><a href="#" style="color: black;">免费注册</a> </li>
+				</ul>
+				<ul class="ul2">
+					<li><a href="#" style="color: black;">个人中心</a></li>
+					<li><a class="done" href="#" style="color: black;">最近浏览</a> </li>
+					<li>|</li>
+					<li><a class="done" href="#" style="color: black;">糯米</a> </li>
+					<li><a class="done" href="#" style="color: black;">我是商家</a> </li>
+					<li>|</li>
+					<li><a href="#" style="color: black;">帮助中心</a> </li>
+					<li><a href="#" style="color: black;">食品安全</a> </li>
+					
+				</ul>
+			</div>
+		</div>
+		<div class="search-all">
+			<div class="search-logo"><img src="img/logo.gif"/></div>
+			<div class="dinw">
+				<a class="search-id">徐州</a>
+			</div>
+			<div class="search-box">
+				
+				<div class="box-left"><input type="text" class="text"></div>
+				<div class="box-right"><a href="#">搜索</a></div>
+				<ul class="search-bottom">
+					<li><a href="#">自助火锅</a></li>
+					<li><a href="#">天虹商城</a></li>
+					<li><a href="#">中医推拿按摩</a></li>
+					<li><a href="#">化妆</a></li>
+					<li><a href="#">钢琴培训</a></li>
+				</ul>
+			</div>
+			<ul class="search-left">
+				<li class="s-l-li1"></li>
+				<li class="s-l-">|</li>
+				<li class="s-l-li2"></li>
+				<li class="s-l-">|</li>
+				<li class="s-l-li3"></li>
+			</ul>
+		</div>
+		<div class="pe-all">
+			<div class="pe-left">
+				<div class="pe-left-top">
+					<a href="#" >全部分类</a>
+					<div></div>
+				</div>
+				<div class="pe-left-bottom">
+					<ul>
+						<li class="plbo-li"><a href="#">酒店</a><span class="plbo-li-sqan">北京/上海/广州</span></li>
+						<li class="plbo-li"><a href="#">旅游</a><span class="plbo-li-sqan">目的地攻略/行程计划</span></li>
+						<li class="plbo-li"><a href="#">电影</a><span class="plbo-li-sqan">看影片/找影院</span></li>
+						<li class="plbo-li"><a href="#">休闲娱乐</a><span class="plbo-li-sqan">KTY/温泉洗浴</span></li>
+						<li class="plbo-li"><a href="#">结婚</a><span class="plbo-li-sqan">婚纱摄影/婚庆服务</span></li>
+						<li class="plbo-li"><a href="#">生活服务</a><span class="plbo-li-sqan">配镜/鲜花</span></li>
+						<li class="plbo-li"><a href="#">美食</a><span class="plbo-li-sqan">小吃快餐/自助餐/火锅</span></li>	
+						<li class="plbo-li"><a href="#">丽人</a><span class="plbo-li-sqan">美发/美容spa/美甲</span></li>
+					</ul>
+				</div>
+			</div>
+			<div class="pe-top">
+				<ul >
+					<li><a href="#">首页</a></li>
+					<li><a href="#">酒店</a></li>
+					<li class="pe-top-li1"><a href="#">出行</a></li>
+					<li class="pe-top-li2"><a href="#">电影</a></li>
+					<li><a href="#">结婚</a></li>
+					<li><a href="#">外卖</a></li>
+				</ul>
+			</div>
+			<div class="pe-pe2"><img src="img/pe2-1.png"/></div>
+			<div class="pe-pe3"><img src="img/pe3-1.png"/></div>
+			<div class="pe-pe4"><img src="img/pe-pe4-1.png" /></div>
+		</div>
+		<div class="movie">
+			<div class="movie-top"><span class="movie-top-span1">热映电影</span><a class="movie-top-a" href="#">查看更多</a><span class="movie-top-span2">看电影/找影院/看票房</span></div>
+			<ul class="movie-pe">
+				<li class="movie-pe1">
+					<img src="img/movie-pe1-1.png" />
+					<p class="movie-pe-text" >复仇者联盟4：终局...</p>
+					<div class="movie-pe-div"><a href="#"class="movie-pe-a">选座购票</a></div>
+				</li>
+				<li class="movie-pe2">
+					<img src="img/movie-pe2-1.png" />
+					<p class="movie-pe-text" >皮卡丘大侦探</p>
+					<div class="movie-pe-div"><a href="#"class="movie-pe-a">选座购票</a></div>
+				</li>
+				<li class="movie-pe3">
+					<img src="img/movie-pe3-1.png" />
+					<p class="movie-pe-text" >何以为家</p>
+					<div class="movie-pe-div"><a href="#"class="movie-pe-a">选座购票</a></div>
+				</li>
+				<li class="movie-pe4">
+					<img src="img/movie-pe4-1.png" />
+					<p class="movie-pe-text" >一个母亲的复仇</p>
+					<div class="movie-pe-div"><a href="#"class="movie-pe-a">选座购票</a></div>
+				</li>
+				<li class="movie-pe5">
+					<img src="img/movie-pe5-1.png" />
+					<p class="movie-pe-text" >进京城</p>
+					<div class="movie-pe-div"><a href="#"class="movie-pe-a">选座购票</a></div>
+				</li>
+				<li class="movie-pe6">
+					<img src="img/movie-pe6-1.png" />
+					<p class="movie-pe-text" >罗马</p>
+					<div class="movie-pe-div"><a href="#" class="movie-pe-a">选座购票</a></div>
+				</li>
+			</ul>
+		</div>
+		<div class="luiyou">
+				<ul class="luiyou-top">
+					<li class="luiyou-top-li1">旅游</li>
+					<li class="luiyou-top-li2"><a href="#">查看更多</a>	</li>
+				</ul>
+				<ul class="luiyou-pe">
+					<li class="luiyou-pe1"><a href="#"><img src="img/luiyou-pe1-1.png"></a></li>
+					<li class="luiyou-pe2"><a href="#"><img src="img/luiyou-pe2-1.png"></a></li>
+					<li class="luiyou-pe3"><a href="#"><img src="img/luiyou-pe3-1.png"></a></li>
+				</ul>
+			</div>
+		<div class="luiyou">
+			<ul class="luiyou-top">
+				<li class="luiyou-top-li1">结婚</li>
+				<li class="luiyou-top-li2"><a href="#">查看更多</a>	</li>
+			</ul>
+			<ul class="luiyou-pe">
+				<li class="luiyou-pe1"><a href="#"><img src="img/luiyou-pe4-1.png"></a></li>
+				<li class="luiyou-pe2"><a href="#"><img src="img/luiyou-pe5-1.png"></a></li>
+				<li class="luiyou-pe3"><a href="#"><img src="img/luiyou-pe6-1.png"></a></li>
+				<li class="luiyou-pe7"><a href="#"><img src="img/luiyou-pe7-1.png"></a></li>
+			</ul>
+		</div>
+		<div class="shancen">
+			<ul class="shancen-top">
+				<li class="shancen-top-li1">热门商城</li>
+			</ul>
+				<div class="shancen-linebig"></div>
+				<div class="shancen-line"></div>
+				<ul class="shancen-wz">
+					<li><a href="#">朝阳大悦城</a></li>
+					<li><a href="#">五道口购物中心</a></li>
+					<li><a href="#">爱琴海购物中心</a></li>
+					<li><a href="#">东方银座购物中心</a></li>
+					<li><a href="#">中关村广场购物中心</a></li>
+				</ul>
+				<ul class="shancen-wz">
+					<li><a href="#">朝阳大悦城</a></li>
+					<li><a href="#">五道口购物中心</a></li>
+					<li><a href="#">爱琴海购物中心</a></li>
+					<li><a href="#">东方银座购物中心</a></li>
+					<li><a href="#">中关村广场购物中心</a></li>
+				</ul>
+				<ul class="shancen-wz">
+					<li><a href="#">朝阳大悦城</a></li>
+					<li><a href="#">五道口购物中心</a></li>
+					<li><a href="#">爱琴海购物中心</a></li>
+					<li><a href="#">东方银座购物中心</a></li>
+					<li><a href="#">中关村广场购物中心</a></li>
+				</ul>
+				<ul class="shancen-wz">
+					<li><a href="#">朝阳大悦城</a></li>
+					<li><a href="#">五道口购物中心</a></li>
+					<li><a href="#">爱琴海购物中心</a></li>
+					<li><a href="#">东方银座购物中心</a></li>
+					<li><a href="#">中关村广场购物中心</a></li>
+				</ul>
+				<ul class="shancen-wz">
+					<li><a href="#">朝阳大悦城</a></li>
+					<li><a href="#">五道口购物中心</a></li>
+					<li><a href="#">爱琴海购物中心</a></li>
+					<li><a href="#">东方银座购物中心</a></li>
+					<li><a href="#">中关村广场购物中心</a></li>
+				</ul>
+		</div>
+		<div class="bottom">
+			<div class="bottom-body">
+				<ul class="shancen-wz">
+					<li class="bottom-body1"><a class="bottom-body1" href="#">朝阳大悦城</a></li>
+					<li><a href="#">五道口购物中心</a></li>
+					<li><a href="#">爱琴海购物中心</a></li>
+				</ul>
+				<ul class="shancen-wz">
+					<li class="bottom-body1"><a class="bottom-body1" href="#">朝阳大悦城</a></li>
+					<li><a href="#">五道口购物中心</a></li>
+					<li><a href="#">爱琴海购物中心</a></li>
+				</ul>
+				<ul class="shancen-wz">
+					<li class="bottom-body1"><a class="bottom-body1" href="#">朝阳大悦城</a></li>
+					<li><a href="#">五道口购物中心</a></li>
+					<li><a href="#">爱琴海购物中心</a></li>
+				</ul>
+				<ul class="shancen-wz">
+					<li class="bottom-body1"><a class="bottom-body1" href="#">朝阳大悦城</a></li>
+					<li><a href="#">五道口购物中心</a></li>
+					<li><a href="#">爱琴海购物中心</a></li>
+					<li><a href="#">东方银座购物中心</a></li>
+				</ul>
+				<ul class="shancen-wz">
+					<li class="bottom-body1"><a class="bottom-body1" href="#">朝阳大悦城</a></li>
+					<li><a href="#">五道口购物中心</a></li>
+					<li><a href="#">爱琴海购物中心</a></li>
+					<li><div class="bottom-pe"><a href="#"class="bottom-pe-a">手机专享优惠</a></div></li>
+				</ul>
+				<div class="bottom-foot-div"><p class="bottom-foot" style="text-decoration: line-through;">公网安备 XXXXXXXXXXXXX号</p></div>
+			</div>
+		</div>
+	</body>
+</html>

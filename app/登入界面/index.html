@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="language" content="English">
+		<meta name="author" content="James Swineson">
+		<link href="css/index.css" rel="stylesheet" media="screen">
+		<title></title>
+		<style>
+		*{margin: 0;padding: 0;text-decoration: none;}
+		html{height: 100%;}
+		body{background: url(img/212819-15087652994988.jpg)no-repeat ;background-size: cover;height: 100%;}
+		.denru{width: 600px;height: 900px;background: rgba(255,255,255,0.7);border-radius: 10px;position: absolute;left: 50% ;top: 50%;margin-left: -300px;margin-top: -450px;}
+		.text1{font-size: 50px;text-align: center;margin-top: 97px;line-height: 50px;}
+		.usename{font-size: 18px;text-indent: 82px;margin-top: 79px;}
+		.zh{width: 500px;height: 80px;border-bottom: 3px solid black;margin:0 auto;background: url(img/user_login1.gif)no-repeat 17px 30px;}
+		.sr{width: 468px;height: 80px;border: none;outline: none;float: left;margin-left: 58px;font-size: 22px;line-height: 80px;background: rgba(255,255,255,0);}
+		.logoin{margin-top: 21px;margin-left: 450px;font-size: 19px;color: #676767;height: 19px;line-height: 19px;}
+		.login{width: 526px;height: 68px;margin: 0 auto;line-height: 68px;text-align: center;background: url(./img/bg-button2.gif)no-repeat repeat; border-radius: 30px;margin-top: 20px;font-size: 25px;}
+		.zc{margin-top: 40px;margin-left: 245px;font-size: 20px;}
+		.pe{height: 50px;margin-top: 25px;}
+		.pe img{margin-left: 20px;float: left;}
+		</style>
+	</head>
+	<body>
+		<canvas id="header-canvas"></canvas>
+		<script src="js/jquery-3.4.1.min.js"></script>
+		<script src="js/hidpi-canvas.min.js"></script>
+		<script src="js/TweenLite.min.js"></script>
+		<script src="js/EasePack.min.js"></script>
+		<script src="js/CSSPlugin.min.js"></script>
+		<script src="js/index.js"></script>
+		<div class="denru">
+			<div class="text1"><strong>登入</strong></div>
+			<div class="usename">用户名：</div>
+			<div class="zh">
+				<input class="sr" type="text" placeholder="请输入用户名" />
+			</div>
+			<div class="usename" style="margin-top: 40px;">密码：</div>
+			<div class="zh" style="background: url(img/pass_login.gif)no-repeat 17px 30px;">
+				<input class="sr" type="password" placeholder="请输入密码" />
+			</div>
+			<div class="logoin">
+				<a href="#">忘记密码？</a>
+			</div>
+			<div class="login">
+				<a href="#"><b>登入</b></a>
+			</div>
+			<div class="zc">
+				第三方登入
+			</div>
+			<div class="pe">
+				<a href="#"><img style="margin-left: 170px;" src="img/qq.gif"/></a>
+				<a href="#"> <img src="img/wx.gif" /></a>
+				<a href="#"><img src="img/wb.gif" /></a>
+			</div>
+			<div class="zc" >
+				<a href="#">注册新账号</a>
+			</div>
+		</div>
+	</body>
+</html>

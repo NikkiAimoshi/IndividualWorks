@@ -1,0 +1,1212 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>网易游戏</title>
+		<style>
+		
+			*{margin: 0;padding: 0;text-decoration: none;list-style: none;}
+			body {
+			    background-color: #f6f7fb;
+			    overflow-x: hidden;
+			}
+			.topNavigation{height: 100px;width: 100%;position: absolute;}
+			.topNavigationBG{height: 100%;width: 1920px;position: absolute;left: 50%; background: #fff;opacity: 0.5;z-index: 2;margin-left: -960px;}
+			.topNavigationlist{height: 100%;width: 1260px;margin: auto;position: relative;z-index: 3;}
+			.logo{width: 177px;height: 58px;float: left;margin-top: 21px;float: left;}
+			.topNavigationUL{margin-top: 42px;margin-left: 90px;line-height: 17px;font-size: 16px;float: left;width: 852px;height: 17px;}
+			.topNavigationUL li{margin-right: 17px;float: left;}
+			.topNavigationUL li a{color: #000;}
+			.topNavigationUL li a:hover{color: #cf0f32;}
+			.topNavigationlist .topNavigationMenu{height: 120px;width: 120px;background: #cf1132;position: absolute;right: 0;transition: 0.3s;cursor: pointer;}
+			.topNavigationlist .topNavigationMenu.active{background: #282b2d;}
+			.topNavigationlist .topNavigationMenu .topNavigationMenuClick{height: 120px;width: 120px;z-index: 3;position: absolute;}
+			.topNavigationlist .topNavigationMenuPE{width: 34px;height: 34px;margin: auto;margin-top: 35px;background: url(img/game-bg.png)no-repeat 0 5px;}
+			.topNavigationlist .topNavigationMenuPE.active{background: url(img/banner_active.png);}
+			.topNavigationMenu span{float: left;font-size: 14px;color: #fff;height: 14px;width: 100%;text-align: center;margin-top: 14px;line-height: 14px;}
+			.topNavigationMenu span.active{display: none;}
+			.topNavigationlist .topNavigationMenu .topMenuShow{position: absolute;width: 1260px;height: 0px;background: #282B2D;right: 0;top: 100px;transition: 0.5s;cursor: auto;overflow: hidden;}
+			
+			.topNavigationlist .topNavigationMenu .topMenuShow.active{height: 931px;}
+			.topNavigationlist .topNavigationMenu .topMenuShow .topMenuShowTop{height: 85px;width: 100%;}
+			.topNavigationlist .topNavigationMenu .topMenuShow .topMenuShowTop p{float: left;margin-top: 40px;margin-left: 65px;font-size: 20px;color: aliceblue;height: 20px;}
+			.topNavigationlist .topNavigationMenu .topMenuShow .topMenuShowTop .div2{width: 180px;height: 13px;float: right;margin-top: 44px;margin-right: 40px;}
+			.topNavigationlist .topNavigationMenu .topMenuShow .topMenuShowTop .div2 span{padding-left: 15px;font-size: 12px;float: left;width: 65px;margin-top: 0;}
+			.topNavigationlist .topNavigationMenu .topMenuShow .topMenuShowTop .div2 .span1{background: url(img/title_2.png)no-repeat 0 4px;}
+			.topNavigationlist .topNavigationMenu .topMenuShow .topMenuShowTop .div2 .span2{background: url(img/title_3.png)no-repeat 0 4px;margin-left: 15px;}
+			.topNavigationlist .topNavigationMenu .topMenuShow .topMenuShowTitle{width: 100%;height: 50px;background: #35373a;}
+			 .topNavigationlist .topNavigationMenu .topMenuShow .topMenuShowTitle .Title{height: 16px;width: 120px;margin-top: 17px;float: left;margin-left: 40px;}
+		  	 .topNavigationlist .topNavigationMenu .topMenuShow .topMenuShowTitle .Title div{height: 100%;width: 4px;background: #cc0225;float: left;}
+			 .topNavigationlist .topNavigationMenu .topMenuShow .topMenuShowTitle .Title p{float: right;font-size: 16px;line-height: 16px;color: aliceblue;}
+			 .topNavigationlist .topNavigationMenu .topMenuShow .topMenuShowTitle .T1{height: 100%;width: 150px;border-left: 1px solid #424242;float: left;margin-left: 285px;}
+			.topNavigationlist .topNavigationMenu .topMenuShow .topMenuShowTitle .T1 .Title{margin-left: 0;}
+			.topNavigationlist .topNavigationMenu .topMenuShow .topMenuShowGameTreeLeft{width: 445px;height: 736px;float: left;}
+			.topNavigationlist .topNavigationMenu .topMenuShow .topMenuShowGameTreeLeft .ul1{width: 147px;float: left;margin-top: 0px;margin-left: 0px;border-left: 1px solid #424242;}
+			.topNavigationlist .topNavigationMenu .topMenuShow .topMenuShowGameTreeLeft .ul1 li{margin-left: 35px;}
+			.topNavigationlist .topNavigationMenu .topMenuShow .topMenuShowGameTreeLeft .ul2{width: 123px;float: left;margin-top: 0px;margin-left: 35px;}
+			.topNavigationlist .topNavigationMenu .topMenuShow .topMenuShowGameTreeLeft .ul3{width: 126px;float: left;margin-top: 0px;margin-left: 13px;}
+			.topNavigationlist .topNavigationMenu .topMenuShow .topMenuShowGameTreeRight{width: 812px;height: 736px;border-left: 1px solid #424242;float: left;}
+			.topNavigationlist .topNavigationMenu .topMenuShow .topMenuShowGameTreeRight .ul2{width: 155px;float: left;margin-top: 0px;margin-left: 36px;}
+			.topNavigationlist .topNavigationMenu .topMenuShow .topMenuShowGameTreeRight .ul1{width: 155px;float: left;margin-top: 0px;margin-left: 0px;border-left: 1px solid #424242;}
+			.topNavigationlist .topNavigationMenu .topMenuShow .topMenuShowGameTreeRight .ul1 li{margin-left: 35px;}
+			.topNavigationlist .topNavigationMenu .topMenuShow .topMenuShowGameTreeRight .ul3{width: 155px;float: left;margin-top: 0px;margin-left: 0px;}
+			 
+			 .topNavigationlist .topNavigationMenu .topMenuShow  ul .liTitle{width: 100%;height: 70px;font-size: 14px;color: #646464;font-weight: 600;line-height: 70px;margin: 0;text-indent: 10px;}
+			 .topNavigationlist .topNavigationMenu .topMenuShow  ul li{margin-bottom: 15px;font-size: 14px;color: #616161;height: 14px;}
+			 .topNavigationlist .topNavigationMenu .topMenuShow  ul li a{color: #fcfcfc;}
+			 .topNavigationlist .topNavigationMenu .topMenuShow  ul .liNo1 a{padding-right: 25px;background: url(img/title_1.png)no-repeat right center;}
+			 .topNavigationlist .topNavigationMenu .topMenuShow  ul .liHot a{padding-right: 17px;background: url(img/title_2.png) no-repeat right center;}
+			 .topNavigationlist .topNavigationMenu .topMenuShow  ul .liNew a{padding-right: 17px;background: url(img/title_3.png) no-repeat right center;}
+			.topNavigationlist .topNavigationMenu .topMenuShow  .topMenuShowBottom{width: 100%;height: 60px;float: left;}
+			 .topNavigationlist .topNavigationMenu .topMenuShow  .topMenuShowBottom div{width: 58px;height: 16px;margin: auto;margin-top: 25px;cursor: pointer;}
+			 
+			
+			.bana{width: 100%;height: 950px;position: relative;z-index: 0;}
+			.banaBodyPE{
+						max-width: 1920px;
+						height: 100%;
+						margin: 0 auto;
+						position: relative;
+						background: #666;}
+			.bana .banaBodyPE .lili{
+								    width: 100%;
+								    height: 100%;
+								    position: absolute;
+									transition: 2s;
+									opacity: 0;}
+			.bana .banaBodyPE {}
+			.bana .banaBodyPE li.active{opacity: 1;}
+			
+			
+			.bana .banaBodyPE .baneTextBody{width: 1219px;padding-left: 41px; height: 100%;margin: 0 auto;z-index: 5;display: block;}
+			.bana .banaBodyPE .baneTextBody h2{width: 345px; height: 36px;line-height: 36px;font-size: 36px;color: white;margin-top: 275px;float: left;}
+			.bana .banaBodyPE .baneTextBody h3{height: 36px;line-height: 36px;font-size: 36px;color: white;margin-top: 16px;width: 100%;float: left;}
+			.bana .banaBodyPE .baneTextBody p{height: 77px;width: 450px; line-height: 24px;font-size: 14px;color: white;border-top: 1px solid #cf1731;padding-top: 15px;float: left;margin-top: 17px;}
+			.bana .banaBodyPE .baneTextBody div{width: 140px;height: 50px;border-radius: 25px;background: #cf0f32;text-align: center;line-height: 50px;font-size: 16px;color: white;float: left;position: absolute;bottom: 403px;cursor: pointer;}
+			.bana .banaBodyPE ol{width: 1260px;height: 20px; padding-right: 5px;margin: 0 auto;position: relative;top: 570px;}
+			.bana .banaBodyPE ol li{width: 20px;height: 20px;background: white;float: left;margin-right: 10px;border-radius: 10px;cursor: pointer;}
+			.bana .banaBodyPE ol li:hover{width: 14px;height: 14px;background: #cf0f32;border: 3px solid white;}
+			.bana .banaBodyPE ol li.change{width: 14px;height: 14px;background: #cf0f32;border: 3px solid white;}
+			.bana .banaBodyPE ol li.first{margin-left: 1100px;}
+			.bana .banaBodyPE .TheRight .baneTextBody h2{margin-left: 765px;}
+			.bana .banaBodyPE .TheRight .baneTextBody h3{text-indent: 765px;}
+			.bana .banaBodyPE .TheRight .baneTextBody div{margin-left: 765px;}
+			.bana .banaBodyPE .TheRight .baneTextBody p{float: right;}
+			.bana .banaBodyPE .TheBlack .baneTextBody h2{color: black;}
+			.bana .banaBodyPE .TheBlack .baneTextBody h3{color: black;}
+			.bana .banaBodyPE .TheBlack .baneTextBody p{color: black;}
+			.baneJTLeft{width: 45px;height: 80px;position: absolute;top: 475px;left: 0;background: #cf0f32;text-align: center;line-height: 94px;cursor: pointer;}
+			.baneJTLeft .show{width: 250px;height: 80px;border-left: 1px solid #666;background: #353537;position: absolute;right: -250px;top: 0;display: none;}
+			.baneJTLeft .show .bannerLeftShowDiv{height: 60px;width: 80px;background-image: url(img/086883a5-5839-45f8-a683-dc217bb4fb92.jpeg);background-size: cover;margin: 10px;float: left;}
+			.baneJTLeft .show .bannerLeftShowSP{height: 20px;width: 150px;float: right;text-align: center;line-height: 20px;font-size: 20px;margin-top: 16px;color: white;font-weight: bold;}
+			.baneJTLeft .show .bannerLeftShowSP1{height: 14px;width: 150px;float: right;text-align: center;line-height: 14px;font-size: 14px;color: white;margin-top: 15px;}
+			.baneJTLeft:hover{background: #353537;}
+			.baneJTLeft:hover .show{display: block;}
+			.baneJTRight{width: 45px;height: 80px;position: absolute;top: 475px;right: 0;background: #cf0f32;text-align: center;line-height: 94px;cursor: pointer;}
+			.baneJTRight .show{width: 250px;height: 100%;border-right: 1px solid #666;background: #353537;position: absolute;left: -250px;top: 0;display: none;}
+			.baneJTRight .show .bannerRightShowDiv{height: 60px;width: 80px;background-image: url(img/086883a5-5839-45f8-a683-dc217bb4fb92.jpeg);background-size: cover;margin: 10px;float: right;}
+			.baneJTRight .show .bannerRightShowSP{height: 20px;width: 150px;float: left;text-align: center;line-height: 20px;font-size: 20px;margin-top: 16px;color: white;font-weight: bold;}
+			.baneJTRight .show .bannerRightShowSP1{height: 14px;width: 150px;float: left;text-align: center;line-height: 14px;font-size: 14px;color: white;margin-top: 15px;}
+			.baneJTRight:hover{background: #353537;}
+			.baneJTRight:hover .show{display: block;}
+			
+			.banaLand{width: 1260px;height: 350px; background: #282b2d;position: absolute;bottom: 0;left: 50%;margin-left: -630px;}
+			.banaLandLeft{height: 100%;width: 210px;float: left;}
+			.banaLandLeft ul{width: 100%;height: 100%;float: left;}
+			/*.banaLandLeft ul .active{background: #080909;}*/
+			.banaLandLeft ul .onclick{background: #080909;}
+			.banaLandLeft ul .onclick .banaLandLeftSJX{display: block;}
+			.banaLandLeft ul li{float: left;height: 70px;width: 100%;position: relative;}
+			.banaLandLeft ul li g{width: 4px;height: 70px;background: #dc0f35;float: left;position: absolute;opacity: 0;}
+			.banaLandLeft ul li div{float: left;width: 100%;height: 100%;}
+			.banaLandLeft ul li div .banaLandLeftPE{width: 40px;height: 40px;background-size: 40px;margin-top: 15px;margin-left: 12px;}
+			.banaLandLeft ul li div span{margin-left: 15px;margin-top: 18px;color: #fff;height: 14px;font-size: 14px;float: left;}
+			.banaLandLeft ul li div p{margin-left: 15px;margin-top: 9px;font-size: 12px;height: 12px;float: left;color: #686f74;}
+			.banaLandLeft ul li .banaLandLeftSJX{width: 9px;height: 16px; position: absolute;right: -9px;top: 27px; background: url(img/sj.png)no-repeat;display: none;}
+			.banaLandModdle{height: 100%;width: 510px;float: left;position: relative;}
+			.banaLandModdle img{height: 100%;width: 100%;position: absolute;left: 0;top: 0;opacity: 0;transition:.5s;}
+			.banaLandModdle img.active{display: block;opacity: 1;}
+			.banaLandRight{height: 100%;width: 460px;float: left;margin-left: 40px;}
+			.banaLandRightTitle{width: 100%;height: 96px;font-size: 23px;font-weight: 600;line-height: 120px;}
+			.banaLandRightTitle p{display: inline-block;line-height: 25px;color: #d10f32;}
+			.banaLandRight .downLine{width: 100%;height: 1px;background: #333638;}
+			.banaLandRightTuiJian{height: 25px;width: 100%;background: #333638;margin-top: 14px;}
+			.banaLandRightTuiJian div{float: left;}
+			.banaLandRightTuiJian p{display: inline-block;font-size: 14px;font-weight: 600;color: #fff;margin-left: 9px;float: left;height: 100%;line-height: 25px;}
+			.banaLandRightLeiBiao{width: 100%;height: 186px;float: left;margin-top: 19px;}
+			.banaLandRightLeiBiao li{width: 100%;height: 14px;line-height: 14px;margin-bottom: 17px;}
+			.banaLandRightLeiBiao li p{color: #a6a6a6;float: left;margin-right: 11px;}
+			.banaLandRightLeiBiao li a{font-size: 14px;color: #f6f5f5;}
+			.banaLandRightLeiBiao li span{color: #a6a6a6;float: right;font-size: 12px;}
+			.forePE{margin: auto; width: 1260px;height: 130px;margin-top: 40px;}
+			.forePE div{height: 100%;width: 300px;margin-right: 20px;float: left;}
+			.forePE div img{height: 100%;width: 100%;}
+			.forePE .forePELast{margin-right: 0;}
+			.societies{width: 1260px;height: 272px;margin: auto;}
+			.societiesTitle{height: 22px;width: 100%;margin-top: 40px;}
+			.societiesTitle div{height: 100%;width: 4px;background: #cc0225;float: left;}
+			.societiesTitle p{float: left;font-size: 22px;line-height: 22px;margin-left: 16px;}
+			.societiesLBT{width: 940px;height: 178px;border: 1px solid #e6e5e5;float: left;margin-top: 30px;}
+			.societiesLBT div{width: 65px;height: 100%;}
+			.societiesLBT .JTLeft{float: left;}
+			.societiesLBT .JTLeft div{background: url(img/group_last.png);width: 16px;height: 28px;margin: auto;margin-top: 75px;cursor: pointer;}
+			.societiesLBT .JTLeft:hover div{background: url(img/group_last_hover.png)}
+
+			.societiesLBT .JTRight{float: right;background: #f1f2f6;}
+			.societiesLBT .JTRight div{background: url(img/group_next.png);width: 16px;height: 28px;margin: auto;margin-top: 75px;cursor: pointer;}
+			.societiesLBT .JTRight:hover div{background: url(img/group_next_hover.png)}
+			.societiesLBT ul{width: 8000px;height: 100%; float: left;position: relative;left: 0; transition: 1s;}
+			.societiesLBT ul li ol li{height: 124px;width: 90px;margin-top: 33px;margin-right: 72px;float: left;position: relative;}
+			
+			.societiesLBT ul li ol .li1{margin-left: 25px;}
+			.societiesLBT ul li ol li img{border-radius: 15px;transition: .3s;}
+			.societiesLBT ul li ol li.active img{transform: translateX(-10px);}
+			.societiesLBT ul li ol li>p{line-height: 34px;height: 34px;width: 100%;font-size: 14px;text-align: center;transition: .3s;}
+			.societiesLBT ul li ol li.active p{transform: translateX(-10px);}
+			.societiesLBT ul li ol li a{width: 32px;height: 122px;background: #cf1132;border-radius: 16px;float: left;position: absolute;right: -32px; top: -10px; font-size: 18px;transition: .2s;opacity: 0;}
+			.societiesLBT ul li ol li.active a{opacity: 1;}
+			.societiesLBT ul li ol li.active a p{right: -1px;}
+			.societiesLBT ul li ol li a p{width: 14px;font-size: 14px;color: white;margin-top: 20px;position: absolute;right: 9px;}
+			.societiesLBT .middle{width: 810px;height: 100%; float: left;overflow: hidden;}
+			.societiesRight{margin-top: 30px;float: right;}
+			.yx{width: 1260px;height: 748px;margin: auto;}
+			.LMYX{width: 960px;height: 100%;float: left;}
+			.LMYXTitle{height: 22px;width: 100%;margin-top: 40px;}
+			.LMYXTitle div{height: 100%;width: 4px;background: #cc0225;float: left;}
+			.LMYXTitle p{float: left;font-size: 22px;line-height: 22px;margin-left: 16px;}
+			.LMYXTitle span{float: right;padding-right: 31px;background: url(img/zhuan.png)no-repeat 58px 2px;font-size: 16px;color: #000;margin-right: 20px;}
+			.LMYXTitleUL{width: 960px;height: 676px;margin-top: 10px;}
+			.LMYXTitleUL li{width: 300px;height: 318px;margin-top: 20px;margin-right: 20px;float: left;background-color: #fff;position: relative;overflow: hidden;transition: .5s;}
+			.LMYXTitleUL li.scale{transform: scale(0);}
+			.LMYXTitleUL li>img{width: 300px;height: 170px;}
+			.LMYXTitleUL li>h3{margin-top: 20px;text-indent: 30px;}
+			.LMYXTitleUL li>p{width: 254px;font-size: 14px;margin: auto;height: 36px;margin-top: 11px;color: #b8b8b8;}
+			.LMYXTitleUL li>div{width: 268px;height: 1px;margin: auto;background: #efefef;margin-top: 17px;}
+			.LMYXTitleUL li>span{float: right;padding-right: 21px;margin-right: 20px;background: url(img/ysjt.png)no-repeat 55px 3px;font-size: 12px;margin-top: 4px;color: #808080;}
+			.LMYXTitleUL li:hover .solider{transform: translateY(0);}
+			.LMYXTitleUL li .solider{width: 100%;height: 170px;background-color: rgba(196,0,0,0.5);position: absolute;left: 0;top: 0;transform: translateY(-100%);transition: .5s;}
+			.LMYXTitleUL li .solider img{height: 80px;width: 80px;float: left;margin-top: 45px;margin-left: 25px;margin-right: 16px;}
+			.LMYXTitleUL li .solider .solider-right{width: 179px;height: 100%;float: left;background-color: rgba(0,0,0,0);}
+			.LMYXTitleUL li .solider .solider-right p{font-size: 14px;line-height: 14px;color: white;margin-top: 50px;font-weight: bold;}
+			.LMYXTitleUL li .solider .solider-right span{font-size: 14px;line-height: 14px;color: white;margin-top: 15px;padding-left: 18px;float: left;background: url(img/down_load.png)no-repeat;}
+			.XYCS{width: 300px;height: 100%;float: left;}
+			.XYCSTitle{height: 22px;width: 100%;margin-top: 40px;}
+			.XYCSTitle div{height: 100%;width: 4px;background: #cc0225;float: left;}
+			.XYCSTitle p{float: left;font-size: 22px;line-height: 22px;margin-left: 16px;}
+			.XYCS ul{width: 100%;height: 656px;margin-top: 30px;}
+			.XYCS ul li{border: solid 1px #ebebef;border-top: none;width: 298px;height: 108px;position: relative;}
+			.XYCS ul .li1 img{width: 100%;height: 100%;margin: 0;} 
+			.XYCS ul li img{width: 68px;height: 68px;margin-top: 21px;margin-left: 26px;float: left;}
+			.XYCS ul li h4{margin-top: 23px;margin-left: 22px;font-size: 16px;height: 16px;width: 139px;float: left;line-height: 16px;}
+			.XYCS ul li p{margin-top: 8px;margin-left: 22px;font-size: 14px;height: 14px;width: 139px;float: left;line-height: 14px;}
+			.XYCS ul li span{margin-top: 12px;margin-left: 22px;padding-left: 20px;background: url(img/timer.png)no-repeat  0 0px;height: 13px;width: 139px;float: left;line-height: 13px;font-size: 12px;}
+			.XYCS .JT{float: right;width: 65px;height: 100%;position: absolute;right: 0;}
+			.XYCS .JT div{background: url(img/group_next.png);width: 16px;height: 28px;margin: auto;cursor: pointer;margin-top: 41px;}
+			.XYCS ul li:hover  .JT div{background: url(img/group_next_hover.png)}
+			.XYCS ul li:hover{background: #ebebef}
+			.treeGame{width: 100%;height: 614px;background: #fff;margin-top: 102px;transition: 1s;overflow: hidden;position: relative;}
+			.treeGame.active{height: 1000px;}
+			.treeGame a{color: #606060;}
+			.treeGame a:hover{color: #000;}
+			.treeGameLand{width: 1262px;height: 900px;margin: auto;}
+			.treeGameLandLeft{width: 447px;height: 100%;float: left;}
+			.treeGameLandLeft .Title{width: 445px;border-left: 1px solid #eee4e6;height: 66px;float: left;}
+			.treeGameLandLeft .XYCSTitle{height: 22px;width: 100%;float: left;margin-top: 25px;}
+			.treeGameLandLeft .XYCSTitle div{height: 100%;width: 4px;background: #cc0225;float: left;}
+			.treeGameLandLeft .XYCSTitle p{float: left;font-size: 22px;line-height: 22px;margin-left: 16px;}
+			.treeGameLandLeft .ul1{width: 136px;padding-left: 36px;border-left: 1px solid #eee4e6;float: left;}
+			.treeGameLandLeft .ul2{width: 126px;float: left;margin-top: 51px;}
+			.treeGameLandLeft .ul3{width: 110px;padding-left: 36px;border-left: 1px solid #eee4e6;float: left;}
+			.treeGameLandRight{width: 814px;height: 100%;float: left;}
+			.treeGameLandRight .Title{width: 812px;border-left: 1px solid #eee4e6;border-right: 1px solid #eee4e6;height: 66px;float: left;}
+			.treeGameLandRight .XYCSTitle{height: 22px;width: 100%;float: left;margin-top: 25px;}
+			.treeGameLandRight .XYCSTitle div{height: 100%;width: 4px;background: #cc0225;float: left;}
+			.treeGameLandRight .XYCSTitle p{float: left;font-size: 22px;line-height: 22px;margin-left: 16px;}
+			.treeGameLandRight .ul1{width: 140px;padding-left: 36px;border-left: 1px solid #eee4e6;float: left;}
+			
+			.treeGameLandRight .ul2{width: 146px;padding-left: 36px;border-left: 1px solid #eee4e6;float: left;}
+			.treeGameLandRight .ul3{width: 146px;float: left;margin-top: 51px;}
+			.treeGameLandRight .ul4{width: 161px;float: left;border-right: 1px solid #eee4e6;}
+			.treeGameLandRight .ul4 .li1{margin-top: 66px;}
+			.treeGameLand ul .liRed{width: 100%;height: 51px;font-size: 14px;color: #af0000;font-weight: 600;line-height: 60px;margin: 0;height: ;}
+			.treeGameLand ul li{margin-top: 15px;font-size: 14px;color: #616161;height: 14px;}
+			.treeGameLand ul .liNo1 a{padding-right: 25px;background: url(img/title_1.png)no-repeat right center;}
+			.treeGameLand ul .liHot a{padding-right: 17px;background: url(img/title_2.png) no-repeat right center;}
+			.treeGameLand ul .liNew a{padding-right: 17px;background: url(img/title_3.png) no-repeat right center;}
+			.treeGameBottom{width: 100%;height: 160px;position: absolute;bottom: 0px;z-index: 3;}
+			
+			.treeGameBottom .box{width: 1260px;height: 100%;margin: auto;position: relative;background-color: white;}
+			.treeGameBottom .box .div1{width: 120px;height: 36px;background: #f1f1f1;margin: auto;margin-top: 40px;float: left;position: absolute;left: 50%;margin-left: -60px;text-align: center;line-height: 36px;cursor: pointer;transition: .5s;}
+			.treeGameBottom .box .div1:hover{background: #d6d7da;}
+			.treeGameBottom .box .div2{width: 170px;height: 36px;margin: auto;margin-top: 100px;float: left;position: absolute;left: 50%;margin-left: -80px;}
+			.treeGameBottom .box .div2 span{padding-left: 15px;font-size: 12px;float: left;}
+			.treeGameBottom .box .div2 .span1{background: url(img/title_2.png)no-repeat 0 4px;}
+			.treeGameBottom .box .div2 .span2{background: url(img/title_3.png)no-repeat 0 4px;margin-left: 8px;}
+			.serveLink{width: 1260px;height: 334px;margin: auto;}
+			.serveLink .top{width: 100%;height: 16px;margin-top: 40px;margin-bottom: 18px;float: left;}
+			.serveLink .top li{float: left;width: 136px;height: 100%;padding-left: 30px;background: url(./img/links.png)no-repeat left bottom;}
+			.serveLink .Left{width: 498px;height: 162px;float: left;}
+			.serveLink .Left li{width: 150px;height: 80px;margin-top: 2px;margin-right: 16px;float: left;background: #e3e3e3;text-align: center;transition: .5s;}
+			.serveLink .Left li h4{height: 15px;font-size: 15px;width: 100%;float: left;margin-top: 18px;}
+			.serveLink .Left li p{font-size: 11px;width: 100%;float: left;margin-top: 16px;color: #747474;line-height: 12px;transition: .5s;}
+			.serveLink .Left li:hover{background-color: red;color: white;}
+			.serveLink .Left li:hover p{color: white;}
+			.serveLink .Right{width: 760px;height: 162px;float: left;}
+			.serveLink .Right li{width: 150px;height: 80px;margin-top: 2px;margin-right: 2px;float: left;background: #e3e3e3;text-align: center;transition: .5s;}
+			.serveLink .Right li h4{height: 15px;font-size: 15px;width: 100%;float: left;margin-top: 18px;}
+			.serveLink .Right li p{font-size: 11px;width: 100%;float: left;margin-top: 16px;color: #747474;line-height: 12px;transition: .5s;}
+			.serveLink .Right li:hover{background-color: red;color: white;}
+			.serveLink .Right li:hover p{color: white;}
+			.serveLink .Bottom{height: 16px;width: 100%;margin-top: 37px;float: left;}
+			.serveLink .Bottom li {float: left;margin-right: 4px;font-size: 12px;}
+			.serveLink .Bottom li a{color: #000;}
+			.serveLink .Bottom li a:hover{color: #cc0225;}
+			.serveLink .Bottom .liBig{font-size: 16px;}
+			.serveLink .Bottom .BottomRight{float: right;}
+			.webBottom{width: 100%;height: 170px;background: #272a2c;}
+			.webBottom .BottomTop{width: 1040px;height: 100%;margin: auto;}
+			.webBottom .BottomTop .logo{width: 304px;height: 31px;margin-top: 42px;float: left;}
+			.webBottom .BottomTop .logo div{float: left;}
+			.webBottom .BottomTop .links{width: 700px;height: 12px;margin-top: 40px;float: left;}
+			.webBottom .BottomTop .links li{float: left;font-size: 12px;margin-right: 3px;color: aliceblue;}
+			.webBottom .BottomTop .links li a{color: #fff;}
+			.webBottom .BottomTop .links li a:hover{text-decoration: underline;}
+			.webBottom .BottomTop p{margin-top: 12px;float: left;font-size: 12px;color: #fff;}
+			.webBottom .BottomTop span{float: left;margin-top: 23px;font-size: 12px;color: #fff;}
+			.webBottom .BottomTop .links2{margin-top: 12px;width: 100%;height: 12px;float: left;color: #fff;}
+			.webBottom .BottomTop .links2 li{float: left;font-size: 12px;margin-right: 3px;color: aliceblue;}
+			.webBottom .BottomTop .links2 li a{color: #fff;}
+			.webBottom .BottomTop .links2 li a:hover{text-decoration: underline;}
+		</style>
+	</head>
+	<body>
+		<div class="topNavigation">
+			<div class="topNavigationBG"></div>
+			<div class="topNavigationlist">
+				<div class="logo"><img src="img/logo.png"/></div>
+				<ul class="topNavigationUL">
+					<li><a href="#">网易游戏会员俱乐部</a></li>
+					<li>·</li>
+					<li><a href="#">关于网易游戏</a></li>
+					<li>·</li>
+					<li><a href="#">合作品牌部</a></li>
+					<li>·</li>
+					<li><a href="#">游戏热爱者</a></li>
+					<li>·</li>
+					<li><a href="#">网易大神</a></li>
+					<li>·</li>
+					<li><a href="#">人才招聘</a></li>
+					<li>·</li>
+					<li><a href="#">客服中心</a></li>
+				</ul>
+				<div class="topNavigationMenu">
+					<div class="topNavigationMenuClick"></div>
+					<div class="topNavigationMenuPE"></div>
+					<span>游戏列表</span>
+					<div class="topMenuShow">
+						<div class="topMenuShowTop">
+							<p>游戏列表</p>
+							<div class="div2"><span class="span1">热门游戏</span><span class="span2">最新游戏</span> </div>
+						</div>
+						<div class="topMenuShowTitle">
+							
+								<div class="Title">
+									<div></div>
+									<p>新游测试</p>
+								</div>
+								<div class="T1">
+									<div class="Title ">
+										<div></div>
+										<p>新游测试</p>
+									</div>
+								</div>
+						</div>
+						<div class="topMenuShowGameTreeLeft">
+							<ul class="ul2">
+								<li class="liTitle">角色扮演</li>
+								<li class="liNo1"><a href="#">梦幻西游电脑版</a></li>
+								<li class="liNew"><a href="#">天下3</a></li>
+								<li class="liNew"><a href="#">逆水寒</a></li>
+								<li class="liHot"><a href="#">永劫无间</a></li>
+								<li><a href="#">天谕</a></li>
+								<li><a href="#">超激斗梦境</a></li>
+								<li><a href="#">新大话3经典版</a></li>
+								<li><a href="#">镇魔曲</a></li>
+								<li><a href="#">大唐无双</a></li>
+								<li><a href="#">魔兽世界</a></li>
+								<li><a href="#">新飞飞</a></li>
+							</ul>
+							<ul class="ul3">
+								<li class="liTitle"></li>
+								<li class="liNo1"><a href="#">梦幻西游电脑版</a></li>
+								<li class="liHot"><a href="#">天下3</a></li>
+								<li class="liHot"><a href="#">逆水寒</a></li>
+								<li class="liHot"><a href="#">永劫无间</a></li>
+								<li><a href="#">天谕</a></li>
+								<li><a href="#">超激斗梦境</a></li>
+								<li><a href="#">新大话3经典版</a></li>
+								<li><a href="#">镇魔曲</a></li>
+								<li><a href="#">大唐无双</a></li>
+								<li><a href="#">魔兽世界</a></li>
+								<li><a href="#">新飞飞</a></li>
+							</ul>
+							<ul class="ul1">
+								<li class="liTitle">角色扮演</li>
+								<li class="liNo1"><a href="#">梦幻西游</a></li>
+								<li class="liHot"><a href="#">天下3</a></li>
+								<li class="liHot"><a href="#">逆水寒</a></li>
+								<li class="liHot"><a href="#">永劫无间</a></li>
+								<li><a href="#">天谕</a></li>
+								<li><a href="#">超激斗梦境</a></li>
+								<li><a href="#">新大话</a></li>
+								<li><a href="#">镇魔曲</a></li>
+								<li><a href="#">大唐无双</a></li>
+								<li><a href="#">魔兽世界</a></li>
+								<li><a href="#">新飞飞</a></li>
+							</ul>
+						</div>
+						<div class="topMenuShowGameTreeRight">
+							<ul class="ul2">
+								<li class="liTitle">新品推荐</li>
+								<li class="liHot"><a href="#">大话2经典版</a></li>
+								<li class="liHot"><a href="#">天下3</a></li>
+								<li class="liHot"><a href="#">逆水寒</a></li>
+								<li class="liHot"><a href="#">永劫无间</a></li>
+								<li><a href="#">天谕</a></li>
+								<li><a href="#">超激斗梦境</a></li>
+								<li><a href="#">新大话3经典版</a></li>
+								<li><a href="#">镇魔曲</a></li>
+								<li><a href="#">大唐无双</a></li>
+								<li><a href="#">魔兽世界</a></li>
+								<li><a href="#">新飞飞</a></li>
+							</ul>
+							<ul class="ul1">
+								<li class="liTitle">角色扮演</li>
+								<li class="liNo1"><a href="#">梦幻西游</a></li>
+								<li class="liHot"><a href="#">天下3</a></li>
+								<li class="liHot"><a href="#">逆水寒</a></li>
+								<li class="liHot"><a href="#">永劫无间</a></li>
+								<li><a href="#">天谕</a></li>
+								<li><a href="#">超激斗梦境</a></li>
+								<li><a href="#">新大话</a></li>
+								<li><a href="#">镇魔曲</a></li>
+								<li><a href="#">大唐无双</a></li>
+								<li><a href="#">魔兽世界</a></li>
+								<li><a href="#">新飞飞</a></li>
+							</ul>
+							<ul class="ul3">
+								<li class="liTitle"></li>
+								<li class="liNew"><a href="#">大话2经典版</a></li>
+								<li class="liHot"><a href="#">天下3</a></li>
+								<li class="liHot"><a href="#">逆水寒</a></li>
+								<li class="liHot"><a href="#">永劫无间</a></li>
+								<li><a href="#">天谕</a></li>
+								<li><a href="#">超激斗梦境</a></li>
+								<li><a href="#">新大话3经典版</a></li>
+								<li><a href="#">镇魔曲</a></li>
+								<li><a href="#">大唐无双</a></li>
+								<li><a href="#">魔兽世界</a></li>
+								<li><a href="#">新飞飞</a></li>
+							</ul>
+							<ul class="ul3">
+								<li class="liTitle"></li>
+								<li class="liNew"><a href="#">大话2经典版</a></li>
+								<li class="liNew"><a href="#">天下3</a></li>
+								<li class="liHot"><a href="#">逆水寒</a></li>
+								<li class="liHot"><a href="#">永劫无间</a></li>
+								<li><a href="#">天谕</a></li>
+								<li><a href="#">超激斗梦境</a></li>
+								<li><a href="#">新大话3经典版</a></li>
+								<li><a href="#">镇魔曲</a></li>
+								<li><a href="#">大唐无双</a></li>
+								<li><a href="#">魔兽世界</a></li>
+								<li><a href="#">新飞飞</a></li>
+							</ul>
+							<ul class="ul3">
+								<li class="liTitle"></li>
+								<li class="liNew"><a href="#">大话2经典版</a></li>
+								<li class="liNew"><a href="#">天下3</a></li>
+								<li class="liNew"><a href="#">逆水寒</a></li>
+								<li class="liNew"><a href="#">永劫无间</a></li>
+								<li><a href="#">天谕</a></li>
+								<li><a href="#">超激斗梦境</a></li>
+								<li><a href="#">新大话3经典版</a></li>
+								<li><a href="#">镇魔曲</a></li>
+								<li><a href="#">大唐无双</a></li>
+								<li><a href="#">魔兽世界</a></li>
+								<li><a href="#">新飞飞</a></li>
+							</ul>
+						</div>
+						<div class="topMenuShowBottom">
+							<div><img src="img/slider_top.png" /> </div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+<!--bana-->
+		<div class="bana">
+			<ul class="banaBodyPE">
+				
+				<li class="lili active TheRight" style="background: url(img/b44514e7-2e31-4567-8e75-2b9ea9583e4e.jpeg)no-repeat center;">
+					<div class="baneTextBody">
+						<h2>2022校园招聘启动！</h2>
+						<h3>网易游戏校招全球进行中</h3>
+						<p>网易游戏(互娱)2022校园招聘启动！开发5+类型.100+岗位.3000+offer，欢迎各位具备[无界]精神的你，以想象力.突破力.创造力，再定义赛博未来的无限可能性。</p>
+						<div>查看详情</div>
+					</div>	
+				</li>
+				<li class="lili" style="background: url(img/bb351359-e561-4e5b-9041-96f42a6fb75d.jpeg)no-repeat center;">
+					<div class="baneTextBody">
+						<h2>2022校园招聘启动！</h2>
+						<h3>网易游戏校招全球进行中</h3>
+						<p>网易游戏(互娱)2022校园招聘启动！开发5+类型.100+岗位.3000+offer，欢迎各位具备[无界]精神的你，以想象力.突破力.创造力，再定义赛博未来的无限可能性。</p>
+						<div>查看详情</div>
+					</div>	
+				</li>
+				<li class="lili TheBlack" style="background: url(img/bca3d7d2-79f8-4ba1-b624-740f15d55718.jpeg)no-repeat center;">
+					<div class="baneTextBody">
+						<h2>2022校园招聘启动！</h2>
+						<h3>网易游戏校招全球进行中</h3>
+						<p>网易游戏(互娱)2022校园招聘启动！开发5+类型.100+岗位.3000+offer，欢迎各位具备[无界]精神的你，以想象力.突破力.创造力，再定义赛博未来的无限可能性。</p>
+						<div>查看详情</div>
+					</div>	
+				</li>
+				<li class="lili" style="background: url(img/fb2c2ca9-1c42-46a5-a3a0-538d2058a387.jpeg)no-repeat center;">
+					<div class="baneTextBody">
+						<h2>2022校园招聘启动！</h2>
+						<h3>网易游戏校招全球进行中</h3>
+						<p>网易游戏(互娱)2022校园招聘启动！开发5+类型.100+岗位.3000+offer，欢迎各位具备[无界]精神的你，以想象力.突破力.创造力，再定义赛博未来的无限可能性。</p>
+						<div>查看详情</div>
+					</div>	
+				</li>
+				<li class="lili TheBlack" style="background: url(./img/b44514e7-2e31-4567-8e75-2b9ea9583e4e.jpeg) center;">
+					<div class="baneTextBody">
+						<h2>2022校园招聘启动！</h2>
+						<h3>网易游戏校招全球进行中</h3>
+						<p>网易游戏(互娱)2022校园招聘启动！开发5+类型.100+岗位.3000+offer，欢迎各位具备[无界]精神的你，以想象力.突破力.创造力，再定义赛博未来的无限可能性。</p>
+						<div>查看详情</div>
+					</div>	
+				</li>
+					
+				<ol>
+						<li class="first change"></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li class=""></li>
+				</ol>
+				
+					
+			</ul>
+			
+			<div class="baneJTLeft">
+				<img src="img/btn-last.png" />
+				<div class="show">
+					<div class="bannerLeftShowDiv"></div>
+					<span class="bannerLeftShowSP">哈利波特：魔法</span>
+					<span class="bannerLeftShowSP1">全平台正式上线</span>
+				</div>
+			</div>
+			<div class="baneJTRight">
+				<img src="img/btn-next.png" />
+				<div class="show">
+					<div class="bannerRightShowDiv"></div>
+					<span class="bannerRightShowSP">哈利波特：魔法</span>
+					<span class="bannerRightShowSP1">全平台正式上线</span>
+				</div>
+			</div>
+			
+			<div class="banaLand">
+				<div class="banaLandLeft">
+					<ul class="banaLandLeftUL">
+						<li class="active onclick">
+							<g class="banaLeftLine"></g>
+							<div>
+								<div class="banaLandLeftPE" style="background: url(img/887685ca-49ea-4b89-9d0d-e0a7fb37b395.png);background-size: 40px;"></div>
+								<span>漫威超级战争</span>
+								<p>灭霸卷土重来</p>
+							</div>
+							<div class="banaLandLeftSJX"></div>
+						</li>
+						<li class="">
+							<g class="banaLeftLine"></g>
+							<div>
+								<div class="banaLandLeftPE" style="background: url(img/c6651755-2773-4434-aaaf-202b54ba8bab.png);background-size: 40px;"></div>
+								<span>漫威超级战争</span>
+								<p>灭霸卷土重来</p>
+							</div>
+							<div class="banaLandLeftSJX"></div>
+						</li>
+						<li class="">
+							<g class="banaLeftLine"></g>
+							<div>
+								<div class="banaLandLeftPE" style="background: url(img/b188cb59-1f72-4710-b7a1-636c0a6cdac8.png);background-size: 40px;"></div>
+								<span>漫威超级战争</span>
+								<p>灭霸卷土重来</p>
+							</div>
+							<div class="banaLandLeftSJX"></div>
+						</li>
+						<li class="">
+							<g class="banaLeftLine"></g>
+							<div>
+								<div class="banaLandLeftPE" style="background: url(img/506b9c3a-68a8-48a4-995c-0b65d796eb26.png);background-size: 40px;"></div>
+								<span>漫威超级战争</span>
+								<p>灭霸卷土重来</p>
+							</div>
+							<div class="banaLandLeftSJX"></div>
+						</li>
+						<li class="">
+							<g class="banaLeftLine"></g>
+							<div>
+								<div class="banaLandLeftPE" style="background: url(img/12075fdb-e6fd-4d2c-8c8f-57b433d65fb5.png);background-size: 40px;"></div>
+								<span>漫威超级战争</span>
+								<p>灭霸卷土重来</p>
+							</div>
+							<div class="banaLandLeftSJX"></div>
+						</li>
+					</ul>
+				</div>
+				<div class="banaLandModdle">
+					<img class="active" src="img/086883a5-5839-45f8-a683-dc217bb4fb92.jpeg" />
+					<img src="img/f359bfaa-6773-45f2-aff0-342d18d6d512.jpeg" />
+					<img src="img/3776af3b-9a26-4af8-b8b9-53172540339c.jpeg" />
+					<img src="img/0c3f0ef1-60c3-4841-8e0c-cc518955f924.jpeg" />
+					<img src="img/d7f33e2f-b537-40c4-89ef-135cc805e53b.jpeg" />
+				</div>
+				<div class="banaLandRight">
+					<div class="banaLandRightTitle"><p>返校·稚语 《决战！平安京》蟹姬返校季皮肤即将登场</p> </div>
+					<div class="downLine"></div>
+					<div class="banaLandRightTuiJian">
+						<div><img src="img/showTitle.png"/></div>
+						<p>游戏党必备好礼，新人特价包邮！</p>
+					</div>
+					<ul class="banaLandRightLeiBiao">
+						<li>
+							<p>◇</p>
+							<a href="#">三周年生辰宴预约中《神都夜行录》天空异象观察员征召令...</a>
+							<span>08-27</span> 
+						</li>
+						<li>
+							<p>◇</p>
+							<a href="#">三周年生辰宴预约中《神都夜行录》天空异象观察员征召令...</a>
+							<span>08-27</span> 
+						</li>
+						<li>
+							<p>◇</p>
+							<a href="#">三周年生辰宴预约中《神都夜行录》天空异象观察员征召令...</a>
+							<span>08-27</span> 
+						</li>
+						<li>
+							<p>◇</p>
+							<a href="#">三周年生辰宴预约中《神都夜行录》天空异象观察员征召令...</a>
+							<span>08-27</span> 
+						</li>
+						<li>
+							<p>◇</p>
+							<a href="#">三周年生辰宴预约中《神都夜行录》天空异象观察员征召令...</a>
+							<span>08-27</span> 
+						</li>
+						<li>
+							<p>◇</p>
+							<a href="#">三周年生辰宴预约中《神都夜行录》天空异象观察员征召令...</a>
+							<span>08-27</span> 
+						</li>
+					</ul>
+				</div>
+				
+			</div>
+		</div>
+		<div class="forePE">
+			<div><img src="img/ec3df234-af1a-4d6e-a5b1-39226c91a7e6.jpeg" /> </div>
+			<div><img src="img/1defe911-dd23-40ac-9e4f-075ae90c5ec1.jpeg" /> </div>
+			<div><img src="img/6c0ae3eb-422a-451d-8282-bb90654cd10e.jpeg" /> </div>
+			<div class="forePELast"><img src="img/ec3df234-af1a-4d6e-a5b1-39226c91a7e6.jpeg" /> </div>
+		</div>
+		<div class="societies">
+			<div class="societiesTitle"><div></div><p>官方社区</p> </div>
+			<div class="societiesLBT">
+				<div class="JTLeft"><div></div> </div>
+				<div class="middle">
+					<ul>
+						<li>
+							<ol>
+								<li class="li1">
+									<img src="img/yx.png"/>
+									<p>猫和老鼠</p>
+									<a href="#"><p>一键加群</p></a>
+								</li>
+								<li>
+									<img src="img/yx.png"/>
+									<p>猫和老鼠</p>
+									<a href="#"><p>一键加群</p></a>
+								</li>
+								<li>
+									<img src="img/yx.png"/>
+									<p>猫和老鼠</p>
+									<a href="#"><p>一键加群</p></a>
+								</li>
+								<li>
+									<img src="img/yx.png"/>
+									<p>猫和老鼠</p> 
+									<a href="#"><p>一键加群</p></a>
+								</li>
+								<li>
+									<img src="img/yx.png"/>
+									<p>猫和老鼠</p> 
+									<a href="#"><p>一键加群</p></a>
+								</li>
+							</ol>
+						</li>
+							
+						<li>
+							<ol>
+								<li class="">
+									<img src="img/yx.png"/>
+									<p>阴阳师</p>
+									<a href="#"><p>一键加群</p></a>
+								</li>
+								<li>
+									<img src="img/yx.png"/>
+									<p>猫和老鼠</p>
+									<a href="#"><p>一键加群</p></a>
+								</li>
+								<li>
+									<img src="img/yx.png"/>
+									<p>猫和老鼠</p>
+									<a href="#"><p>一键加群</p></a>
+								</li>
+								<li>
+									<img src="img/yx.png"/>
+									<p>猫和老鼠</p> 
+									<a href="#"><p>一键加群</p></a>
+								</li>
+								<li>
+									<img src="img/yx.png"/>
+									<p>猫和老鼠</p> 
+									<a href="#"><p>一键加群</p></a>
+								</li>
+							</ol>
+						</li>
+						
+						<li>
+							<ol>
+								<li class="">
+									<img src="img/yx.png"/>
+									<p>大话西游</p>
+									<a href="#"><p>一键加群</p></a>
+								</li>
+								<li>
+									<img src="img/yx.png"/>
+									<p>猫和老鼠</p>
+									<a href="#"><p>一键加群</p></a>
+								</li>
+								<li>
+									<img src="img/yx.png"/>
+									<p>猫和老鼠</p>
+									<a href="#"><p>一键加群</p></a>
+								</li>
+								<li>
+									<img src="img/yx.png"/>
+									<p>猫和老鼠</p> 
+									<a href="#"><p>一键加群</p></a>
+								</li>
+								<li>
+									<img src="img/yx.png"/>
+									<p>猫和老鼠</p> 
+									<a href="#"><p>一键加群</p></a>
+								</li>
+							</ol>
+						</li>
+					</ul>
+				</div>
+				<div class="JTRight"><div></div> </div>
+			</div>
+			<div class="societiesRight"><img src="img/ewm.png" > </div>
+		</div>
+		<div class="yx">
+			<div class="LMYX">
+				<div class="LMYXTitle">
+					<div></div>
+					<p>官方社区</p>
+					<span>换一批</span>
+				</div>
+				<ul class="LMYXTitleUL">
+					<li>
+						<a class="solider" href="#">
+							<img src="img/games_ewn.png" />
+							<div class="solider-right">
+								<p>游戏类型：童话MMO手游</p>
+								<span>立即下载</span>
+							</div>
+						</a>
+						<img src="img/14556651-311f-4e04-891c-b88dcc840798.jpeg" />
+						<h3>Hello Kity</h3>
+						<p>KITY   KITY</p>
+						<div></div>
+						<span>进入官网</span>
+					</li>
+					<li>
+						<a class="solider" href="#">
+							<img src="img/games_ewn.png" />
+							<div class="solider-right">
+								<p>游戏类型：童话MMO手游</p>
+								<span>立即下载</span>
+							</div>
+						</a>
+						<img src="img/67ecf0ee-2ab0-433b-9eb8-ae1f826e8a59.jpeg" />
+						<h3>漫威超级战争</h3>
+						<p>超能反派[灭霸]将于9月2日维护后获得全新能力：在对局中集齐无限宝石后，可</p>
+						<div></div>
+						<span>进入官网</span>
+					</li>
+					<li>
+						<a class="solider" href="#">
+							<img src="img/games_ewn.png" />
+							<div class="solider-right">
+								<p>游戏类型：童话MMO手游</p>
+								<span>立即下载</span>
+							</div>
+						</a>
+						<img src="img/yx1.png" />
+						<h3>漫威超级战争</h3>
+						<p>超能反派[灭霸]将于9月2日维护后获得全新能力：在对局中集齐无限宝石后，可</p>
+						<div></div>
+						<span>进入官网</span>
+					</li>
+					<li>
+						<a class="solider" href="#">
+							<img src="img/games_ewn.png" />
+							<div class="solider-right">
+								<p>游戏类型：童话MMO手游</p>
+								<span>立即下载</span>
+							</div>
+						</a>
+						<img src="img/yx1.png" />
+						<h3>漫威超级战争</h3>
+						<p>超能反派[灭霸]将于9月2日维护后获得全新能力：在对局中集齐无限宝石后，可</p>
+						<div></div>
+						<span>进入官网</span>
+					</li>
+					<li>
+						<a class="solider" href="#">
+							<img src="img/games_ewn.png" />
+							<div class="solider-right">
+								<p>游戏类型：童话MMO手游</p>
+								<span>立即下载</span>
+							</div>
+						</a>
+						<img src="img/yx1.png" />
+						<h3>漫威超级战争</h3>
+						<p>超能反派[灭霸]将于9月2日维护后获得全新能力：在对局中集齐无限宝石后，可</p>
+						<div></div>
+						<span>进入官网</span>
+					</li>
+					<li>
+						<a class="solider" href="#">
+							<img src="img/games_ewn.png" />
+							<div class="solider-right">
+								<p>游戏类型：童话MMO手游</p>
+								<span>立即下载</span>
+							</div>
+						</a>
+						<img src="img/yx1.png" />
+						<h3>漫威超级战争</h3>
+						<p>超能反派[灭霸]将于9月2日维护后获得全新能力：在对局中集齐无限宝石后，可</p>
+						<div></div>
+						<span>进入官网</span>
+					</li>
+				</ul>
+			</div>
+			<div class="XYCS">
+				<div class="XYCSTitle">
+					<div></div>
+					<p>新游测试</p>
+				</div>
+				<ul>
+					<li class="li1"><img src="img/XY.png" /> </li>
+					<li>
+						<img src="img/8ad656a4-eac9-4fee-acde-f9d211e70bdc.png"/>
+						<h4>王牌竟速</h4>
+						<p>公测</p>
+						<span>7月23日</span>
+						<div class="JT"><div></div> </div>
+					</li>
+					<li>
+						<img src="img/8ad656a4-eac9-4fee-acde-f9d211e70bdc.png"/>
+						<h4>王牌竟速</h4>
+						<p>公测</p>
+						<span>7月23日</span>
+						<div class="JT"><div></div> </div>
+					</li>
+					<li>
+						<img src="img/8ad656a4-eac9-4fee-acde-f9d211e70bdc.png"/>
+						<h4>王牌竟速</h4>
+						<p>公测</p>
+						<span>7月23日</span>
+						<div class="JT"><div></div> </div>
+					</li>
+					<li>
+						<img src="img/8ad656a4-eac9-4fee-acde-f9d211e70bdc.png"/>
+						<h4>王牌竟速</h4>
+						<p>公测</p>
+						<span>7月23日</span>
+						<div class="JT"><div></div> </div>
+					</li>
+					<li>
+						<img src="img/8ad656a4-eac9-4fee-acde-f9d211e70bdc.png"/>
+						<h4>王牌竟速</h4>
+						<p>公测</p>
+						<span>7月23日</span>
+						<div class="JT"><div></div> </div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="treeGame">
+			<div class="treeGameLand">
+				<div class="treeGameLandLeft">
+					<div class="Title">
+						<div class="XYCSTitle">
+							<div></div>
+							<p>新游测试</p>
+						</div>
+					</div>
+					
+					<ul class="ul1">
+						<li class="liRed">角色扮演</li>
+						<li class="liNo1"><a href="#">梦幻西游电脑版</a></li>
+						<li class="liHot"><a href="#">天下3</a></li>
+						<li class="liHot"><a href="#">逆水寒</a></li>
+						<li class="liHot"><a href="#">永劫无间</a></li>
+						<li><a href="#">天谕</a></li>
+						<li><a href="#">超激斗梦境</a></li>
+						<li><a href="#">新大话3经典版</a></li>
+						<li><a href="#">镇魔曲</a></li>
+						<li><a href="#">大唐无双</a></li>
+						<li><a href="#">魔兽世界</a></li>
+						<li><a href="#">新飞飞</a></li>
+						<li><a href="#">新大话3经典版</a></li>
+						<li><a href="#">镇魔曲</a></li>
+						<li><a href="#">大唐无双</a></li>
+						<li><a href="#">魔兽世界</a></li>
+						<li><a href="#">新飞飞</a></li>
+					</ul>
+					<ul class="ul2">
+						<li class="liHot"><a href="#">大话2经典版</a></li>
+						<li class="liHot"><a href="#">天下3</a></li>
+						<li class="liHot"><a href="#">逆水寒</a></li>
+						<li class="liHot"><a href="#">永劫无间</a></li>
+						<li><a href="#">天谕</a></li>
+						<li><a href="#">超激斗梦境</a></li>
+						<li><a href="#">新大话3经典版</a></li>
+						<li><a href="#">镇魔曲</a></li>
+						<li><a href="#">大唐无双</a></li>
+						<li><a href="#">魔兽世界</a></li>
+						<li><a href="#">新飞飞</a></li>
+						<li class="liHot"><a href="#">逆水寒</a></li>
+						<li class="liHot"><a href="#">永劫无间</a></li>
+						<li><a href="#">天谕</a></li>
+						<li><a href="#">超激斗梦境</a></li>
+						<li><a href="#">新大话3经典版</a></li>
+						<li><a href="#">镇魔曲</a></li>
+						<li><a href="#">大唐无双</a></li>
+						<li><a href="#">魔兽世界</a></li>
+						<li><a href="#">新飞飞</a></li>
+					</ul>
+					<ul class="ul3">
+						<li class="liRed">竞技/休闲</li>
+						<li class="liNew"><a href="#">我的世界</a></li>
+						<li class="liNew"><a href="#">天下3</a></li>
+						<li class="liNew"><a href="#">逆水寒</a></li>
+						<li class="liNew"><a href="#">永劫无间</a></li>
+						<li><a href="#">天谕</a></li>
+						<li><a href="#">超激斗梦境</a></li>
+						<li><a href="#">新大话3经典版</a></li>
+						<li><a href="#">镇魔曲</a></li>
+						<li><a href="#">大唐无双</a></li>
+						<li><a href="#">魔兽世界</a></li>
+						<li><a href="#">新飞飞</a></li>
+						<li class="liRed">竞技/休闲</li>
+						<li class="liNew"><a href="#">我的世界</a></li>
+						<li class="liNew"><a href="#">天下3</a></li>
+						<li class="liNew"><a href="#">逆水寒</a></li>
+						<li class="liNew"><a href="#">永劫无间</a></li>
+						<li><a href="#">天谕</a></li>
+						<li><a href="#">超激斗梦境</a></li>
+						<li><a href="#">新大话3经典版</a></li>
+						<li><a href="#">镇魔曲</a></li>
+						<li><a href="#">大唐无双</a></li>
+						<li><a href="#">魔兽世界</a></li>
+						<li><a href="#">新飞飞</a></li>
+					</ul>
+				</div>
+				<div class="treeGameLandRight">
+					<div class="Title">
+						<div class="XYCSTitle">
+							<div></div>
+							<p>手机游戏</p>
+						</div>
+					</div>
+					
+					<ul class="ul1">
+						<li class="liRed">角色扮演</li>
+						<li class="liNo1"><a href="#">梦幻西游电脑版</a></li>
+						<li class="liHot"><a href="#">天下3</a></li>
+						<li class="liHot"><a href="#">逆水寒</a></li>
+						<li class="liHot"><a href="#">永劫无间</a></li>
+						<li><a href="#">天谕</a></li>
+						<li><a href="#">超激斗梦境</a></li>
+						<li><a href="#">新大话3经典版</a></li>
+						<li><a href="#">镇魔曲</a></li>
+						<li><a href="#">大唐无双</a></li>
+						<li><a href="#">魔兽世界</a></li>
+						<li><a href="#">新飞飞</a></li>
+						<li><a href="#">新大话3经典版</a></li>
+						<li><a href="#">镇魔曲</a></li>
+						<li><a href="#">大唐无双</a></li>
+						<li><a href="#">魔兽世界</a></li>
+						<li><a href="#">新飞飞</a></li>
+					</ul>
+					<ul class="ul2">
+						<li class="liRed">新品推荐</li>
+						<li class="liHot"><a href="#">大话2经典版</a></li>
+						<li class="liHot"><a href="#">天下3</a></li>
+						<li class="liHot"><a href="#">逆水寒</a></li>
+						<li class="liHot"><a href="#">永劫无间</a></li>
+						<li><a href="#">天谕</a></li>
+						<li><a href="#">超激斗梦境</a></li>
+						<li><a href="#">新大话3经典版</a></li>
+						<li><a href="#">镇魔曲</a></li>
+						<li><a href="#">大唐无双</a></li>
+						<li><a href="#">魔兽世界</a></li>
+						<li><a href="#">新飞飞</a></li>
+						<li class="liNew"><a href="#">我的世界</a></li>
+						<li class="liNew"><a href="#">天下3</a></li>
+						<li class="liNew"><a href="#">逆水寒</a></li>
+						<li class="liNew"><a href="#">永劫无间</a></li>
+						<li><a href="#">天谕</a></li>
+						<li><a href="#">超激斗梦境</a></li>
+						<li><a href="#">新大话3经典版</a></li>
+						<li><a href="#">镇魔曲</a></li>
+						<li><a href="#">大唐无双</a></li>
+						<li><a href="#">魔兽世界</a></li>
+						<li><a href="#">新飞飞</a></li>
+					</ul>
+					<ul class="ul3">
+						<li class="liNew"><a href="#">我的世界</a></li>
+						<li class="liNew"><a href="#">天下3</a></li>
+						<li class="liNew"><a href="#">逆水寒</a></li>
+						<li class="liNew"><a href="#">永劫无间</a></li>
+						<li><a href="#">天谕</a></li>
+						<li><a href="#">超激斗梦境</a></li>
+						<li><a href="#">新大话3经典版</a></li>
+						<li><a href="#">镇魔曲</a></li>
+						<li><a href="#">大唐无双</a></li>
+						<li><a href="#">魔兽世界</a></li>
+						<li><a href="#">新飞飞</a></li>
+						<li class="liNew"><a href="#">我的世界</a></li>
+						<li class="liNew"><a href="#">天下3</a></li>
+						<li class="liNew"><a href="#">逆水寒</a></li>
+						<li class="liNew"><a href="#">永劫无间</a></li>
+						<li><a href="#">天谕</a></li>
+						<li><a href="#">超激斗梦境</a></li>
+						<li><a href="#">新大话3经典版</a></li>
+						<li><a href="#">镇魔曲</a></li>
+						<li><a href="#">大唐无双</a></li>
+						<li><a href="#">魔兽世界</a></li>
+						<li><a href="#">新飞飞</a></li>
+					</ul>
+					<ul class="ul3">
+						<li class="liNew"><a href="#">我的世界</a></li>
+						<li class="liNew"><a href="#">天下3</a></li>
+						<li class="liNew"><a href="#">逆水寒</a></li>
+						<li class="liNew"><a href="#">永劫无间</a></li>
+						<li><a href="#">天谕</a></li>
+						<li><a href="#">超激斗梦境</a></li>
+						<li><a href="#">新大话3经典版</a></li>
+						<li><a href="#">镇魔曲</a></li>
+						<li><a href="#">大唐无双</a></li>
+						<li><a href="#">魔兽世界</a></li>
+						<li><a href="#">新飞飞</a></li>
+						<li class="liNew"><a href="#">天下3</a></li>
+						<li class="liNew"><a href="#">逆水寒</a></li>
+						<li class="liNew"><a href="#">永劫无间</a></li>
+						<li><a href="#">天谕</a></li>
+						<li><a href="#">超激斗梦境</a></li>
+						<li><a href="#">新大话3经典版</a></li>
+						<li><a href="#">镇魔曲</a></li>
+						<li><a href="#">大唐无双</a></li>
+						<li><a href="#">魔兽世界</a></li>
+						<li><a href="#">新飞飞</a></li>
+					</ul>
+					<ul class="ul4">
+						<li class="liNew li1"><a href="#">我的世界</a></li>
+						<li class="liNew"><a href="#">天下3</a></li>
+						<li class="liNew"><a href="#">逆水寒</a></li>
+						<li class="liNew"><a href="#">永劫无间</a></li>
+						<li><a href="#">天谕</a></li>
+						<li><a href="#">超激斗梦境</a></li>
+						<li><a href="#">新大话3经典版</a></li>
+						<li><a href="#">镇魔曲</a></li>
+						<li><a href="#">大唐无双</a></li>
+						<li><a href="#">魔兽世界</a></li>
+						<li><a href="#">新飞飞</a></li>
+						<li><a href="#">天谕</a></li>
+						<li><a href="#">超激斗梦境</a></li>
+						<li><a href="#">新大话3经典版</a></li>
+						<li><a href="#">镇魔曲</a></li>
+						<li><a href="#">大唐无双</a></li>
+						<li><a href="#">魔兽世界</a></li>
+						<li><a href="#">新飞飞</a></li>
+						<li><a href="#">天谕</a></li>
+						<li><a href="#">超激斗梦境</a></li>
+						<li><a href="#">新大话3经典版</a></li>
+						<li><a href="#">镇魔曲</a></li>
+						<li><a href="#">大唐无双</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="treeGameBottom">
+				<div class="box">
+					<div class="div1">查看更多</div>
+					<div class="div2"><span class="span1">热门游戏</span><span class="span2">最新游戏</span> </div>
+				</div>
+			</div>
+		</div>
+		<div class="serveLink">
+			<ul class="top">
+				<li>游戏助手</li>
+				<li>充值购卡</li>
+				<li>安全保障</li>
+				<li>游戏综合</li>
+			</ul>
+			<ul class="Left">
+				<li>
+					<h4>网易MuMu</h4>
+					<p>电脑玩手游官方模拟器</p> 
+				</li>
+				<li>
+					<h4>网易MuMu</h4>
+					<p>电脑玩手游官方模拟器</p> 
+				</li>
+				<li>
+					<h4>网易MuMu</h4>
+					<p>电脑玩手游官方模拟器</p> 
+				</li>
+				<li>
+					<h4>网易MuMu</h4>
+					<p>电脑玩手游官方模拟器</p> 
+				</li>
+				<li>
+					<h4>网易MuMu</h4>
+					<p>电脑玩手游官方模拟器</p> 
+				</li>
+				<li>
+					<h4>网易MuMu</h4>
+					<p>电脑玩手游官方模拟器</p> 
+				</li>
+			</ul>
+			<ul class="Right">
+				<li>
+					<h4>网易MuMu</h4>
+					<p>电脑玩手游官方模拟器</p> 
+				</li>
+				<li>
+					<h4>网易MuMu</h4>
+					<p>电脑玩手游官方模拟器</p> 
+				</li>
+				<li>
+					<h4>网易MuMu</h4>
+					<p>电脑玩手游官方模拟器</p> 
+				</li>
+				<li>
+					<h4>网易MuMu</h4>
+					<p>电脑玩手游官方模拟器</p> 
+				</li>
+				<li>
+					<h4>网易MuMu</h4>
+					<p>电脑玩手游官方模拟器</p> 
+				</li>
+				<li>
+					<h4>网易MuMu</h4>
+					<p>电脑玩手游官方模拟器</p> 
+				</li>
+				<li>
+					<h4>网易MuMu</h4>
+					<p>电脑玩手游官方模拟器</p> 
+				</li>
+				<li>
+					<h4>网易MuMu</h4>
+					<p>电脑玩手游官方模拟器</p> 
+				</li>
+				<li>
+					<h4>网易MuMu</h4>
+					<p>电脑玩手游官方模拟器</p> 
+				</li>
+				<li>
+					<h4>网易MuMu</h4>
+					<p>电脑玩手游官方模拟器</p> 
+				</li>
+			</ul>
+			<ul class="Bottom">
+				<li class="liBig">客户服务</li>
+				<li>></li>
+				<li><a href="#">GM服务</a></li>
+				<li>|</li>
+				<li><a href="#">帐号修复</a></li>
+				<li>|</li>
+				<li><a href="#">更改密码</a></li>
+				<li>|</li>
+				<li><a href="#">手机验证特权</a></li>
+				<li>|</li>
+				<li><a href="#">游戏知道</a></li>
+				<li>|</li>
+				<li><a href="#">密保中心</a></li>
+				<li>|</li>
+				<li><a href="#">自助百宝箱</a></li>
+				<li>|</li>
+				<ul class="BottomRight">
+					<li class="liBig">客户电话</li>
+					<li>></li>
+					<li class="liBig">95163000</li>
+				</ul>
+			</ul>
+			
+		</div>
+		<div class="webBottom">
+			<div class="BottomTop">
+				
+				<div class="logo">
+					<div class="logo1"><img src="img/netease.2.png" /> </div>
+					<div class="logo2"><img src="img/nie.2.png" /> </div>
+				</div>
+				<ul class="links"><a href="#"></a>
+					<li><a href="#">公司简介</a></li>
+					<li>-</li>
+					<li><a href="#">客户服务</a></li>
+					<li>-</li>
+					<li><a href="#">网易集团隐私政策及儿童个人信息保护规则</a></li>
+					<li>-</li>
+					<li><a href="#">网易游戏</a></li>
+					<li>-</li>
+					<li><a href="#">联系我们</a></li>
+					<li>-</li>
+					<li><a href="#">商务合作</a></li>
+					<li>-</li>
+					<li><a href="#">加入我们</a></li>
+					
+				</ul>
+				<p>网易公司版权所有@1997-2021</p>
+				<span>积极健康的游戏心态是健康游戏的开端，本游戏故事情节设置紧凑，请您合理控制游戏时间，避免沉溺游戏影响生活，注意自我保护，防范网络陷阱。</span>
+				<ul class="links2">
+					<li>《网络文化经营许可证》 粤网文[2020]3377-188号 </li>
+					<li><a href="#">违法及不良信息举报中心</a> </li>
+					<li><a href="#">ICP备案：粤B2-20090191-18</a> </li>
+				</ul>
+			</div>
+		</div>
+		<script src="js/new_file.js"></script>
+	</body>
+</html>

@@ -1,0 +1,22 @@
+.provile{
+    height: 580rpx;
+    background-color: #3fca84;
+    color: #fff;
+    padding-top: 20rpx;
+    position: relative;
+    text-align: center;
+}
+.provile .uesrPE{
+    width: 200rpx;
+    height: 200rpx;
+    border-radius: 100px;
+    overflow: hidden;
+    margin-top: 40rpx;
+    margin-bottom: 40rpx;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%,0);
+}
+.provile .userName{
+    font-size: 40rpx;
+}

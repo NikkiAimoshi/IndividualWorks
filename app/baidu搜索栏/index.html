@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style> 
+		body{height: 100%	;}
+		*{margin: 0;padding: 0;text-decoration: none;}
+		     .logo{
+				 text-align: center;
+				 margin-top: 120px;
+				 
+			 }
+			 .search{
+				 width: 650px;
+				 height: 45px;
+				 margin-left: auto;
+				 margin-right: auto;
+				 margin-top: 36px;
+			 }
+			 .lan{
+				 text-align: center;
+			 }
+			 .left-btn{
+				 width: 534px;
+				 height: 37px;
+				 float: left;
+				 border:  4px solid #506EFC;
+				 border-radius: 8px 0px 0px 8px;
+				 overflow: hidden;
+				 
+			 }
+			 .right-btn{
+				 width: 108px;
+				 height: 45px;
+				 float: left;
+				 background: #506efc;
+				 text-align: center;
+				 line-height: 45px;
+				 color: aliceblue;
+				 font-size: 17px;
+				 border-radius: 0px 8px 8px 0px;
+				 cursor: pointer;
+			 }
+			 .input1{
+				 width: 440px;
+				 height: 37px;
+				 border: none;
+				 outline: none;
+				 text-indent: 8px;
+				 float: left;
+			 }
+			 .p1{
+				width: 37px;
+				height: 37px;
+				float: left; 
+				background: url(../登入界面/img/user_login.gif) no-repeat center;
+				margin-left: 10px;
+				cursor: pointer;
+			 }
+			 .p2{
+				 width: 37px;
+				 height: 37px;
+				 background: url(img/nier.png) no-repeat center;
+				 margin-left: 0px;
+				 float: left;
+				 cursor: pointer;
+			 }
+			 .pe{
+				 width: 300px;
+				 height: 100px;
+			 }
+			 .head{margin-top: 30px;height: 20px;line-height: 20px;}
+			 .head a{margin-left: 40px;float: left;font-size: 20px;color: #000000;}
+			 .twoyeima{width: 100%;position: absolute;bottom: 0;text-align: center;height: 220px;}
+			 .as{display: block;}
+			 .ul1{margin-top: 20px;}
+			 .ul1 li{display: inline;margin: 0 12.5px;height: auto;}
+			 .uli li a{font-size: 12px;}
+			 .pp{display: inline;float: lef}
+			 .ul2{margin-top: 20px;;}
+			 .ul2 li{display: inline;margin-left: 4px;}
+		</style>
+	</head>
+	<body>
+		<div class="head">
+			<a href="#" style="margin-left: 30px;">新闻</a>
+			<a href="#">hao123</a>
+			<a href="#">地图</a>
+			<a href="#">直播</a>
+			<a href="#">视频</a>
+			<a href="#">贴吧</a>
+			<a href="#">学术</a>
+			<a href="#">更多</a>
+		</div>
+		<div class="logo">
+			<a href="https://www.baidu.com/s?wd=%E7%99%BE%E5%BA%A6%E7%83%AD%E6%90%9C&sa=ire_dl_gh_logo_texing&rsv_dl=igh_logo_pc"><img class="pe" src="img/PCtm_d9c8750bed0b3c7d089fa7d55720d6cf.png" /></a>
+		</div>
+		<div class="search">
+			<div class="left-btn">
+				<input class="input1" id="on"/>
+				<div class="p1"></div>
+				<div class="p2"></div>
+			</div>
+			<div class="right-btn" id="btn">
+				百度一下
+			</div>
+		</div>
+		<script>
+		     btn.onclick = function(){
+				 alert(on.value);
+				 open('https://www.baidu.com/s?wd='+on.value);
+			 };
+		</script>
+		<div class="twoyeima">
+			<img src="img/ewm.gif"><span class="as">百度</span>
+			<ul class="ul1">
+				<li><a href="#">关于百度</a></li>
+				<li> <a href="#">把百度设为首页</a></li>
+				<li><a href="#">AboutBaidu</a></li>
+				<li><a href="#">百度推广</a></li>
+			</ul>
+				<ul class="ul2">
+					<li>@2019 baidu</li>
+					<li><a href="#">百度</a></li>
+					<li>使用百度前必读</li>
+					<li><a href="#">意见反馈</a></li>
+					<li><img class="pp" src="img/l_1.gif" /></li>
+					<li><a href="#">京公网安备11000002000001</a></li>
+					<li><img class="pp" src="img/l_2.gif"/></li>
+					
+				</ul>
+		</div>
+		
+	</body>
+</html>

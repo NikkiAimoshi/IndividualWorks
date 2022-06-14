@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html style="font-size: 20px;">
+	<head>
+		<meta charset="utf-8" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+		<title>阴阳师官网</title>
+		<script src="js/yys.js"></script>
+		<script src="js/rem.js"></script>
+		<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+		<script src="https://unpkg.com/swiper/swiper-bundle.min.js"> </script>
+		<style>
+			*{margin :0;padding: 0;list-style: none;text-decoration: none;}
+			.my-button-disabled{
+				opacity: 0;
+			}
+		/* topNav start */
+			.topNav{
+				height: 2.2rem;
+				width: 100%;
+				background: url(img/top_bg.jpg);
+				background-size: 1.125rem 2.2rem;
+				position: fixed;
+				top: 0;
+				z-index: 5;
+			}
+			.topNav .navContent{
+				width: 14.925rem;
+				height: 100%;
+				margin-left: 0.65rem;
+				display: flex;
+				justify-content: space-between;
+			}
+			.topNav .navContent .navContentLeft{
+				width: 8rem;
+				height: 100%;
+				display: flex;
+			}
+			.topNav .navContent .navContentLeft .topLogoLink{
+				margin: 0.25rem 0.35rem 0 0;
+			}
+			.topNav .navContent .navContentLeft .topLogoLink img{
+				width: 1.7rem;
+				height: 1.7rem;
+				
+			}
+			.topNav .navContent .navContentLeft .text h3{
+				font-size: 0.625rem;
+				line-height: 0.625rem;
+				height: 0.625rem;
+				color: white;
+				margin: 0.4rem 0 0.275rem 0;
+			}
+			.topNav .navContent .navContentLeft .text p{
+				font-size: 0.55rem;
+				line-height: 0.55rem;
+				height: 0.55rem;
+				color: white;
+			}
+			.topNav .navContent .navContentRight{
+				width: 4.5rem;
+				height: 100%;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+			.topNav .navContent .navContentRight .downNode{
+				width: 3rem;
+				height: 1.325rem;
+			}
+			.topNav .navContent .navContentRight .downNode img{
+				width: 3rem;
+				height: 1.325rem;
+			}
+			.topNav .navContent .navContentRight .search{
+				width: 0.9rem;
+				height: 0.95rem;
+			}
+		/* topNav end */
+		
+		/* banner start */
+			.banner{
+				width: 100%;
+				height: 10.65rem;
+				background: url(img/banner.png);
+				background-size: 16rem 10.65rem;
+				margin-top: 2.2rem;
+				position: relative;
+			}
+			.banner .bannerAge{
+				width: 1.6rem;
+				height: 2.05rem;
+				position: absolute;
+				top: 0.55rem;
+				right: 2.55rem;
+			}
+			.banner .bannerDown{
+				width: 5.4rem;
+				height: 1.8rem;
+				position: absolute;
+				left: 50%;
+				transform: translateX(-50%);
+				bottom: -0.75rem;
+			}
+			.banner .bannerDown img{
+				width: 5.4rem;
+				height: 1.8rem;
+			}
+		/* banner end */
+		/* news start */
+			.news{
+				width: 100%;
+				height: 27rem;
+				
+			}
+			.news .newsTop{
+				height: 1.15rem;
+				width: 100%;
+				margin-top: 2.1rem;
+			}
+			.news .newsTop img{
+				height: 1.15rem;
+				width: 100%;
+			}
+			.news .outerNode{
+				height: 23.1rem;
+				width: 100%;
+				margin-top: 0.65rem;
+			}
+			.news .outerNode .swiper-wrapper{
+				width: 100%;
+				height: 100%;
+			}
+			.news .outerNode .swiper-wrapper .swiper-slide{
+				width: 100%;
+				height: 100%;
+			}
+			.news .outerNode .swiper-wrapper .swiper-slide ul{
+				width: 15.1rem;
+				height: 100%;
+				margin: auto;
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-between;
+				align-content: space-between;
+			}
+			.news .outerNode .swiper-wrapper .swiper-slide ul li{
+				width: 7.15rem;
+				height: 7.2rem;
+				border: 0.1rem solid #ccc;
+			}
+			.news .outerNode .more{
+				height: 0.55rem;
+				line-height: 0.55rem;
+				font-size: 0.55rem;
+				width: 8rem;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				float: right;
+				margin-top: 0.825rem;
+				margin-right: 0.425rem;
+			}
+			.news .outerNode .more .page{
+				width: 4.5rem;
+				display: flex;
+				justify-content: space-between;	
+				
+			}
+			.news .outerNode .more .page p{
+				color: #333;
+				height: 0.55rem;
+				line-height: 0.55rem;
+				font-size: 0.55rem;
+			}
+			.news .outerNode .more .line{
+				width: 0.025rem;
+				height: 0.4rem;
+				background-color: #333;
+			}
+			.news .outerNode .more a{
+				color: #333;
+				padding-left: 0.575rem;
+				background: url(img/more_bg.png)no-repeat left center;
+				background-size: 0.5rem 0.5rem;
+				text-decoration: none;
+			}
+			.news .outerNode .swiper-wrapper .swiper-slide ul li.newsPE a{
+				width: 100%;
+				height: 100%;
+			}
+			.news .outerNode .swiper-wrapper .swiper-slide ul li.newsPE img{
+				width: 7.15rem;
+			}
+			.news .outerNode .swiper-wrapper .swiper-slide ul li.newsPE p{
+				text-overflow: ellipsis;
+				overflow: hidden;
+				white-space: nowrap;
+				padding: 0 0.35rem;
+				height: 0.575rem;
+				font-size: 0.575rem;
+				line-height: 0.575rem;
+				color: #000;
+				margin-top: 0.4rem;
+			}
+			
+			.news .outerNode .swiper-wrapper .swiper-slide ul li.newsText{
+				background: url(img/i_next3_5219eb7.png)no-repeat 3.9rem 6.25rem;
+				background-size: 2.65rem 0.25rem;
+			}
+			.news .outerNode .swiper-wrapper .swiper-slide ul li.newsText a{
+				width: 100%;
+				height: 100%;
+			}
+			.news .outerNode .swiper-wrapper .swiper-slide ul li.newsText a h3{
+				font-size: 0.6rem;
+				padding: 0 0.5rem;
+				line-height: 0.775rem;
+				margin-top: 0.525rem;
+				margin-bottom: 0.375rem;
+				color: #000000;
+			}
+			.news .outerNode .swiper-wrapper .swiper-slide ul li.newsText p{
+				font-size: 0.575rem;
+				font-weight: bold;
+				color: #666;
+				padding: 0 0.425rem;
+				line-height: 0.725rem;
+				-webkit-line-clamp: 3;
+				-webkit-box-orient: vertical;
+				display: -webkit-box;
+				overflow: hidden;
+			}
+			
+		/* news end */
+		/* techo start */
+			.techo{
+				width: 100%;
+				height: 7.8rem;
+			}
+			.techo .techoTop{
+				height: 2.225rem;
+				width: 100%;
+			}
+			.techo .techoTop img{
+				height: 100%;
+				width: 100%;
+			}
+			.techo .techo-swiper{
+				width: 100%;
+				height: 3.6rem;
+				overflow: hidden;
+				margin-top: 0.25rem;
+			}
+			.techo .techo-swiper a{
+				width: 2.925rem;
+				height: 100%;
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-between;
+				
+			}
+			.techo .techo-swiper a img{
+				width: 100%;
+				height: 2.7rem;
+			}
+			.techo .techo-swiper a p{
+				font-size: 0.55rem;
+				width: 100%;
+				text-align: center;
+				color: #000000;
+				font-weight: bold;
+			}
+		/* techo end */
+		</style>
+	</head>
+	<body>
+		<!-- top-->
+		<div class="topNav">
+			<div class="navContent">
+				<div class="navContentLeft">
+					<a href="#" class="topLogoLink">
+						<img src="img/logo.png" />
+					</a>
+					<div class="text">
+						<h3>阴阳师</h3>
+						<p>网易和风匠心巨制</p>
+					</div>
+				</div>
+				<div class="navContentRight">
+					<a href="#" class="downNode">
+						<img src="img/download.jpg" />
+					</a>
+					<img src="img/search.png" class="search" />
+				</div>
+			</div>
+		</div>
+		<!--  banner start -->
+		<div class="banner">
+			<img src="img/age_bg.png" class="bannerAge"/>
+			<a href="#" class="bannerDown">
+				<img src="img/downloadGame.png" />
+			</a>
+		</div>
+		<!-- news 新闻-->
+		<div class="news">
+			<div class="newsTop">
+				<img src="img/news_bg.png" />
+			</div>
+			<div class="outerNode">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<ul>
+							<li class="newsPE">
+								<a href="#">
+									<img src="img/new_tu.png" />
+									<p>阴阳师薇雅直播间大家快来啊</p>
+								</a>
+							</li>
+							<li class="newsText">
+								<a href="#">
+									<h3>《阴阳师》手游9月29日维护更新公告</h3>
+									<p>亲爱的阴阳师大人：为了给大家带来更好的游戏体验，服务器将于9月案说法为发士大夫啊圣诞袜</p>
+								</a>
+							</li>
+							<li class="newsText">
+								<a href="#">
+									<h3>《阴阳师》手游9月29日维护更新公告</h3>
+									<p>亲爱的阴阳师大人：为了给大家带来更好的游戏体验，服务器将于9月案说法为发士大夫啊圣诞袜</p>
+								</a>
+							</li>
+							<li class="newsText">
+								<a href="#">
+									<h3>《阴阳师》手游9月29日维护更新公告</h3>
+									<p>亲爱的阴阳师大人：为了给大家带来更好的游戏体验，服务器将于9月案说法为发士大夫啊圣诞袜</p>
+								</a>
+							</li>
+							<li class="newsPE">
+								<a href="#">
+									<img src="img/new_tu.png" />
+									<p>阴阳师薇雅直播间大家快来啊</p>
+								</a>
+							</li>
+							<li class="newsText">
+								<a href="#">
+									<h3>《阴阳师》手游9月29日维护更新公告</h3>
+									<p>亲爱的阴阳师大人：为了给大家带来更好的游戏体验，服务器将于9月案说法为发士大夫啊圣诞袜</p>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="swiper-slide">
+						<ul>
+							<li class="newsText">
+								<a href="#">
+									<h3>《阴阳师》手游9月29日维护更新公告</h3>
+									<p>亲爱的阴阳师大人：为了给大家带来更好的游戏体验，服务器将于9月案说法为发士大夫啊圣诞袜</p>
+								</a>
+							</li>
+							<li class="newsPE">
+								<a href="#">
+									<img src="img/new_tu.png" />
+									<p>阴阳师薇雅直播间大家快来啊</p>
+								</a>
+							</li>
+							<li class="newsPE">
+								<a href="#">
+									<img src="img/new_tu.png" />
+									<p>阴阳师薇雅直播间大家快来啊</p>
+								</a>
+							</li>
+							<li class="newsText">
+								<a href="#">
+									<h3>《阴阳师》手游9月29日维护更新公告</h3>
+									<p>亲爱的阴阳师大人：为了给大家带来更好的游戏体验，服务器将于9月案说法为发士大夫啊圣诞袜</p>
+								</a>
+							</li>
+							<li class="newsText">
+								<a href="#">
+									<h3>《阴阳师》手游9月29日维护更新公告</h3>
+									<p>亲爱的阴阳师大人：为了给大家带来更好的游戏体验，服务器将于9月案说法为发士大夫啊圣诞袜</p>
+								</a>
+							</li>
+							<li class="newsText">
+								<a href="#">
+									<h3>《阴阳师》手游9月29日维护更新公告</h3>
+									<p>亲爱的阴阳师大人：为了给大家带来更好的游戏体验，服务器将于9月案说法为发士大夫啊圣诞袜</p>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="swiper-slide">
+						<ul>
+							<li class="newsPE">
+								<a href="#">
+									<img src="img/new_tu.png" />
+									<p>阴阳师薇雅直播间大家快来啊</p>
+								</a>
+							</li>
+							<li class="newsText">
+								<a href="#">
+									<h3>《阴阳师》手游9月29日维护更新公告</h3>
+									<p>亲爱的阴阳师大人：为了给大家带来更好的游戏体验，服务器将于9月案说法为发士大夫啊圣诞袜</p>
+								</a>
+							</li>
+							<li class="newsText">
+								<a href="#">
+									<h3>《阴阳师》手游9月29日维护更新公告</h3>
+									<p>亲爱的阴阳师大人：为了给大家带来更好的游戏体验，服务器将于9月案说法为发士大夫啊圣诞袜</p>
+								</a>
+							</li>
+							<li class="newsText">
+								<a href="#">
+									<h3>《阴阳师》手游9月29日维护更新公告</h3>
+									<p>亲爱的阴阳师大人：为了给大家带来更好的游戏体验，服务器将于9月案说法为发士大夫啊圣诞袜</p>
+								</a>
+							</li>
+							<li class="newsText">
+								<a href="#">
+									<h3>《阴阳师》手游9月29日维护更新公告</h3>
+									<p>亲爱的阴阳师大人：为了给大家带来更好的游戏体验，服务器将于9月案说法为发士大夫啊圣诞袜</p>
+								</a>
+							</li>
+							<li class="newsPE">
+								<a href="#">
+									<img src="img/new_tu.png" />
+									<p>阴阳师薇雅直播间大家快来啊</p>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="more">
+					<div class="page">
+						<p class="prev">上一页</p>
+						<p class="next">下一页</p>
+					</div>
+					<div class="line"></div>
+					<a href="#">更多</a>
+				</div>
+			</div>
+			
+		</div>
+		<script>
+				      var swiper = new Swiper(".outerNode", {
+				        navigation: {
+				           nextEl: ".next",
+				           prevEl: ".prev",
+						   disabledClass: 'my-button-disabled',
+				        },
+				      });
+					 
+				    </script>
+			</body>
+		</html>
+		

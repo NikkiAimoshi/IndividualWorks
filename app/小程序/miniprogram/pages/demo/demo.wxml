@@ -1,0 +1,6 @@
+<!--pages/demo/demo.wxml-->
+<!-- <text>pages/demo/demo.wxml</text> -->
+<view>你好</view>
+<view>{{mag}}</view>
+<image src="/images/weather.png"></image>
+<view wx:for="{{arr}}" wx:key="index">{{index}}: {{item}}</view>

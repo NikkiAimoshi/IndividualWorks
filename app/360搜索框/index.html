@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>360</title>
+		<style>
+		.logo{
+			text-align: center;
+			margin-top: 120px;
+		}
+		.search{
+			width: 640px;
+			height: 40px;
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: 50px;
+		}
+		.left{
+			width: 496px;
+			height: 36px;
+			border: 2px solid chartreuse;
+			float: left;
+			overflow: hidden;
+		}
+		.right{
+			width: 140px;
+			height: 40px;
+			background: #7FFF00;
+			float: left;
+			color: aliceblue;
+			font-size: 20px;
+			line-height: 40px;
+			text-align: center;
+			cursor: pointer;
+		}
+		.input-a{
+			border: none;
+			outline: none;
+			width: 496px;
+			height: 36px;
+			text-indent: 8px;
+		}
+		
+		</style>
+	</head>
+	<body>
+		<div class="logo">
+			<a href="https://www.baidu.com/s?wd=%E7%99%BE%E5%BA%A6%E7%83%AD%E6%90%9C">
+				<img src="img/360-1.png" style="width: 360px; height: 80px;"/>
+			</a>
+		</div>
+		<div class="search">
+			<div class="left">
+				<input class="input-a" id="on"/>
+			</div>
+			<div class="right" id="ss">
+				搜索
+			</div>
+		</div>
+		<script>
+		    ss.onclick = function(){
+				open('https://www.baidu.com/s?wd='+on.value);
+			};
+		</script>
+	</body>
+</html>
+

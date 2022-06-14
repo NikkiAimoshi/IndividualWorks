@@ -1,0 +1,1638 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>网易云课堂</title>
+		<style>
+		*{margin: 0;padding: 0;text-decoration: none;list-style: none;font-family: "Arial","Hiragino Sans GB", \5fae\8f6f\96c5\9ed1, "Helvetica", "sans-serif";}
+		body{position: relative;}
+		.topCopy{height: 56px;display: none;}
+		.topNode{height: 56px;background: #303440;position: relative;top: 0; width: 100%;z-index: 1;}
+		.topNode .topNode-content{height: 56px;width: 1225px;background: #303440;margin: auto;z-index: 1; position: relative;}
+		.topNode-content-a1{float: left;margin-top: 15px;}
+		.search{height: 36px;width: 354px;margin-left: 20px;margin-top: 10px;float: left;background: white;border-radius: 16px;position: relative;}
+		.search .searchleft span{float: left;font-size:13px;margin-left: 18px;margin-top: 10px; padding-right: 17px;background: url(img/search-1.png)no-repeat 33px 6px;cursor: pointer;position: relative;height: 100%;}
+		.search .searchleft .active{color: #4EAE54;background-image: url(img/search-2.png);}
+		.search .searchleft:hover .searchleftxiaila{display: block;}
+		.search .searchleft .searchleftxiaila{position: absolute;top: 27px; left: 5px; height: 88px;width: 60px;background: white;z-index: 2;box-shadow: 0 0 5px #ccc;display: none;}
+		.search .searchleft .searchleftxiaila li{margin-top: 4px; line-height: 40px;height: 40px;width: 60px;text-align: center;}
+		.search .searchleft .searchleftxiaila li:hover a{color: #4EAE54;}
+		.search .searchleft .searchleftxiailaula .active1{color: #4EAE54;}
+		.search .searchinput{height: 100%;width: 198px;overflow: hidden;margin-left: 14px;float: left;}
+		.search .searchinputz{outline: none;height: 100%;width: 100%;border: none;font-size: 13px;color: #686868;}
+		.search .searchright{float: left;height: 100%;width: 79px;background: #4aaf4f;border-radius: 0 16px 16px 0;}
+		.search .searchright-a{height: 100%; line-height: 36px;margin-left: 11px;color: white;background: url(img/searchright-1.png)no-repeat 0 3px;padding-left: 18px;}
+		.search .searchmenu{position: absolute;top: 40px;left: 20px; width: 300px;background: white;z-index: 1;background: white;display: none;}
+		.search .searchmenu ul{margin-top: 5px;margin-bottom: 10px;}
+		.search .searchmenu li{height: 40px;line-height: 40px;width: 100%;text-indent: 20px;font-size: 12px;}
+		.search .searchmenu li a{font-size: 15px;width: 100%;height: 100%;float: left;}
+		.search .searchmenu li a:hover {background: #ccc;color: #4EAE54;}
+		.topNode p{float: left;margin-top: 20px;color: white;}
+		.topNode .search-download{font-size: 13px;float: left;margin-top: 20px;padding-left: 17px;margin-left: 43px;background: url(img/download.png)no-repeat 0 3px ;color: #cbcccf;position: relative;}
+		.topNode .search-download:hover{color: #4EAE54;background: url(img/download-h.gif)no-repeat 0 3px ;}
+		
+		.topNode .search-download .search-download-show{height: 196px;width: 380px;background: white;z-index: 1; position: absolute;left: -60px;top: 30px;display: none;border: 1px solid #93949b;}
+		.topNode .search-download .search-download-show .sjx{width: 14px;height: 5px;position: absolute;top: -13px;left: 90px;}
+		.topNode .search-download .search-download-show .ewm{ width: 143px;margin-top: 25px;float: left;width: 143px;margin-left: 20px;}
+		.topNode .search-download .search-download-show span{font-size: 16px;color: #303440;float: left;width: 143px;margin-top: 25px;margin-left: 27px;}
+		.topNode .search-download .search-download-show .app{height: 44px;width: 150px;margin-top: 19px;margin-left: 26px;float: left;}
+		.topNode .search-download .search-download-show .app2{height: 44px;width: 150px;margin-top: 10px;margin-left: 26px;float: left;}
+		.topNode .search-guanzhu{font-size: 13px;float: left;margin-top: 20px;margin-left: 22px;padding-left: 19px;background: url(img/guanzhu.png)no-repeat 0 3px;color: #cbcccf;position: relative;}
+		.topNode .search-guanzhu:hover .guanZhu{display: block;}
+		.topNode .search-guanzhu .guanZhu{position: absolute;top: 30px;left: -65px; width: 262px;height: 266px;z-index: 1;background: white;border: 1px solid #ccc;display: none;}
+		.topNode .search-guanzhu .guanZhu .sjx{position: absolute;top: -10px;left: 110px; background: url(img/jt-t.png);width: 16px;height: 10px;}
+		.topNode .search-guanzhu .guanZhu ul .li1{margin-top: 20px;width: 100%;height: 15px;font-size: 15px;float: left;text-align: center;color: #080606;}
+		.topNode .search-guanzhu .guanZhu ul .li2{margin-top: 16px;width: 100%;height: 13px;font-size: 13px;float: left;text-align: center;color: #4e4a4d;}
+		.topNode .search-guanzhu .guanZhu .img{margin: 30px 62px;float: left;}
+		.topNode .search-guanzhu:hover{color: #4EAE54;}
+		.topNode .search-huiyuan{font-size: 13px;float: left;margin-top: 20px;margin-left: 22px;margin-right: 20px;color: #cbcccf;position: relative;}
+		.topNode .search-huiyuan:hover .line{display: block;}
+		.topNode .search-huiyuan .line{width: 20px;height: 3px;background: #4EAE54;position: absolute;top: 33px;left: 20px;display: none;}
+		.topNode .search-huiyuan:hover{color: #4eae54;}
+		.topNode .search-guanli{float: left;margin-top: 20px;margin-left: 20px;color: #cbcccf;font-size: 13px;}
+		.topNode .search-guanli:hover{color: #4eae54;}
+		.topNode .SearchMyStudy{float: left;margin-top: 20px;margin-left: 20px;color: #cbcccf;font-size: 13px;}
+		
+		.topNode .SearchMyStudy:hover{color: #4eae54;}
+		
+		.topNode .search-lin{float: left;margin-left: 20px;margin-top: 22px;height: 16px;width: 14px;background: url(img/lin-1.png);}
+		.topNode .search-lin:hover{background: url(img/lin-2.png);}
+		.topNode .search-car{float: left;margin-left: 20px;margin-top: 22px;margin-right: 20px;height: 16px;width: 15px;background: url(img/car-1.png);}
+		.topNode .search-car:hover{background: url(img/car-2.png);}
+		.topNode .search-username{font-size: 13px;margin-top: 20px;margin-left: 20px;height: 32px;float: left;color: #cbcccf;}
+		.topNode .search-userpe{margin-top: 13px;margin-right: 20px;float: right;}
+		.topNode .usermenu{position: absolute;right: 20px;top: 50px; width: 160px;height: 218px;background: #fff;z-index: 1;border: 1px #dbd9d8 solid;padding: 8px;display: none;}
+		.topNode .usermenu li{width: 100%;height: 36px;font-size: 12px;text-indent: 10px;}
+		.topNode .usermenu li a{color: #98999a;width: 100%;height: 100%;line-height: 36px;float: left;}
+		.topNode .usermenu li a span{float: right;color: #fd9a2f;margin-right: 10px;}
+		.topNode .usermenu .usermenuTopBorder{border-bottom: 1px solid #edecec;}
+		.topNode .usermenu .usermenuBottomBorder{border-top: 1px solid #edecec;}
+		.topNode .usermenu li a:hover{background: #ccc;}
+		.topNode .usermenu  .usermenuJT{position: absolute;top: -10px;right: 7px; background: url(img/jt-t.png);height: 10px;width: 16px;}
+		.topNode .MyStudy{width: 282px;border: 1px solid #e0dfdf;position: absolute;top: 50px;right: 60px; background: white;z-index: 1;display: none;}
+		.topNode .MyStudy .MyStudyTop{margin-top: 10px;font-size: 15px;line-height: 21px;height: 21px;width: 100%;text-indent: 11px;}
+		.topNode .MyStudy ul li{height: 56px;width: 100%;}
+		.topNode .MyStudy ul li:hover{background: #f5f3f5;}
+		.topNode .MyStudy ul li:hover a span{color: #4eae54;}
+		.topNode .MyStudy ul li a{height: 100%;width: 100%;float: left;}
+		.topNode .MyStudy ul li img{margin: 9px 11px;float: left;}
+		.topNode .MyStudy ul li span{margin-top: 11px;float: left;font-size: 14px;width: 200px;}
+		.topNode .MyStudy ul li h2{font-size: 12px;float: left;width: 200px;font-weight: 400;color: #838182;}
+		.topNode .MyStudy .MyStudyBottom{margin-top: 10px;background: #f5f3f5;text-align: center;height: 52px;width: 100%;line-height: 52px;}
+		.topNode .MyStudy .MyStudyBottom a{background: url(img/MyStudyBottomJT.png)no-repeat 54px; padding-right: 10px;font-size: 13px;color: #69676a;}
+		.topNode .MyStudy .MyStudysjx{width: 13px;height: 10px;position: absolute;left: 87px;top: -13px;}
+/**/
+		.menu{height: 56px;width: 1205px;margin: auto;}
+		.menu>li{margin-left: 67px;float: left;margin-top: 20px;font-size: 15px;position: relative;}
+		.menu>li>a{color: #424242;}
+		.menu .active>a{color: #4aaf4f;}
+		.menu .fastmenu{margin-left: 0;}
+		.menu .lastmenu{margin-top: 13px;cursor: pointer;position: relative;}
+		.menu>li>div{width: 24px;height: 3px;background: #4aaf4f;margin-top: 13px;margin-left: auto;margin-right: auto;border-radius: 1px;display: none;}
+		.menu .active>div{display: block;}
+		.menu>li>a:hover {color: #4AAF4F;}
+		.menu>li:hover .xiailamenu0{display: block;}
+		.menu .xiailamenu{height: 150px;width: 90px;background: white;position: absolute;left: -10px;top: 23px; z-index: 1;}
+		.menu .xiailamenu1{background: white;position: absolute;left: -10px;top: 23px; z-index: 1;box-shadow: 0 0 2px #ccc;font-size: 12px;}
+		.menu .xiailamenu1 ul li{line-height: 45px;height: 45px;position: relative;text-indent: 10px;}
+		.menu .xiailamenu1 ul li:hover a{color: #7f7f7f;font-weight: 550;}
+		.menu .xiailamenu1 ul li div{height: 15px;width: 3px;position: absolute;right: 0;top: 12px;background: #4AAF4F;display: none;}
+		.menu .xiailamenu1 ul li:hover div{display: block;}
+		.menu .lastmenu .rightmenu{height: 150px;width: 90px;background: white;position: absolute;left: -35px;top: 0px; z-index: 1;}
+		.menu .lastmenu .rightmenu ul{margin-top: 33px;font-size: 13px;}
+		.menu .lastmenu .rightmenu ul li{line-height: 39px;height: 39px;text-align:  center;position: relative;}
+		.menu .lastmenu .rightmenu ul li:hover a{color: #4AAF4F;font-weight: 550;}
+		.menu .lastmenu .rightmenu ul li div{height: 15px;width: 3px;position: absolute;right: 0;top: 12px;background: #4AAF4F;display: none;}
+		.menu .lastmenu .rightmenu ul li:hover div{display: block;}
+		.menu .lastmenu:hover .rightmenu{display: block;}
+/**/
+		.pe{width: 100%;height: 360px;background: #f15c5a;}
+		.pe .dape{height: 100%;width: 1205px;margin: auto;}
+		.pe .dape .luenfantupe img{position: absolute;opacity: 0;transition: 1s;}
+		.pe .dape .luenfantupe .lft1{opacity: 1;}
+		.pe .xiaope{width: 280px;height: 320px;border-radius: 3px;background: rgba(0,0,0,0.4);margin-top: 20px;margin-right: 0px;float: right;position: relative;}
+		.pe .xiaope li{font-size: 15px;margin-top: 25px;height: 15px;text-indent: 20px;}
+		.pe .xiaope .back a{color: #4AAF4F;}
+		.pe .xiaope .back{background: url(img/back.png)no-repeat 8px 5px;}
+		.pe .xiaope li a{color: #aaa;}
+		.pe .xiaope .pe-text{margin-top: 10px;}
+		.pe .xiaope .pe-text li a{font-weight: 510;}
+		.pe .xiaope li:hover a{color: #4AAF4F;}
+		
+/**/
+		.teacher{width: 1205px;height: 215px;margin: 35px auto 20px;position: relative;}
+		.teacher .teacher-top{height: 41px;width: 100%;}
+		.teacher .teacher-top h2{font-size: 23px;color: #333333;float: left;}
+		.teacher .teacher-top a{float: right;margin-right: 2px;padding-right: 26px;margin-top: 5px;background: url(img/teachertopgenduo-1.png)no-repeat 41px 5px;}
+		.teacher .middle{width: 1125px;height: 159px;margin-left: 40px;overflow: hidden;}
+		.teacher #teacherleftjt{display: none;}
+		.teacher .teacherlft{width: 1525px;height: 159px;transition: 1s;}
+		.teacher .teacherlft li{width: 351px;height: 141px;border: solid 1px #f0f0f0;border-radius: 6px;margin-top: 10px;margin-right: 25px;float: left;}
+		.teacher .teacherlft li:hover{box-shadow: 2px 2px 4px #ccc;}
+		.teacher .teacherlft .li1{margin-left: 10px;}
+		.teacher .teacherlft li .teacherpe{height: 100%;width: 112px;float: left;}
+		.teacher .teacherlft li .teacherpe img{margin: 12px;}
+		.teacher .teacherlft li .div1{margin-top: 16px;font-size: 13px;float: left;width: 230px;height: 13px;line-height: 13px;position: relative;color: #333333;}
+		.teacher .teacherlft li .div1 div{float: left;width: 56px;height: 21px;border: 1px solid #fadca0;font-size: 11px;line-height: 21px;text-align: center;color: #f4ad0d;border-radius: 3px;position:  absolute;left: 44px;top: -5px;}
+		.teacher .teacherlft li .div2{font-size: 11px;line-height: 11px;margin-top: 16px;height: 11px;width: 230;float: left;color: #6b6b6b;}
+		.teacher .left-jt{position: absolute;left: 1px;top: 110px;}
+		.teacher .right-jt{position: absolute;right: 1px;top: 110px;}
+		
+/**/
+
+		.zhibo{height: 320px;width: 1205px;margin: 0 auto;}
+		.zhibo .zhibo-top{height: 26px;width: 100%;line-height: 26px;}
+		.zhibo .zhibo-top h2{font-size: 23px;color: #333333;float: left;}
+		.zhibo .zhibo-top a{float: right;margin-right: 2px;padding-right: 26px;margin-top: 0px;background: url(img/teachertopgenduo-1.png)no-repeat 41px 5px;}
+		.zhibo .zhibope{width: 1215px;height: 253px;margin-left: -5px;}
+		.zhibo .zhibope ul{width: 1206px;height: 249px;}
+		.zhibo .zhibope ul li{width: 365px;height: 124px;margin-top: 1px;margin-left: 2px;float: left;margin-right: 52px;}
+		.zhibo .zhibope ul .li3{margin-right: 0;}
+		.zhibo .zhibope ul li:hover{box-shadow:0 0 4px #bbb;}
+		.zhibo .zhibope ul li .photo{height: 80px;width: 100px;margin-top: 22px;margin-left: 3px;float: left;}
+		.zhibo .zhibope .line1{float: left;margin-top: 24px;width: 259px;font-size: 13px;height: 13px;color: black;}
+		.zhibo .zhibope .line1 .linea{color: #4eb153;}
+		.zhibo .zhibope .line2{float: left;margin-top: 15px;width: 259px;font-size: 15px;height: 15px;}
+		.zhibo .zhibope .line3{float: left;margin-top: 16px;width: 259px;font-size: 11px;height: 11px;}
+		
+/**/
+		
+		.xitong{width: 1205px;height: 207px;margin: 0 auto;}
+		.xitong .xitong-top h2{font-size: 23px;color: #333333;float: left;}
+		.xitong .xitong-top span{font-size: 13px;margin-left: 13px;margin-top: 9px;float: left;}
+		.xitong .xitongpe{width: 100%;height: 120px;margin-top: 21px;float: left;}
+		.xitong .xitongpe li{margin-right: 25px;float: left;}
+		.xitong .xitongpe .li6{margin-right: 0;}
+		
+/**/
+		.weizy{width: 1205px;height: 313px;margin: 0 auto;}
+		.weizy .weizy-top{height: 38px;width: 100%;line-height: 26px;}
+		.weizy .weizy-top h2{font-size: 23px;color: #333333;float: left;}
+		.weizy .weizy-top a{float: right;margin-right: 2px;padding-right: 26px;margin-top: 0px;background: url(img/teachertopgenduo-1.png)no-repeat 41px 5px;}
+		.weizype{height: 223px;width: 1205px;}
+		.weizype li{height: 223px;width: 286px;float: left;margin-right: 20px;}
+		.weizype .li4{margin-right: 0;}
+		.weizype li:hover img{transform: scale(1.1);}
+		.weizype li img{float: left;transition: 0.6s;}
+		.weizype li a .weizype-out{width: 286px;height: 161px;border-radius: 3px;overflow: hidden;}
+		.weizype li .weizydiv{width: 284px;height: 61px;border: solid #eeeeee 1px;border-top: none;border-radius: 0 0 2px 2px; float: left;}
+		.weizype li .weizydiv .s1{margin-top: 12px;margin-left: 10px; height: 13px;font-size: 13px;}
+		.weizype li .weizydiv .s2{margin-top: 9px;margin-left: 10px;font-size: 12px;color: #666666;}
+		
+/**/
+		.xiansmiaos{width: 1205px;height: 350px;margin: 0 auto;}
+		.xiansmiaos .xiansmiaos-top{height: 38px;width: 100%;line-height: 23px;}
+		.xiansmiaos .xiansmiaos-top h2{font-size: 23px;color: #333333;float: left;}
+		.xiansmiaos .qiango{margin-top: 21px;width: 100%;height: 40px;}
+		.xiansmiaos .qiango li{width: 200px;height: 40px;margin-right: 1px;background-color: #edf7ee;float: left;color: #666666;font-size: 13px;text-align: center;line-height: 40px;}
+		.xiansmiaos .qiango li span{font-size: 15px;font-weight: 550;}
+		.xiansmiaos .qiango .li6{margin-right: 0;}
+		.xiansmiaos .qiango .active{background: #4aaf4f;color: #f5fbf6;}
+		.qiangope-out{height: 223px;width: 1205px;margin-top: 12px;position: relative;}
+		.qiangope-out .show{display: block;}
+		.qiangope{height: 223px;width: 1205px;position: absolute;display: none;}
+		.qiangope li{height: 125px;width: 225px;float: left;margin-right: 20px;}
+		.qiangope .li4{margin-right: 0;}
+		.qiangope li img{float: left;}
+		.qiangope li .weizydiv{width: 225px;height: 130px;float: left;}
+		.qiangope li .weizydiv .s1{margin-top: 13px; height: 13px;font-size: 13px;font-weight: 600;}
+		.qiangope li .weizydiv .s2{margin-top: 9px;font-size: 12px;color: #666666;}
+		.qiangope li .monery{margin-top: 19px;float: left;width: 100%;}
+		.qiangope li .xi{width: 60px;height: 20px;border: solid 1px #ff4000;border-radius: 1px;float: right;color: #ff4000;font-size: 12px;text-align: center;line-height: 20px;}
+		
+/**/
+		
+		.xingqu{height: 60px;width: 1205px;background: #edf7ee;border-radius: 2px;text-align: center;margin: 0 auto;}
+		.xingqu .xingqutext{line-height: 60px;float: left;margin-left: 21px;font-size: 17px;font-weight: 600;}
+		.xingqu .xingqua{float: left;margin-left: 21px;line-height: 60px;color: #4aaf4f;background: url(img/xingqua.png)no-repeat 60px;padding-right: 14px;cursor: pointer;}
+		
+/**/
+		.houduan{height: 262px;width: 1205px;margin: 23px auto 0;}
+		.houduan .houduan-top{height: 38px;width: 100%;line-height: 23px;}
+		.houduan .houduan-top h2{font-size: 23px;color: #333333;float: left;}
+		.houduanpe{height: 223px;width: 1205px;margin-top: 19px;}
+		.houduanpe li{height: 125px;width: 225px;float: left;margin-right: 20px;}
+		.houduanpe li:hover img{transform: scale(1.2);}
+		.houduanpe .li4{margin-right: 0;}
+		.houduanpe li img{float: left;transition: 0.6s;}
+		.houduanpe li .houduanpe-out{width: 225px;height: 125px;border-radius: 3px;overflow: hidden;}
+		.houduanpe li .zydiv{width: 225px;height: 95px;float: left;}
+		.houduanpe li .zydiv .sl1{margin-top: 11px; height: 13px;font-size: 15px;font-weight: 600;}
+		.houduanpe li .zydiv .sl2{margin-top: 9px;font-size: 12px;color: #666666;}
+		
+/**/
+			
+		.xilei{height: 254px;width: 1205px;margin: 0 auto;}
+		.xilei .xilei-top{height: 38px;width: 100%;line-height: 23px;}
+		.xilei .xilei-top h2{font-size: 23px;color: #333333;float: left;}
+		.xileipe{height: 170px;width: 1205px;margin-top: 19px;}
+		.xileipe li{height: 170px;width: 286px;float: left;margin-right: 20px;}
+		.xileipe .li4{margin-right: 0;}
+		
+/**/
+		.bluepe{height: 130px;width: 1205px;margin: 0 auto;}
+		.bluepe .bluepediv1{margin-right: 20px;}
+		.bluepe div{float: left;}
+		
+/**/
+		.bottom{height: 184px;width: 100%;background: #474443;margin-top: 26px;}
+		.bottom .bottomnode{height: 184px;width: 1205px;margin: 0 auto;position: relative;}
+		.bottom .bottomnode .bottomnode1{margin-top: 34px;float: left;width: 100%;font-size: 13px;height: 13px;color: #e7e7e6;width: 800px;}
+		.bottom .bottomnode .bottomnode2{margin-top: 16px;float: left;width: 100%;font-size: 13px;height: 13px;width: 800px;}
+		.bottom .bottomnode .bottomnode2 li{float: left;margin-right: 22px;}
+		.bottom .bottomnode .bottomnode2 li:hover{text-decoration: underline;}
+		.bottom .bottomnode .bottomnode2 li a{color: #e7e7e6;}
+		.bottom .bottomnode .bottomnode3{color: #989898;margin-top: 15px;float: left;font-size: 12px;width: 800px;}
+		.bottom .bottomnode .bottomnode3 a{color: #989898;margin-left: 5px;}
+		.bottom .bottomnode .bottomnode3 a:hover{color: #e7e7e6;text-decoration: underline;}
+		.bottom .bottomnode .aa{height: 32px;width: 231px;position: absolute;right: 1px;top: 20px;}
+		.bottom .bottomnode .aa a{float: right;margin-left: 11px;}
+		.bottom .bottomnode .aa .a1{margin-left: 0;}
+		.bottom .bottomnode .guanz{height: 26px;width: 142px;position: absolute;right: 0;top: 86px;}
+		.bottom .bottomnode .guanz span{font-size:  13px;color: #e5e5e5;line-height: 26px;float: left;}
+		.bottom .bottomnode .guanz .a1{margin-top: 0;margin-left: 10px;float: left;position: relative;}
+		.bottom .bottomnode .guanz .a1:hover .guanz-a1-show{display: block;}
+		.bottom .bottomnode .guanz .a2{margin-top: 0;margin-left: 20px;float: left;}
+		.bottom .bottomnode .guanz .a1 .guanz-a1-show{width: 240px;height: 247px;background: white;position: absolute;top: -260px;left: -113px;border-radius: 3px;box-shadow: 0 0 5px #ccc;display: none;}
+		.bottom .bottomnode .guanz .a1 .guanz-a1-show .sjx{width: 19px;height: 9px; position: absolute;left: 50%;bottom: -9px; background: url(img/sjx.gif)no-repeat;}
+		.bottom .bottomnode .guanz .a1 .guanz-a1-show ul{text-align: center;height: 70px;width: 100%;}
+		.bottom .bottomnode .guanz .a1 .guanz-a1-show ul .li1{font-size: 15px;margin-top: 19px; height: 15px;font-weight: 550;}
+		.bottom .bottomnode .guanz .a1 .guanz-a1-show ul .li2{font-size: 11px;height: 11px;margin-top: 16px;font-weight: 500;}
+		.bottom .bottomnode .guanz .a1 .guanz-a1-show img{position: absolute;left: 50%;margin-left: -60px;}
+		
+/*xuanfu*/
+		.xuanfu{position: fixed;right: 5px;top: 320px; width: 61px;height: 327px;}
+		.xuanfu .xuanfu-ul{width: 48px;height: 220px;border: solid 1px #d1d1d1;position: absolute;left: 0;bottom: 0;background: white;border-radius: 5px;}
+		.xuanfu .xuanfu-ul .xuanfu-ul-pe{height: 58px;width: 100%;position: relative;}
+		.xuanfu .xuanfu-ul .xuanfu-ul-line{height: 23px;width: 100%;position: relative;}
+		.xuanfu .xuanfu-ul .xuanfu-ul-line .line{width: 39px;height: 1px;background: #cecece;position: absolute;top: 11px;left: 4px;}
+		.xuanfu .xuanfu-ul .xuanfu1{background: url(img/show-m.gif)no-repeat center;border-radius: 5px 5px 0 0;}
+		.xuanfu .xuanfu-ul .xuanfu2{background: url(img/show-mobile.gif)no-repeat center;}
+		.xuanfu .xuanfu-ul .xuanfu3{background: url(img/show-t.gif)no-repeat center;border-radius: 0 0 5px 5px;}
+		.xuanfu .xuanfu-ul .xuanfu-ul-pe .show{width: 30px;height: 30px;font-size: 15px;line-height: 15px;position: absolute;left: 9px;top: 14px;display: none;color: white;}
+		.xuanfu .xuanfu-ul .xuanfu-ul-pe:hover{background: #69a030;}
+		.xuanfu .xuanfu-ul .xuanfu-ul-pe:hover .show{display: block;}
+		.xuanfu .xuanfu-ul .xuanfu-ul-pe .xuanfu-show2{width: 212px;height: 133px;border: 1px solid #cecece;box-shadow: 0 0 2px #cecece;position: absolute;left: -214px;top: -40px;background: white;display: none;}
+		.xuanfu .xuanfu-ul .xuanfu-ul-pe .xuanfu-show2 .sjx{background: url(img/show-jt.gif)no-repeat;width: 5px;height: 14px;position: absolute;right: -5px;top: 45px;}
+		.xuanfu .xuanfu-ul .xuanfu-ul-pe .xuanfu-show2 div{margin-left: 15px;margin-top: 15px;width: 85px;height: 85px;float: left;}
+		.xuanfu .xuanfu-ul .xuanfu2:hover .xuanfu-show2{display: block;}
+	
+/**/
+		.xingQu-out{width: 100%;height: 100%;position: fixed;top: 0%; background: #000;opacity: 0.7;z-index: 1;}
+		.xingQuXuanXianKa{width: 990px; position: fixed;top: 50%;left: 50%;margin-left: -495px;margin-top: -235px; background: white;z-index: 2;}
+		.xingQuXuanXianKa .xx{height: 22px;width: 100%;margin-top: 20px;}
+		.xingQuXuanXianKa .xx .xxk-xx{background: url(img/xxk-xx.png);width: 15px;height: 15px;float: right;margin-right: 19px;cursor: pointer;}
+		.xingQuXuanXianKa .xx .xxk-xx:hover{background: url(img/xxk-xx1.png);}
+		.xingQuXuanXianKa .title{height: 19px;width: 100%;}
+		.xingQuXuanXianKa .title h4{font-size: 19px;line-height: 19px;float: left;margin-left: 40px;}
+		.xingQuXuanXianKa .title span{float: left;margin-left: 28px;font-size: 14px;margin-top: 5px;line-height: 14px;color: #5e5c5e;}
+		.xingQuXuanXianKa .menu{width: 100%;height: 28px;}
+		.xingQuXuanXianKa .menu ul{width: 906px;height: 26px;border-bottom: 2px solid #c2c5c3;margin-left: 40px;margin-top: 38px;}
+		.xingQuXuanXianKa .menu ul li{height: 16px;float: left;margin-right: 30px;position: relative;font-size: 16px;line-height: 16px;color: #5e5c5e;}
+		.xingQuXuanXianKa .menu ul li.active{color: #4aaf4f;}
+		.xingQuXuanXianKa .menu ul .active .line{position: absolute;bottom: -12px;left: 0;width: 100%;height: 3px;background: #4aaf4f;}
+		.xingQuXuanXianKa .menuContent{height: 154px;width: 906px;margin-left: 40px;border-bottom: 2px solid #c2c5c3;}
+		.xingQuXuanXianKa .menuContent div div{width: 94px;height: 31px;text-align: center;line-height: 31px;font-size: 14px;color: #5e5c5e;border-radius: 14px;margin-right: 19px;margin-top: 20px;border: 2px solid #dbdbdb;float: left;}
+		.xingQuXuanXianKa .menuContent div div.click{background: #4aaf4f;color: white;}
+		.xingQuXuanXianKa .menuContent .menuContent-list{position: absolute;width: 906px;height: 154px;display: none;}
+		.xingQuXuanXianKa .menuContent .show{display: block;}
+		.xingQuXuanXianKa .bottom{height: 130px;width: 100%;position: relative;background: white;float: left;}
+		.xingQuXuanXianKa .conture{width: 180px;height: 45px;position: absolute;top: 50%;left: 50%; margin-top: -22.5px;margin-left: -90px;border-radius: 18px;background: #4aaf4f;color: white;font-size: 15px;text-align: center;line-height: 45px;float: left;cursor: pointer;}
+		.xingQuXuanXianKa .choose{width: 906px;margin-top: 6px;margin-left: 40px;float: left;}
+		.xingQuXuanXianKa .choose p{float: left;margin-top: 20px;margin-right: 13px;font-size: 12px;color: #5e5c5e;}
+		.xingQuXuanXianKa .choose div{float: left;margin-top: 12px;margin-right: 15px; height: 26px;width: 113px;border: solid 2px #dbdbdb;border-radius: 12px; font-size: 12px;line-height: 26px;}
+		.xingQuXuanXianKa .choose div span{color: #5e5c5e;margin-left: 17px;}
+		.xingQuXuanXianKa .choose div img{margin-right: 12px;float: right;margin-top: 8px;cursor: pointer;}
+		</style>
+		
+	</head>
+	<body>
+		<div class="topCopy"></div>
+		<div class="topNode">
+			<div class="topNode-content">
+				<a href="#" class="topNode-content-a1">
+					<img src="img/title-1.png" />
+				</a>
+				
+				<div class="search" id="search">
+					<div class="searchleft" ><span>课程</span>
+						<div class="searchleftxiaila">
+							<ul id="searchleftxiailaul">
+								<li class="searchleftxiailaula"><a class="active1">课程</a> </li>
+								<li class="searchleftxiailaula"><a>网校</a> </li>
+							</ul>
+						</div>
+					</div>
+					<div class="searchinput">
+						<input type="text" class="searchinputz" placeholder="零基础学Javescript"/>
+					</div>
+					
+					<div class="searchright">
+						<a href="#" class="searchright-a">搜索</a>
+					</div>
+					<div class="searchmenu searchmenu1">
+						<ul class="searchmenuul">
+							<li>热门搜索</li>
+							<li><a href="#">培训</a> </li>
+							<li><a href="#">程序</a> </li>
+							<li><a href="#">北京理工大学</a> </li>
+							<li><a href="#">中国</a> </li>
+							<li><a href="#">网校</a> </li>
+						</ul>
+					</div>
+					<div class="searchmenu searchmenu2">
+						<ul class="searchmenuul">
+							<li>热门搜索</li>
+							<li><a href="#">职业考试</a> </li>
+							<li><a href="#">edu</a> </li>
+							<li><a href="#">语言学习</a> </li>
+							<li><a href="#">中国</a> </li>
+							<li><a href="#">网校</a> </li>
+						</ul>
+					</div>
+				</div>
+				<a href="#" class="search-download">下载APP
+					<div class="search-download-show">
+						<div class="sjx"><img src="./img/search-download-show-sjx.png"/></div>
+						<div class="ewm"><img src="./img/ewm-top.png"/> </div>
+						<span>扫码下载官方APP</span>
+						<div class="app"><img src="img/show-ad.gif" /> </div>
+						<div class="app2"><img src="img/show-app.gif" /> </div>
+					</div>
+				</a>
+				<a href="#" class="search-guanzhu">关注领福利
+					<div class="guanZhu">
+						<div class="sjx"></div>
+						<ul>
+							<li class="li1">关注云课堂官方微信号</li>
+							<li class="li2">-领取课程免费福利，超值学习资料-</li>
+						</ul>
+						<div class="img"><img src="./img/ewm.gif" /></div>
+					</div>
+				</a>
+				<a href="#" class="search-huiyuan">会员中心
+					<div class="line"></div>
+				</a>
+				<p>|</p>
+				<a href="#" class="search-guanli">管理后台</a>
+				<a href="#" class="SearchMyStudy">我的学习</a>
+				<a href="#" class="search-lin"></a>
+				<a href="#" class="search-car"></a>
+				<p>|</p>
+				<a href="#" class="search-username">张玮</a>
+				<img src="img/userpe.png" class="search-userpe"/>
+				<ul class="usermenu">
+					<li class="usermenuTopBorder"><a href="#">正使用手机账号登陆</a> </li>
+					<li><a href="#">我的优惠卷<span>兑换</span> </a> </li>
+					<li><a href="#">我的订单</a> </li>
+					<li><a href="#">帮助与反馈</a> </li>
+					<li><a href="#">设置</a> </li>
+					<li class="usermenuBottomBorder"><a href="#">退出</a> </li>
+					<div class="usermenuJT"></div>
+				</ul>
+				<div class="MyStudy">
+					<div class="MyStudysjx"><img src="img/jt-t-down.png" /> </div>
+					<div class="MyStudyTop">最近学习课程</div>
+					<ul>
+						<li>
+							<a href="#">
+								<img src="img/MyStudype1.png"/>
+								<span>前端工程师就业班</span>
+								<h2>放大与缩小</h2>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="img/MyStudype1.png"/>
+								<span>前端工程师就业班</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="img/MyStudype1.png"/>
+								<span>前端工程师就业班</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="img/MyStudype1.png"/>
+								<span>前端工程师就业班</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="img/MyStudype1.png"/>
+								<span>前端工程师就业班</span>
+							</a>
+						</li>
+					</ul>
+					<div class="MyStudyBottom"><a href="#">查看更多</a> </div>
+				</div>
+			</div>
+		</div>
+			
+		<ul class="menu" id="menu">
+			<li class="active fastmenu" ><a  class="menuda"href="#">首页</a><div class="xiailamenu0"></div> </li>
+			<li><a  class="menuda"href="#">实用英语</a> <div class="xiailamenu0"></div>
+				<div class="xiailamenu1">
+					<ul>
+						<li><a href="#"></a><div></div> </li>
+					</ul>
+				</div>
+			</li>
+			<li><a class="menuda" href="#">兴趣技能</a> <div class="xiailamenu0"></div>
+				<div class="xiailamenu1">
+					<ul>
+						<li><a href="#"></a><div></div> </li>
+					</ul>
+				</div>
+			</li>
+			<li><a class="menuda" href="#">职场提升</a>
+				<div class="xiailamenu0"></div>
+				<div class="xiailamenu1">
+					<ul>
+						<li><a href="#">电</a><div></div> </li>
+						<li><a href="#">职业</a><div></div> </li>
+						<li><a href="#">语言学</a><div></div> </li>
+						<li><a href="#">电商运营</a><div></div> </li>
+						<li><a href="#">职业考试</a><div></div> </li>
+						<li><a href="#">语言学习</a><div></div> </li>
+						<li><a href="#">是的</a><div></div> </li>
+						<li><a href="#">职业试</a><div></div> </li>
+						<li><a href="#">语言学习</a><div></div> </li>
+					</ul>
+				</div>
+			</li>
+			<li><a class="menuda" href="#">编程与开发</a> 
+				<div class="xiailamenu0"></div>
+				<div class="xiailamenu1">
+					<ul>
+						<li><a href="#">电商运营</a><div></div> </li>
+						<li><a href="#">职业考试</a><div></div> </li>
+						<li><a href="#">语言学习</a><div></div> </li>
+						<li><a href="#">电商运营</a><div></div> </li>
+						<li><a href="#">职业考试</a><div></div> </li>
+						<li><a href="#">语言学习</a><div></div> </li>
+						<li><a href="#">电商运营</a><div></div> </li>
+					</ul>
+				</div>
+			</li>
+			<li><a class="menuda" href="#">AI/数据科学</a>
+				<div class="xiailamenu0"></div>
+				<div class="xiailamenu1">
+					<ul>
+						<li><a href="#">电商运营</a><div></div> </li>
+						<li><a href="#">职业考试</a><div></div> </li>
+						<li><a href="#">语言学习</a><div></div> </li>
+						<li><a href="#">电商运营</a><div></div> </li>
+						
+					</ul>
+				</div>
+			</li>
+			<li><a class="menuda" href="#">生活兴趣</a>
+				<div class="xiailamenu0"></div>
+				<div class="xiailamenu1">
+					<ul>
+						<li><a href="#">职商运营</a><div></div> </li>
+						<li><a href="#">语商运营</a><div></div> </li>
+						<li><a href="#">电商运营</a><div></div> </li>
+						<li><a href="#">职商运营</a><div></div> </li>
+						<li><a href="#">语商运营</a><div></div> </li>
+					</ul>
+				</div>
+			</li>
+			<li><a class="menuda" href="#">设计创意</a>
+				<div class="xiailamenu0"></div>
+				<div class="xiailamenu1">
+					<ul>
+						<li><a href="#">语商运营</a><div></div> </li>
+					</ul>
+				</div>
+			</li>
+			<li><a class="menuda" href="#">产品与运营</a>
+				<div class="xiailamenu0"></div>
+				<div class="xiailamenu1">
+					<ul>
+						<li><a href="#">试习</a><div></div> </li>
+						<li><a href="#">语言习</a><div></div> </li>
+						<li><a href="#">电商营</a><div></div> </li>
+						<li><a href="#">职业试</a><div></div> </li>
+						<li><a href="#">语言习</a><div></div> </li>
+						<li><a href="#">电商营</a><div></div> </li>
+						<li><a href="#">职业试</a><div></div> </li>
+						<li><a href="#">语言是</a><div></div> </li>
+					</ul>
+				</div>
+			</li>
+			<li class="lastmenu">
+				<img src="img/asdsd-1.png"/>
+				<div class="rightmenu">
+					<ul>
+						<li><a href="#">电商运营</a><div></div> </li>
+						<li><a href="#">职业考试</a><div></div> </li>
+						<li><a href="#">语言学习</a><div></div> </li>
+					</ul>
+				</div>
+			</li>
+		</ul>
+			
+		<div class="pe">
+			<div class="dape">
+				<div class="luenfantupe">
+					<img class="lft1" src="img/8c35596bb5ec4cb8ae7390f28c4cb567.png" >	
+					<img class="lft2" src="img/6ca7db807c3f448fa19039cae380ffb7.jpg" />
+					<img class="lft3" src="img/a17ddac75cc944b9b0f5204156e2afa6.png" >
+					<img class="lft4" src="img/79b6a4b0bd644681b1d2a5ec3c10da65.jpg" />
+					<img class="lft5" src="img/9da551a2ceee48fcae68db05b562cff1.jpg" >	
+					<img class="lft6" src="img/19055192bca54c5ea9622d8f672fd8e1.png"/>
+					<img class="lft7" src="img/81f375340e0c48b7a4d1b9c853eab8ce.png" >
+				
+				</div>
+				<div class="xiaope">
+					<ul class="pe-text">
+						<li class="back"><a href="#" >脱口而出： 3天地道口语轻松说</a> </li>
+						<li><a href="#">0元领取：站酷大神带你入门UI</a> </li>
+						<li><a href="#">高效提升：3节课练就口语技能</a> </li>
+						<li><a href="#">限时免费：如何获取稳定投资收益</a> </li>
+						<li><a href="#">金融思维：25个经典案例解析</a> </li>
+						<li><a href="#">免费试听：清华大神教你Python</a> </li>
+						<li><a href="#">新课特惠：网课变现全流程进阶课</a> </li>
+					</ul>
+				</div>
+			</div>
+		</div>
+			
+		<div class="teacher">
+			<div class="teacher-top">
+				<h2>名师公开课</h2>
+				<a href="#">更多</a>
+			</div>
+			<div class="middle">
+				<ul class="teacherlft">
+					<li class="li1">
+						<a href="#">
+								<div class="teacherpe"><img src="img/teacher1pe.png"/></div>
+							<div class="div1">12月21日 20:00</div>
+							<div class="div1">零基础轻松学Python</div>
+							<div class="div1">毕滢<div>清华码神</div></div>
+							<div class="div2">编程小白的Python入门课</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="teacherpe"><img src="img/teacher1pe.png"/></div>
+							<div class="div1">12月21日 20:00</div>
+							<div class="div1">零基础轻松学Python</div>
+							<div class="div1">毕滢<div>清华码神</div></div>
+							<div class="div2">编程小白的Python入门课</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="teacherpe"><img src="img/teacher1pe.png"/></div>
+							<div class="div1">12月21日 20:00</div>
+							<div class="div1">零基础轻松学Python</div>
+							<div class="div1">毕滢<div>清华码神</div></div>
+							<div class="div2">编程小白的Python入门课</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="teacherpe"><img src="img/teacher1pe.png"/></div>
+							<div class="div1">20月21日 20:00</div>
+							<div class="div1">零基础轻松学Python</div>
+							<div class="div1">毕滢<div>清华码神</div></div>
+							<div class="div2">编程小白的Python入门课</div>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<a href="#" id="teacherleftjt" class="left-jt"><img src="img/left-jt.png"/></a>
+			<a href="#" id="teacherrightjt" class="right-jt"><img src="img/right-jt.png"/></a>
+		</div>
+		
+		<div class="zhibo">
+			<div class="zhibo-top">
+				<h2>直播课堂</h2>
+				<a href="#">更多</a>
+			</div>
+			<div class="zhibope">
+				<ul>
+					<li>
+						<a href="#">
+							<div class="photo"><img src="img/zhibope1.png"/></div>
+							<div class="line1">今天20:00 | <a href="#" class="linea">开启提醒</a></div>
+							<div class="line2">入行毕听: UI设计师5大避坑问题</div>
+							<div class="line3">aiki网易特邀设计师</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="photo"><img src="img/zhibope1.png"/></div>
+							<div class="line1">今天20:00 | <a href="#" class="linea">开启提醒</a></div>
+							<div class="line2">入行毕听: UI设计师5大避坑问题</div>
+							<div class="line3">aiki网易特邀设计师</div>
+						</a>
+					</li>
+					<li class="li3">
+						<a href="#">
+							<div class="photo"><img src="img/zhibope1.png"/></div>
+							<div class="line1">今天20:00 | <a href="#" class="linea">开启提醒</a></div>
+							<div class="line2">入行毕听: UI设计师5大避坑问题</div>
+							<div class="line3">aiki网易特邀设计师</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="photo"><img src="img/zhibope1.png"/></div>
+							<div class="line1">今天20:00 | <a href="#" class="linea">开启提醒</a></div>
+							<div class="line2">入行毕听: UI设计师5大避坑问题</div>
+							<div class="line3">aiki网易特邀设计师</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="photo"><img src="img/zhibope1.png"/></div>
+							<div class="line1">今天20:00 | <a href="#" class="linea">开启提醒</a></div>
+							<div class="line2">入行毕听: UI设计师5大避坑问题</div>
+							<div class="line3">aiki网易特邀设计师</div>
+						</a>
+					</li>
+					<li class="li3">
+						<a href="#">
+							<div class="photo"><img src="img/zhibope1.png"/></div>
+							<div class="line1">今天20:00 | <a href="#" class="linea">开启提醒</a></div>
+							<div class="line2">入行毕听: UI设计师5大避坑问题</div>
+							<div class="line3">aiki网易特邀设计师</div>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="xitong">
+			<div class="xitong-top">
+				<h2>系统化学习路径</h2>
+				<span>网易云课堂六大课程体系，让学习有章有序</span>
+			</div>
+			<ul class="xitongpe">
+				<li><a href="#"><img src="img/xitongpe1.png" /> </a> </li>
+				<li><a href="#"><img src="img/xitongpe1.png" /> </a> </li>
+				<li><a href="#"><img src="img/xitongpe1.png" /> </a> </li>
+				<li><a href="#"><img src="img/xitongpe1.png" /> </a> </li>
+				<li><a href="#"><img src="img/xitongpe1.png" /> </a> </li>
+				<li class="li6"><a href="#"><img src="img/xitongpe1.png" /> </a> </li>
+			</ul>
+		</div>
+		
+		<div class="weizy">
+			<div class="weizy-top">
+				<h2>微专业</h2>
+				<a href="#">更多</a>
+			</div>
+			<ul class="weizype">
+				<li>
+					<a href="#">
+						<div class="weizype-out"><img src="img/weizype1.png" /></div>
+						<div class="weizydiv">
+							<div class="s1">UI设计师</div>
+							<div class="s2">打通全链路,成为独当一面的核心设计师</div>
+						</div> 
+					</a> 
+				</li>
+				<li>
+					<a href="#">
+						<div class="weizype-out"><img src="img/wzy-2.gif" /></div>
+						<div class="weizydiv">
+							<div class="s1">UI设计师</div>
+							<div class="s2">打通全链路,成为独当一面的核心设计师</div>
+						</div> 
+					</a> 
+				</li>
+				<li>
+					<a href="#">
+						<div class="weizype-out"><img src="img/wzy-3.gif" /></div>
+						<div class="weizydiv">
+							<div class="s1">UI设计师</div>
+							<div class="s2">打通全链路,成为独当一面的核心设计师</div>
+						</div> 
+					</a> 
+				</li>
+				<li class="li4">
+					<a href="#">
+						<div class="weizype-out"><img src="img/wzy-4.gif" /></div>
+						<div class="weizydiv">
+							<div class="s1">UI设计师</div>
+							<div class="s2">打通全链路,成为独当一面的核心设计师</div>
+						</div> 
+					</a> 
+				</li>
+			</ul>
+		</div>
+		
+		<div class="xiansmiaos">
+			<div class="xiansmiaos-top">
+				<h2>微专业</h2>
+			</div>
+			<ul class="qiango">
+				<li class="active"> <span>抢购中</span> 距结束:00:15:12</li>
+				<li> <span>今天 &nbsp; </span> 20:00开抢</li>
+				<li> <span>明天</span> 10:00开抢</li>
+				<li> <span>明天</span> 14:00开抢</li>
+				<li> <span>明天</span> 20:00开抢</li>
+				<li class="li6"> <span>12月19号</span> 10:00开抢</li>
+			</ul>
+			<div class="qiangope-out">
+				<ul class="qiangope show">
+					<li>
+						<a href="#">
+							<img src="img/weizy.png" />
+							<div class="weizydiv">
+								<div class="s1">1抖音短视频运营操盘核心技法</div>
+								<div class="s2">产品农转非</div>
+								<div class="monery"><img src="img/monery.png"/> <div class="xi">仅剩8席</div></div>
+							</div> 
+						</a> 
+					</li>
+					<li>
+						<a href="#">
+							<img src="img/weizy.png" />
+							<div class="weizydiv">
+								<div class="s1">UI设计师</div>
+								<div class="s2">成为独当一面的核心设计师</div>
+								<div class="monery"><img src="img/monery.png"/> <div class="xi">仅剩8席</div></div>
+							</div> 
+						</a> 
+					</li>
+					<li>
+						<a href="#">
+							<img src="img/weizy.png" />
+							<div class="weizydiv">
+								<div class="s1">UI设计师</div>
+								<div class="s2">成为独当一面的核心设计师</div>
+								<div class="monery"><img src="img/monery.png"/> <div class="xi">仅剩8席</div></div>
+							</div> 
+						</a> 
+					</li>
+					<li>
+						<a href="#">
+							<img src="img/weizy.png" />
+							<div class="weizydiv">
+								<div class="s1">UI设计师</div>
+								<div class="s2">成为独当一面的核心设计师</div>
+								<div class="monery"><img src="img/monery.png"/> <div class="xi">仅剩8席</div></div>
+							</div> 
+						</a> 
+					</li>
+					<li class="li4">
+						<a href="#">
+							<img src="img/weizy.png" />
+							<div class="weizydiv">
+								<div class="s1">UI设计师</div>
+								<div class="s2">成为独当一面的核心设计师</div>
+								<div class="monery"><img src="img/monery.png"/> <div class="xi">仅剩8席</div></div>
+								
+							</div> 
+						</a> 
+					</li>
+				</ul>
+				<ul class="qiangope">
+					<li>
+						<a href="#">
+							<img src="img/spss.png" />
+							<div class="weizydiv">
+								<div class="s1">2抖音短视频运营操盘核心技法</div>
+								<div class="s2">产品农转非</div>
+								<div class="monery"><img src="img/monery.png"/> <div class="xi">仅剩8席</div></div>
+							</div> 
+						</a> 
+					</li>
+					<li>
+						<a href="#">
+							<img src="img/weizy.png" />
+							<div class="weizydiv">
+								<div class="s1">UI设计师</div>
+								<div class="s2">成为独当一面的核心设计师</div>
+								<div class="monery"><img src="img/monery.png"/> <div class="xi">仅剩8席</div></div>
+							</div> 
+						</a> 
+					</li>
+					<li>
+						<a href="#">
+							<img src="img/weizy.png" />
+							<div class="weizydiv">
+								<div class="s1">UI设计师</div>
+								<div class="s2">成为独当一面的核心设计师</div>
+								<div class="monery"><img src="img/monery.png"/> <div class="xi">仅剩8席</div></div>
+							</div> 
+						</a> 
+					</li>
+					<li>
+						<a href="#">
+							<img src="img/weizy.png" />
+							<div class="weizydiv">
+								<div class="s1">UI设计师</div>
+								<div class="s2">成为独当一面的核心设计师</div>
+								<div class="monery"><img src="img/monery.png"/> <div class="xi">仅剩8席</div></div>
+							</div> 
+						</a> 
+					</li>
+					<li class="li4">
+						<a href="#">
+							<img src="img/weizy.png" />
+							<div class="weizydiv">
+								<div class="s1">UI设计师</div>
+								<div class="s2">成为独当一面的核心设计师</div>
+								<div class="monery"><img src="img/monery.png"/> <div class="xi">仅剩8席</div></div>
+								
+							</div> 
+						</a> 
+					</li>
+				</ul>
+				<ul class="qiangope">
+					<li>
+						<a href="#">
+							<img src="./img/project.png" />
+							<div class="weizydiv">
+								<div class="s1">3抖音短视频运营操盘核心技法</div>
+								<div class="s2">产品农转非</div>
+								<div class="monery"><img src="img/monery.png"/> <div class="xi">仅剩8席</div></div>
+							</div> 
+						</a> 
+					</li>
+					<li>
+						<a href="#">
+							<img src="img/weizy.png" />
+							<div class="weizydiv">
+								<div class="s1">UI设计师</div>
+								<div class="s2">成为独当一面的核心设计师</div>
+								<div class="monery"><img src="img/monery.png"/> <div class="xi">仅剩8席</div></div>
+							</div> 
+						</a> 
+					</li>
+					<li>
+						<a href="#">
+							<img src="img/weizy.png" />
+							<div class="weizydiv">
+								<div class="s1">UI设计师</div>
+								<div class="s2">成为独当一面的核心设计师</div>
+								<div class="monery"><img src="img/monery.png"/> <div class="xi">仅剩8席</div></div>
+							</div> 
+						</a> 
+					</li>
+					<li>
+						<a href="#">
+							<img src="img/weizy.png" />
+							<div class="weizydiv">
+								<div class="s1">UI设计师</div>
+								<div class="s2">成为独当一面的核心设计师</div>
+								<div class="monery"><img src="img/monery.png"/> <div class="xi">仅剩8席</div></div>
+							</div> 
+						</a> 
+					</li>
+					<li class="li4">
+						<a href="#">
+							<img src="img/weizy.png" />
+							<div class="weizydiv">
+								<div class="s1">UI设计师</div>
+								<div class="s2">成为独当一面的核心设计师</div>
+								<div class="monery"><img src="img/monery.png"/> <div class="xi">仅剩8席</div></div>
+								
+							</div> 
+						</a> 
+					</li>
+				</ul>
+				<ul class="qiangope">
+					<li>
+						<a href="#">
+							<img src="img/qianduan.png" />
+							<div class="weizydiv">
+								<div class="s1">4抖音短视频运营操盘核心技法</div>
+								<div class="s2">产品农转非</div>
+								<div class="monery"><img src="img/monery.png"/> <div class="xi">仅剩8席</div></div>
+							</div> 
+						</a> 
+					</li>
+					<li>
+						<a href="#">
+							<img src="img/weizy.png" />
+							<div class="weizydiv">
+								<div class="s1">UI设计师</div>
+								<div class="s2">成为独当一面的核心设计师</div>
+								<div class="monery"><img src="img/monery.png"/> <div class="xi">仅剩8席</div></div>
+							</div> 
+						</a> 
+					</li>
+					<li>
+						<a href="#">
+							<img src="img/weizy.png" />
+							<div class="weizydiv">
+								<div class="s1">UI设计师</div>
+								<div class="s2">成为独当一面的核心设计师</div>
+								<div class="monery"><img src="img/monery.png"/> <div class="xi">仅剩8席</div></div>
+							</div> 
+						</a> 
+					</li>
+					<li>
+						<a href="#">
+							<img src="img/weizy.png" />
+							<div class="weizydiv">
+								<div class="s1">UI设计师</div>
+								<div class="s2">成为独当一面的核心设计师</div>
+								<div class="monery"><img src="img/monery.png"/> <div class="xi">仅剩8席</div></div>
+							</div> 
+						</a> 
+					</li>
+					<li class="li4">
+						<a href="#">
+							<img src="img/weizy.png" />
+							<div class="weizydiv">
+								<div class="s1">UI设计师</div>
+								<div class="s2">成为独当一面的核心设计师</div>
+								<div class="monery"><img src="img/monery.png"/> <div class="xi">仅剩8席</div></div>
+								
+							</div> 
+						</a> 
+					</li>
+				</ul>
+				<ul class="qiangope">
+					<li>
+						<a href="#">
+							<img src="img/kuaiki.png" />
+							<div class="weizydiv">
+								<div class="s1">5抖音短视频运营操盘核心技法</div>
+								<div class="s2">产品农转非</div>
+								<div class="monery"><img src="img/monery.png"/> <div class="xi">仅剩8席</div></div>
+							</div> 
+						</a> 
+					</li>
+					<li>
+						<a href="#">
+							<img src="img/weizy.png" />
+							<div class="weizydiv">
+								<div class="s1">UI设计师</div>
+								<div class="s2">成为独当一面的核心设计师</div>
+								<div class="monery"><img src="img/monery.png"/> <div class="xi">仅剩8席</div></div>
+							</div> 
+						</a> 
+					</li>
+					<li>
+						<a href="#">
+							<img src="img/weizy.png" />
+							<div class="weizydiv">
+								<div class="s1">UI设计师</div>
+								<div class="s2">成为独当一面的核心设计师</div>
+								<div class="monery"><img src="img/monery.png"/> <div class="xi">仅剩8席</div></div>
+							</div> 
+						</a> 
+					</li>
+					<li>
+						<a href="#">
+							<img src="img/weizy.png" />
+							<div class="weizydiv">
+								<div class="s1">UI设计师</div>
+								<div class="s2">成为独当一面的核心设计师</div>
+								<div class="monery"><img src="img/monery.png"/> <div class="xi">仅剩8席</div></div>
+							</div> 
+						</a> 
+					</li>
+					<li class="li4">
+						<a href="#">
+							<img src="img/weizy.png" />
+							<div class="weizydiv">
+								<div class="s1">UI设计师</div>
+								<div class="s2">成为独当一面的核心设计师</div>
+								<div class="monery"><img src="img/monery.png"/> <div class="xi">仅剩8席</div></div>
+								
+							</div> 
+						</a> 
+					</li>
+				</ul>
+				<ul class="qiangope">
+					<li>
+						<a href="#">
+							<img src="img/weizy.png" />
+							<div class="weizydiv">
+								<div class="s1">6抖音短视频运营操盘核心技法</div>
+								<div class="s2">产品农转非</div>
+								<div class="monery"><img src="img/monery.png"/> <div class="xi">仅剩8席</div></div>
+							</div> 
+						</a> 
+					</li>
+					<li>
+						<a href="#">
+							<img src="img/weizy.png" />
+							<div class="weizydiv">
+								<div class="s1">UI设计师</div>
+								<div class="s2">成为独当一面的核心设计师</div>
+								<div class="monery"><img src="img/monery.png"/> <div class="xi">仅剩8席</div></div>
+							</div> 
+						</a> 
+					</li>
+					<li>
+						<a href="#">
+							<img src="img/weizy.png" />
+							<div class="weizydiv">
+								<div class="s1">UI设计师</div>
+								<div class="s2">成为独当一面的核心设计师</div>
+								<div class="monery"><img src="img/monery.png"/> <div class="xi">仅剩8席</div></div>
+							</div> 
+						</a> 
+					</li>
+					<li>
+						<a href="#">
+							<img src="img/weizy.png" />
+							<div class="weizydiv">
+								<div class="s1">UI设计师</div>
+								<div class="s2">成为独当一面的核心设计师</div>
+								<div class="monery"><img src="img/monery.png"/> <div class="xi">仅剩8席</div></div>
+							</div> 
+						</a> 
+					</li>
+					<li class="li4">
+						<a href="#">
+							<img src="img/weizy.png" />
+							<div class="weizydiv">
+								<div class="s1">UI设计师</div>
+								<div class="s2">成为独当一面的核心设计师</div>
+								<div class="monery"><img src="img/monery.png"/> <div class="xi">仅剩8席</div></div>
+								
+							</div> 
+						</a> 
+					</li>
+				</ul>
+				
+			</div>
+			
+		</div>
+		
+		<div class="xingqu">
+			<div class="xingqutext">以下根据你的学习兴趣推荐</div>
+			<a  class="xingqua">更改兴趣</a>
+		</div>
+		
+		<div class="houduan">
+			<div class="houduan-top">
+				<h2>后端开发</h2>
+			</div>
+			<ul class="houduanpe">
+				<li>
+					<a href="#">
+						<div class="houduanpe-out"><img src="img/houduan.png" /></div>
+						<div class="zydiv">
+							<div class="sl1">ThinkPHP5.0框架开发</div>
+							<div class="sl2">为API开发而设计的高性能框架</div>
+						</div>
+					</a> 
+				</li>
+				<li>
+					<a href="#">
+						<div class="houduanpe-out"><img src="img/houduan.png" /></div>
+						<div class="zydiv">
+							<div class="sl1">ThinkPHP5.0框架开发</div>
+							<div class="sl2">为API开发而设计的高性能框架</div>
+						</div>
+					</a> 
+				</li>
+				<li>
+					<a href="#">
+						<div class="houduanpe-out"><img src="img/houduan.png" /></div>
+						<div class="zydiv">
+							<div class="sl1">ThinkPHP5.0框架开发</div>
+							<div class="sl2">为API开发而设计的高性能框架</div>
+						</div>
+					</a> 
+				</li>
+				<li>
+					<a href="#">
+						<div class="houduanpe-out"><img src="img/houduan.png" /></div>
+						<div class="zydiv">
+							<div class="sl1">ThinkPHP5.0框架开发</div>
+							<div class="sl2">为API开发而设计的高性能框架</div>
+						</div>
+					</a> 
+				</li>
+				<li class="li4">
+					<a href="#">
+						<div class="houduanpe-out"><img src="img/houduan.png" /></div>
+						<div class="zydiv">
+							<div class="sl1">ThinkPHP5.0框架开发</div>
+							<div class="sl2">为API开发而设计的高性能框架</div>
+						</div>
+					</a> 
+				</li>
+			</ul>
+		</div>
+		
+		<div class="houduan">
+			<div class="houduan-top">
+				<h2>前端开发</h2>
+			</div>
+			<ul class="houduanpe">
+				<li>
+					<a href="#">
+						<div class="houduanpe-out"><img src="img/qianduan.png" /></div>
+						<div class="zydiv">
+							<div class="sl1">React视频教程</div>
+							<div class="sl2">本套视频基于新版本React录制</div>
+						</div>
+					</a> 
+				</li>
+				<li>
+					<a href="#">
+						<div class="houduanpe-out"><img src="img/qianduan.png" /></div>
+						<div class="zydiv">
+							<div class="sl1">ThinkPHP5.0框架开发</div>
+							<div class="sl2">为API开发而设计的高性能框架</div>
+						</div>
+					</a> 
+				</li>
+				<li>
+					<a href="#">
+						<div class="houduanpe-out"><img src="img/qianduan1.png" /></div>
+						<div class="zydiv">
+							<div class="sl1">ThinkPHP5.0框架开发</div>
+							<div class="sl2">为API开发而设计的高性能框架</div>
+						</div>
+					</a> 
+				</li>
+				<li>
+					<a href="#">
+						<div class="houduanpe-out"><img src="img/qianduan1.png" /></div>
+						<div class="zydiv">
+							<div class="sl1">ThinkPHP5.0框架开发</div>
+							<div class="sl2">为API开发而设计的高性能框架</div>
+						</div>
+					</a> 
+				</li>
+				<li class="li4">
+					<a href="#">
+						<div class="houduanpe-out"><img src="img/qianduan1.png" /></div>
+						<div class="zydiv">
+							<div class="sl1">ThinkPHP5.0框架开发</div>
+							<div class="sl2">为API开发而设计的高性能框架</div>
+						</div>
+					</a> 
+				</li>
+			</ul>
+		</div>
+		
+		<div class="houduan">
+			<div class="houduan-top">
+				<h2>职场能力</h2>
+			</div>
+			<ul class="houduanpe">
+				<li>
+					<a href="#">
+						<div class="houduanpe-out"><img src="img/spss.png" /></div>
+						<div class="zydiv">
+							<div class="sl1">会计实操—零基础学做帐技巧</div>
+							<div class="sl2">添加老师微信:zxkt6666即可免费领</div>
+						</div>
+					</a> 
+				</li>
+				<li>
+					<a href="#">
+						<div class="houduanpe-out"><img src="img/kuaiki.png" /></div>
+						<div class="zydiv">
+							<div class="sl1">ThinkPHP5.0框架开发</div>
+							<div class="sl2">为API开发而设计的高性能框架</div>
+						</div>
+					</a> 
+				</li>
+				<li>
+					<a href="#">
+						<div class="houduanpe-out"><img src="img/spss.png" /></div>
+						<div class="zydiv">
+							<div class="sl1">ThinkPHP5.0框架开发</div>
+							<div class="sl2">为API开发而设计的高性能框架</div>
+						</div>
+					</a> 
+				</li>
+				<li>
+					<a href="#">
+						<div class="houduanpe-out"><img src="img/spss.png" /></div>
+						<div class="zydiv">
+							<div class="sl1">ThinkPHP5.0框架开发</div>
+							<div class="sl2">为API开发而设计的高性能框架</div>
+						</div>
+					</a> 
+				</li>
+				<li class="li4">
+					<a href="#">
+						<div class="houduanpe-out"><img src="img/spss.png" /></div>
+						<div class="zydiv">
+							<div class="sl1">ThinkPHP5.0框架开发</div>
+							<div class="sl2">为API开发而设计的高性能框架</div>
+						</div>
+					</a> 
+				</li>
+			</ul>
+		</div>
+		
+		<div class="houduan">
+			<div class="houduan-top">
+				<h2>办公软件</h2>
+			</div>
+			<ul class="houduanpe">
+				<li>
+					<a href="#">
+						<div class="houduanpe-out"><img src="img/spss.png" /></div>
+						<div class="zydiv">
+							<div class="sl1">10天精通Project项目管理1.0</div>
+							<div class="sl2">十天从小白晋升成为高手</div>
+						</div>
+					</a> 
+				</li>
+				<li>
+					<a href="#">
+						<div class="houduanpe-out"><img src="img/spss.png" /></div>
+						<div class="zydiv">
+							<div class="sl1">ThinkPHP5.0框架开发</div>
+							<div class="sl2">为API开发而设计的高性能框架</div>
+						</div>
+					</a> 
+				</li>
+				<li>
+					<a href="#">
+						<div class="houduanpe-out"><img src="img/spss.png" /></div>
+						<div class="zydiv">
+							<div class="sl1">ThinkPHP5.0框架开发</div>
+							<div class="sl2">为API开发而设计的高性能框架</div>
+						</div>
+					</a> 
+				</li>
+				<li>
+					<a href="#">
+						<div class="houduanpe-out"><img src="img/spss.png" /></div>
+						<div class="zydiv">
+							<div class="sl1">ThinkPHP5.0框架开发</div>
+							<div class="sl2">为API开发而设计的高性能框架</div>
+						</div>
+					</a> 
+				</li>
+				<li class="li4">
+					<a href="#">
+						<div class="houduanpe-out"><img src="img/spss.png" /></div>
+						<div class="zydiv">
+							<div class="sl1">ThinkPHP5.0框架开发</div>
+							<div class="sl2">为API开发而设计的高性能框架</div>
+						</div>
+					</a> 
+				</li>
+			</ul>
+		</div>
+		
+		<div class="xilei">
+			<div class="xilei-top">
+				<h2>系列课程</h2>
+			</div>
+			<ul class="xileipe">
+				<li><a><img src="img/xilei.png" /> </a> </li>
+				<li><a><img src="img/xilie1.png" /> </a> </li>
+				<li><a><img src="img/xilie2.png" /> </a> </li>
+				<li class="li4"><a><img src="img/xilei.png" /> </a> </li>
+			</ul>
+			
+		</div>
+		<div class="houduan">
+			<div class="houduan-top">
+				<h2>精选好课</h2>
+			</div>
+			<ul class="houduanpe">
+				<li>
+					<a href="#">
+						<div class="houduanpe-out"><img src="img/spss.png" /></div>
+						<div class="zydiv">
+							<div class="sl1">10天精通Project项目管理1.0</div>
+							<div class="sl2">十天从小白晋升成为高手</div>
+						</div>
+					</a> 
+				</li>
+				<li>
+					<a href="#">
+						<div class="houduanpe-out"><img src="img/spss.png" /></div>
+						<div class="zydiv">
+							<div class="sl1">ThinkPHP5.0框架开发</div>
+							<div class="sl2">为API开发而设计的高性能框架</div>
+						</div>
+					</a> 
+				</li>
+				<li>
+					<a href="#">
+						<div class="houduanpe-out"><div class="houduanpe-out"><img src="img/spss.png" /></div></div>
+						<div class="zydiv">
+							<div class="sl1">ThinkPHP5.0框架开发</div>
+							<div class="sl2">为API开发而设计的高性能框架</div>
+						</div>
+					</a> 
+				</li>
+				<li>
+					<a href="#">
+						<div class="houduanpe-out"><img src="img/spss.png" /></div>
+						<div class="zydiv">
+							<div class="sl1">ThinkPHP5.0框架开发</div>
+							<div class="sl2">为API开发而设计的高性能框架</div>
+						</div>
+					</a> 
+				</li>
+				<li class="li4">
+					<a href="#">
+						<div class="houduanpe-out"><img src="img/spss.png" /></div>
+						<div class="zydiv">
+							<div class="sl1">ThinkPHP5.0框架开发</div>
+							<div class="sl2">为API开发而设计的高性能框架</div>
+						</div>
+					</a> 
+				</li>
+			</ul>
+		</div>
+		
+		<div class="houduan">
+			<div class="houduan-top">
+				<h2>新课推荐</h2>
+			</div>
+			<ul class="houduanpe">
+				<li>
+					<a href="#">
+						<div class="houduanpe-out"><div class="houduanpe-out"><img src="img/spss.png" /></div></div>
+						<div class="zydiv">
+							<div class="sl1">10天精通Project项目管理1.0</div>
+							<div class="sl2">十天从小白晋升成为高手</div>
+						</div>
+					</a> 
+				</li>
+				<li>
+					<a href="#">
+						<div class="houduanpe-out"><img src="img/spss.png" /></div>
+						<div class="zydiv">
+							<div class="sl1">ThinkPHP5.0框架开发</div>
+							<div class="sl2">为API开发而设计的高性能框架</div>
+						</div>
+					</a> 
+				</li>
+				<li>
+					<a href="#">
+						<div class="houduanpe-out"><img src="img/spss.png" /></div>
+						<div class="zydiv">
+							<div class="sl1">ThinkPHP5.0框架开发</div>
+							<div class="sl2">为API开发而设计的高性能框架</div>
+						</div>
+					</a> 
+				</li>
+				<li>
+					<a href="#">
+						<div class="houduanpe-out"><img src="img/spss.png" /></div>
+						<div class="zydiv">
+							<div class="sl1">ThinkPHP5.0框架开发</div>
+							<div class="sl2">为API开发而设计的高性能框架</div>
+						</div>
+					</a> 
+				</li>
+				<li class="li4">
+					<a href="#">
+						<div class="houduanpe-out"><img src="img/spss.png" /></div>
+						<div class="zydiv">
+							<div class="sl1">ThinkPHP5.0框架开发</div>
+							<div class="sl2">为API开发而设计的高性能框架</div>
+						</div>
+					</a> 
+				</li>
+			</ul>
+		</div>
+		
+		<div class="houduan">
+			<div class="houduan-top">
+				<h2>免费好课</h2>
+			</div>
+			<ul class="houduanpe">
+				<li>
+					<a href="#">
+						<div class="houduanpe-out"><img src="img/spss.png" /></div>
+						<div class="zydiv">
+							<div class="sl1">10天精通Project项目管理1.0</div>
+							<div class="sl2">十天从小白晋升成为高手</div>
+						</div>
+					</a> 
+				</li>
+				<li>
+					<a href="#">
+						<div class="houduanpe-out"><img src="img/spss.png" /></div>
+						<div class="zydiv">
+							<div class="sl1">ThinkPHP5.0框架开发</div>
+							<div class="sl2">为API开发而设计的高性能框架</div>
+						</div>
+					</a> 
+				</li>
+				<li>
+					<a href="#">
+						<div class="houduanpe-out"><img src="img/spss.png" /></div>
+						<div class="zydiv">
+							<div class="sl1">ThinkPHP5.0框架开发</div>
+							<div class="sl2">为API开发而设计的高性能框架</div>
+						</div>
+					</a> 
+				</li>
+				<li>
+					<a href="#">
+						<div class="houduanpe-out"><img src="img/spss.png" /></div>
+						<div class="zydiv">
+							<div class="sl1">ThinkPHP5.0框架开发</div>
+							<div class="sl2">为API开发而设计的高性能框架</div>
+						</div>
+					</a> 
+				</li>
+				<li class="li4">
+					<a href="#">
+						<div class="houduanpe-out"><img src="img/spss.png" /></div>
+						<div class="zydiv">
+							<div class="sl1">ThinkPHP5.0框架开发</div>
+							<div class="sl2">为API开发而设计的高性能框架</div>
+						</div>
+					</a> 
+				</li>
+			</ul>
+		</div>
+		
+		<div class="bluepe">
+			<a href="#"><div class="bluepediv1"><img src="img/bluepe.png" /> </div></a>
+			<a href="#"><div><img src="img/blueep2.png" /> </div></a>
+		</div>
+		
+		<div class="bottom">
+			<div class="bottomnode">
+				<div class="bottomnode1">网易云课堂是网易公司(163.com)旗下专注职业技能提升的在线学习平台。</div>
+				<ul class="bottomnode2">
+					<li><a href="#">关于我们</a> </li>
+					<li><a href="#">联系我们</a> </li>
+					<li><a href="#">帮助中心</a> </li>
+					<li><a href="#">中国大学MOOC</a> </li>
+					<li><a href="#">网易卡搭编程</a> </li>
+					<li><a href="#">极客战记</a> </li>
+					<li><a href="#">有道智云</a> </li>
+				</ul>
+				<div class="bottomnode3">@1997-2020网易公司 版权所有  粤B2-20090191-18 <a href="#">工业和信息化部备案管理系统网站</a> </div>
+				<div class="aa">
+					<a href="#" class="a"><img src="img/android.png" /> </a>
+					<a href="#" class="a1"><img src="img/apple.png" /> </a>
+				</div>
+				<div class="guanz">
+					<span>关注我们:</span>
+					<a href="#" class="a1">
+						<img src="img/qq.png" />
+						<div class="guanz-a1-show">
+							<div class="sjx"></div>
+							<ul>
+								<li class="li1">关注云课堂官方微信号</li>
+								<li class="li2">-领取课程免费福利，超值学习资料-</li>
+							</ul>
+							<div class="img"><img src="img/ewm.gif" /></div>
+						</div>
+					</a>
+					<a href="#" class="a2"><img src="img/wb.png" /> </a>
+				</div>
+			</div>
+		</div>
+		
+		<div class="xuanfu">
+			<a href="#"><img src="img/sjfxs.png"/></a>
+			<ul class="xuanfu-ul">
+				<li class="xuanfu-ul-pe xuanfu1">
+					<div class="xuanfu-show1 show">在线咨询</div>
+				</li>
+				<li class="xuanfu-ul-line">
+					<div class="line"></div>
+				</li>
+				<li class="xuanfu-ul-pe xuanfu2">
+					<div class="show">手机课堂</div>
+					<div class="xuanfu-show2"><div class="sjx"></div>
+						<div><img src="img/ewm-l1.png"/><span>下载APP</span> </div>
+						<div><img src="img/ewm-r.png"/><span>关注微信</span> </div>
+					</div>
+					
+				</li>
+				<li class="xuanfu-ul-line">
+					<div class="line"></div>
+				</li>
+				<li class="xuanfu-ul-pe xuanfu3">
+					<a><div class="xuanfu-show3 show">返回顶部</div></a>
+					
+				</li>
+			</ul>
+		</div>
+		
+		<div class="xingQu-out"></div>
+		<div class="xingQuXuanXianKa">
+			<div class="xx">
+				<p  class="xxk-xx"></p>
+			</div>
+			<div class="title"><h4>请选择你的学习兴趣</h4><span>至少选择一个，可随时调整</span> </div>
+			<div class="menu">
+				<ul class="menu-ul">
+					<li class="active">职场提升<div class="line"></div> </li>
+					<li>编程与开发<div class="line"></div> </li>
+					<li>AI数据科学<div class="line"></div> </li>
+					<li>生活兴趣<div class="line"></div> </li>
+					<li>设计创意<div class="line"></div> </li>
+					<li>产品与运营<div class="line"></div> </li>
+					<li>电商运营<div class="line"></div> </li>
+					<li>职业考试<div class="line"></div> </li>
+					<li>语言学习<div class="line"></div> </li>
+				</ul>
+			</div>
+			<div class="menuContent">
+				<div class="menuContent-list show">
+					<div>办公软件</div>
+					<div>效率工具</div>
+					<div>求职准备</div>
+					<div>电商运营</div>
+					<div>职场提升</div>
+					<div>职业考试</div>
+					<div>设计创意</div>
+					<div>生活兴趣</div>
+				</div>
+				<div class="menuContent-list">
+					<div>阿斯蒂芬</div>
+					<div>效率工具</div>
+					<div>求职准备</div>
+					<div>办公软件</div>
+					<div>效率工具</div>
+					<div>求职准备</div>
+					<div>求职准备</div>
+					<div>求职准备</div>
+				</div>
+				<div class="menuContent-list">
+					<div>权威人物</div>
+					<div>效率工具</div>
+					<div>求职准备</div>
+					<div>办公软件</div>
+					<div>效率工具</div>
+					<div>求职准备</div>
+					<div>求职准备</div>
+					<div>求职准备</div>
+				</div>
+				<div class="menuContent-list">
+					<div>十大高手</div>
+					<div>效率工具</div>
+					<div>求职准备</div>
+					<div>办公软件</div>
+					<div>效率工具</div>
+					<div>求职准备</div>
+					<div>求职准备</div>
+					<div>求职准备</div>
+				</div>
+				<div class="menuContent-list">
+					<div>自学成才</div>
+					<div>效率工具</div>
+					<div>求职准备</div>
+					<div>办公软件</div>
+					<div>效率工具</div>
+					<div>求职准备</div>
+					<div>求职准备</div>
+					<div>求职准备</div>
+				</div>
+				<div class="menuContent-list">
+					<div>返回的是</div>
+					<div>效率工具</div>
+					<div>求职准备</div>
+					<div>办公软件</div>
+					<div>效率工具</div>
+					<div>求职准备</div>
+					<div>求职准备</div>
+					<div>求职准备</div>
+				</div>
+				<div class="menuContent-list">
+					<div>工会经费</div>
+					<div>效率工具</div>
+					<div>求职准备</div>
+					<div>办公软件</div>
+					<div>效率工具</div>
+					<div>求职准备</div>
+				</div>
+				<div class="menuContent-list">
+					<div>按时发放</div>
+					<div>效率工具</div>
+					<div>求职准备</div>
+				</div>
+				<div class="menuContent-list">
+					<div>爱说大话</div>
+					<div>效率工具</div>
+					<div>求职准备</div>
+					<div>求职准备</div>
+					<div>求职准备</div>
+				</div>
+				
+			</div>
+			
+			<div class="choose">
+				<p>以选0个:</p>
+				<!--<div><span>办公软件</span><img class="chooseNode" src="img/choose-xx.png" /> </div>-->
+			</div>
+			<div class="bottom">
+				<div class="conture">选好了</div>
+			</div>
+		</div>
+		
+		<script src="js/index.js"></script>
+	</body>
+</html>

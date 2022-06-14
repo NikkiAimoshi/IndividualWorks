@@ -1,0 +1,20 @@
+.liveStyle-container{
+    margin: 20rpx;
+}
+.liveStyle-container .title{
+    text-align: center;
+    height: 40rpx;
+    padding: 20rpx;
+    border-bottom: 2rpx solid #ccc;
+}
+.liveStyle-container .liveStyle-item{
+    margin: 20rpx;
+}
+.liveStyle-container .liveStyle-item .name{
+    font-size: 35rpx;
+}
+.liveStyle-container .liveStyle-item .text{
+    text-indent: 35rpx;
+    margin-top: 20rpx;
+    font-size: 30rpx;
+}

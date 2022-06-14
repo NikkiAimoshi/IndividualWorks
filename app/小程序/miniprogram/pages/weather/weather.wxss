@@ -1,0 +1,99 @@
+.container{
+    height: 580rpx;
+    background-color: #3fca84;
+    color: #fff;
+    padding-top: 20rpx;
+    position: relative;
+}
+.container .lifeStyle{
+    width: 240rpx;
+    height: 80rpx;
+    background-color: #ccc;
+    color: white;
+    line-height: 80rpx;
+    text-align: center;
+    border-radius: 40rpx 0 0 40rpx;
+    position: absolute;
+    right: 0;
+    top: 120rpx;
+}
+.container .address{
+    text-align: center;
+    line-height: 50rpx;
+    display: flex;
+    justify-content: center;
+}
+.container .address image{
+    width: 40rpx;
+    height: 40rpx;
+    margin-right: 10rpx;
+    margin-top: 7rpx;
+}
+.container .nowTemp{
+    text-align: center;
+}
+.container .nowTemp .nowTempNum{
+    font-size: 180rpx;
+}
+.container .nowIcon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container .nowIcon .nowTempPE{
+    width: 45rpx;
+    height: 45rpx;
+}
+.container .nowIcon .nowTempText{
+    font-size: 45rpx;
+    margin-left: 20rpx;
+}
+.container .nowItems{
+    display: flex;
+    justify-content: center;
+    margin: 20rpx 0 20rpx 0;
+    width: 100%;
+    
+}
+.container .nowItems .left{
+    text-align: right;
+}
+.container .nowItems .left>view , .container .nowItems .right>view{
+    margin: 10rpx 20rpx;
+}
+.container .nowItems .right{
+    border-left: solid white 2rpx;
+}
+.container .time{
+    float: right;
+    margin-right: 40rpx;
+}
+.forecast{
+    line-height: 2;
+}
+.forecast .forecast-title{
+    text-align: center;
+    width: 700rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    border-bottom: solid 2rpx #ccc;
+    margin-left: 25rpx;
+}
+.forecast .forecast-scroll{
+    overflow-x: scroll;
+}
+.forecast .forecast-scroll .day{
+    display: flex;
+    justify-content: space-around;
+    width: 1750rpx;
+    text-align: center;
+    margin-top: 10rpx;
+}
+.forecast .forecast-scroll .day>view{
+    width: 250rpx;
+}
+.forecast .forecast-scroll .day image{
+    width: 60rpx;
+    height: 60rpx;
+    margin: 10rpx;
+}
